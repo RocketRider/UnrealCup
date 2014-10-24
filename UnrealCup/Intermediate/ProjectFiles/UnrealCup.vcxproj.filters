@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\UnrealCup.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{D7F14414-1EF2-4D6A-B5C8-1499FFF14659}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\UnrealCupEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{E9229648-CEE6-4E83-9F94-D57DBF6463F8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\UnrealCup">
+			<UniqueIdentifier>{CC6A0850-56D5-4102-A514-F28695BA8D62}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\Robot.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\UnrealCup\UnrealCup.Build.cs">
+			<Filter>Source\UnrealCup</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCup.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCup.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCupGameMode.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCupGameMode.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<Filter Include="Source\UnrealCup\Resources">
+			<UniqueIdentifier>{467C56BE-3E86-4446-B4C2-2C2C877A8C66}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\UnrealCup\Resources\Windows">
+			<UniqueIdentifier>{05286280-28B2-4A1E-A4A8-8AFD8F38EB61}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</None >
+		<ResourceCompile Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.rc">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
