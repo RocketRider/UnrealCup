@@ -3,7 +3,11 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "../../Include/lua.h"
+#include "../../Include/lauxlib.h"
+#include "../../Include/lualib.h"
 #include "Robot.generated.h"
+#pragma comment(lib, "Lua.lib")
 
 /**
  * 
@@ -14,14 +18,26 @@ class UNREALCUP_API ARobot : public ACharacter
 	GENERATED_UCLASS_BODY()
 
 	virtual void BeginPlay() override;
-	
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
 
 	void MoveForward(float value);
 	void Rotate(float value);
 
-protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
+	FString luaFile;
 
+protected:
+	
 	//Tick
 	virtual void Tick(float DeltaSeconds) OVERRIDE;
+
+
+
+	lua_State *luaState = NULL;
+	void LuaLoad(const char* file);
+	void LuaClose();
+	void LuaOverridePrint();
+	void LuaRegisterFunctions();
 
 };
