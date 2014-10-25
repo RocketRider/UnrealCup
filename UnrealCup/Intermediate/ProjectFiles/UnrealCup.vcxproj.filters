@@ -1,139 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\UnrealCup.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{D7F14414-1EF2-4D6A-B5C8-1499FFF14659}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\UnrealCup.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\UnrealCupEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{E9229648-CEE6-4E83-9F94-D57DBF6463F8}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Source\UnrealCup">
-      <UniqueIdentifier>{CC6A0850-56D5-4102-A514-F28695BA8D62}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\Robot.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <None Include="..\..\Source\UnrealCup\UnrealCup.Build.cs">
-      <Filter>Source\UnrealCup</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\UnrealCup\UnrealCup.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\UnrealCup.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\UnrealCupGameMode.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\UnrealCupGameMode.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <Filter Include="Source\UnrealCup\Resources">
-      <UniqueIdentifier>{467C56BE-3E86-4446-B4C2-2C2C877A8C66}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\UnrealCup\Resources\Windows">
-      <UniqueIdentifier>{05286280-28B2-4A1E-A4A8-8AFD8F38EB61}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
-      <Filter>Source\UnrealCup\Resources\Windows</Filter>
-    </None>
-    <ResourceCompile Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.rc">
-      <Filter>Source\UnrealCup\Resources\Windows</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Source\UnrealCup\lua">
-      <UniqueIdentifier>{018ec7a9-97d9-4acf-b404-550b044e1f43}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Include\lapi.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lauxlib.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lcode.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lctype.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\ldebug.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\ldo.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lfunc.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lgc.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\llex.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\llimits.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lmem.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lobject.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lopcodes.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lparser.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lstate.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lstring.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\ltable.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\ltm.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lua.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\luaconf.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lualib.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lundump.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lvm.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Include\lzio.h">
-      <Filter>Source\UnrealCup\lua</Filter>
-    </ClInclude>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\UnrealCup.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{EEEDEA24-A0D8-47CF-BDC7-8C29E5E61D84}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\UnrealCupEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{220733DA-2E3C-4B46-B3F0-837BCBC07B6A}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\UnrealCup">
+			<UniqueIdentifier>{7FE1EC1C-49C0-4E41-91CE-C337A23BE69C}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\Robot.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\UnrealCup\UnrealCup.Build.cs">
+			<Filter>Source\UnrealCup</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCup.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCup.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCupGameMode.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCupGameMode.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<Filter Include="Source\UnrealCup\Resources">
+			<UniqueIdentifier>{31CA4B15-A83D-4787-9E32-EFE37DE8527D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\UnrealCup\Resources\Windows">
+			<UniqueIdentifier>{16146387-4E42-4F54-B757-96203FAB9AA9}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</None >
+		<ResourceCompile Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.rc">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
 </Project>

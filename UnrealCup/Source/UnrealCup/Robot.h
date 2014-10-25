@@ -3,11 +3,11 @@
 #pragma once
 
 #include "GameFramework/Character.h"
-#include "../../Include/lua.h"
-#include "../../Include/lauxlib.h"
-#include "../../Include/lualib.h"
+#include "../../ThirdParty/lua/Include/lua.h"
+#include "../../ThirdParty/lua/Include/lauxlib.h"
+#include "../../ThirdParty/lua/Include/lualib.h"
 #include "Robot.generated.h"
-#pragma comment(lib, "Lua.lib")
+//#pragma comment(lib, "Lua.lib")
 
 /**
  * 
@@ -30,7 +30,7 @@ class UNREALCUP_API ARobot : public ACharacter
 protected:
 	
 	//Tick
-	virtual void Tick(float DeltaSeconds) OVERRIDE;
+	virtual void Tick(float DeltaSeconds) override;
 
 
 
