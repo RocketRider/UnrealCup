@@ -22,7 +22,7 @@ void ARobot::Tick(float DeltaSeconds)
 {
 
 	MoveForward(5);
-
+	Rotate(10);
 }
 
 
@@ -30,7 +30,7 @@ void ARobot::Tick(float DeltaSeconds)
 void ARobot::MoveForward(float value)
 {
 
-	if (Controller)
+	if (Controller && GEngine)
 	{
 		// find out which way is forward
 		FRotator Rotation = Controller->GetControlRotation();
@@ -41,8 +41,19 @@ void ARobot::MoveForward(float value)
 		}
 		// add movement in that direction
 		const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::X);
-		Controller->GetPawn()->AddMovementInput(Direction, value);
+		AddMovementInput(Direction, value);
 
+	}
+
+}
+
+
+void ARobot::Rotate(float value)
+{
+	if (Controller && GEngine)
+	{
+		//Does not work correctly!
+		AddActorLocalRotation(FRotator(0, value, 0));
 	}
 
 }

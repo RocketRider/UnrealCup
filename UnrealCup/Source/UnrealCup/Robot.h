@@ -17,6 +17,7 @@ class UNREALCUP_API ARobot : public ACharacter
 	
 
 	void MoveForward(float value);
+	void Rotate(float value);
 
 protected:
 
