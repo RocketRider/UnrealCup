@@ -1,10 +1,14 @@
 StudentResearchProject
 ======================
 
-1) Unreal Editior, File->"Refresh Visual Studio Project"
+1) UnrealCup.uproject öffnen
 
-2) sln aus UnrealCup mit Visual Studio 2013 öffnen
+2) Unreal Editior, File->"Refresh Visual Studio Project"
 
-3) Als DebugGame Editor x64 kompilieren
+3) Unreal Editior, File->"Open Visual Studio"
 
-4) starten
+4) Unreal Editior schließen
+
+5) Als DebugGame Editor x64 kompilieren
+
+6) starten (F5)
