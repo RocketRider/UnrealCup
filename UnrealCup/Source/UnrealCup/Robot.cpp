@@ -12,20 +12,26 @@ ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP)
 
 }
 
-
 void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
 
+}
+
+void ARobot::Tick(float DeltaSeconds)
+{
+
+	MoveForward(5);
+
+}
+
+
+
+void ARobot::MoveForward(float value)
+{
+
 	if (Controller)
 	{
-
-
-		//Works:
-		//SetActorLocation(FVector(0, 0, 0));
-
-
-		
 		// find out which way is forward
 		FRotator Rotation = Controller->GetControlRotation();
 		// Limit pitch when walking or falling
@@ -35,24 +41,8 @@ void ARobot::BeginPlay()
 		}
 		// add movement in that direction
 		const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::X);
-		Controller->GetPawn()->AddMovementInput(Direction, 1000);
-		
-
-
-
-
-
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("RUN!"));
-		}
+		Controller->GetPawn()->AddMovementInput(Direction, value);
 
 	}
-	else
-	{
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("No controller!"));
-		}
-	}
+
 }

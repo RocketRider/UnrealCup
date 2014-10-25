@@ -15,4 +15,12 @@ class UNREALCUP_API ARobot : public ACharacter
 
 	virtual void BeginPlay() override;
 	
+
+	void MoveForward(float value);
+
+protected:
+
+	//Tick
+	virtual void Tick(float DeltaSeconds) OVERRIDE;
+
 };
