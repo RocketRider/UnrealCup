@@ -1,2 +1,1 @@
-print("Hello LUA!!! Player 2")
-MoveForward();
+print("Player 2 loaded")

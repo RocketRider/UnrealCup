@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "Map.h"
 #include "../../ThirdParty/lua/Include/lua.h"
 #include "../../ThirdParty/lua/Include/lauxlib.h"
 #include "../../ThirdParty/lua/Include/lualib.h"
@@ -27,17 +28,31 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
 	FString luaFile;
 
+	static TMap<lua_State*, ARobot*> LuaObjectMapping;
+
+	/*
+	struct LuaRobot
+	{
+		lua_State* lua;
+		ARobot* robot;
+	};
+	
+
+	static LuaRobot LuaObjectMapping[100];
+	*/
+
 protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
 
-
+	
 
 	lua_State *luaState = NULL;
 	void LuaLoad(const char* file);
 	void LuaClose();
 	void LuaOverridePrint();
 	void LuaRegisterFunctions();
+	void LuaTick(float DeltaSeconds);
 
 };

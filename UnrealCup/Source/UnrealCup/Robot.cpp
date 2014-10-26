@@ -4,6 +4,8 @@
 #include "Robot.h"
 
 
+TMap<lua_State*, ARobot*> ARobot::LuaObjectMapping;
+
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
@@ -29,7 +31,8 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 void ARobot::Tick(float DeltaSeconds)
 {
-	MoveForward(5);
+	LuaTick(DeltaSeconds);
+	//MoveForward(5);
 	//Rotate(10);
 }
 
@@ -65,13 +68,22 @@ void ARobot::Rotate(float value)
 
 //Lua functions:
 
-static int32 luaMoveForward(lua_State* L) {
+static int32 LuaMoveForward(lua_State* L) {
 	double d = lua_tonumber(L, 1);  /* get argument */
 
-	if (GEngine)
+	
+	ARobot *robot = ARobot::LuaObjectMapping[L];
+	if (robot)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "MOVE!!!");
+		robot->MoveForward(d);
+		/*
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "MOVE!");
+		}
+		*/
 	}
+	
 	return 0;  /* number of results */
 }
 
@@ -99,6 +111,8 @@ static int32 LuaUnrealLog(lua_State* L)
 
 
 
+
+//Load Lua script
 void ARobot::LuaLoad(const char* file)
 {
 	luaState = luaL_newstate();
@@ -117,21 +131,26 @@ void ARobot::LuaLoad(const char* file)
 		}
 		else
 		{
+			LuaObjectMapping.Add(luaState, this);
 			int res = lua_pcall(luaState, 0, LUA_MULTRET, 0);
 		}
 	}
 }
 
+
+//Free Lua script
 void ARobot::LuaClose()
 {
 	if (luaState)
 	{
 		lua_close(luaState);
+		LuaObjectMapping.Remove(luaState);
 		luaState = NULL;
 	}
 }
 
 
+//Overwrite print function il Lua
 void ARobot::LuaOverridePrint()
 {
 	static const luaL_Reg PrintOverride[] =
@@ -145,10 +164,28 @@ void ARobot::LuaOverridePrint()
 	lua_pop(luaState, 1);
 }
 
+
+//Register Functions
 void ARobot::LuaRegisterFunctions()
 {
-	lua_pushcfunction(luaState, luaMoveForward);
+	//MoveForward(double Speed)
+	lua_pushcfunction(luaState, LuaMoveForward);
 	lua_setglobal(luaState, "MoveForward");
+
 }
 
+
+//Call Tick(float DeltaSeconds) funtion in Lua script
+void ARobot::LuaTick(float DeltaSeconds)
+{
+	if (luaState)
+	{
+		/* push functions and arguments */
+		lua_getglobal(luaState, "tick");  /* function to be called */
+		lua_pushnumber(luaState, DeltaSeconds);   /* push 1st argument */
+		/* do the call (1 arguments, 0 result) */
+		if (lua_pcall(luaState, 1, 0, 0) != 0)
+			printf("error running function `f': %s", lua_tostring(luaState, -1));
+	}
+}
 
