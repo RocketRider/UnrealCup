@@ -2,16 +2,14 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
-
-
 TMap<lua_State*, ARobot*> ARobot::LuaObjectMapping;
+
+
 
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
-
-
-
+	luaState = NULL;
 }
 
 void ARobot::BeginPlay()

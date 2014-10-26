@@ -18,6 +18,9 @@ class UNREALCUP_API ARobot : public ACharacter
 {
 	GENERATED_UCLASS_BODY()
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
+	FString luaFile;
+
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
@@ -25,30 +28,16 @@ class UNREALCUP_API ARobot : public ACharacter
 	void MoveForward(float value);
 	void Rotate(float value);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
-	FString luaFile;
 
 	static TMap<lua_State*, ARobot*> LuaObjectMapping;
-
-	/*
-	struct LuaRobot
-	{
-		lua_State* lua;
-		ARobot* robot;
-	};
-	
-
-	static LuaRobot LuaObjectMapping[100];
-	*/
-
 protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
 
 	
-
-	lua_State *luaState = NULL;
+	//Lua
+	lua_State *luaState;
 	void LuaLoad(const char* file);
 	void LuaClose();
 	void LuaOverridePrint();
