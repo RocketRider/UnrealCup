@@ -28,8 +28,18 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
 	FString luaFile;
 
-	//static TMap<lua_State*, ARobot*> LuaObjectMapping;
-	static TMap<int32, double> map;
+	static TMap<lua_State*, ARobot*> LuaObjectMapping;
+
+	/*
+	struct LuaRobot
+	{
+		lua_State* lua;
+		ARobot* robot;
+	};
+	
+
+	static LuaRobot LuaObjectMapping[100];
+	*/
 
 protected:
 	
@@ -43,5 +53,6 @@ protected:
 	void LuaClose();
 	void LuaOverridePrint();
 	void LuaRegisterFunctions();
+	void LuaTick(float DeltaSeconds);
 
 };
