@@ -68,16 +68,16 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h" />
-		<ResourceCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h" />
+		<ResourceCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest" />
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{85E5E4D5-1D97-4DF4-995D-0688FF25518B}</ProjectGuid>
@@ -140,10 +140,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\ShaderCompileWorker-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\ShaderCompileWorker-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -157,10 +157,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\ShaderCompileWorker-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\ShaderCompileWorker-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -174,10 +174,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\ShaderCompileWorker-Mac-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\ShaderCompileWorker-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -191,10 +191,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\ShaderCompileWorker-WinRT-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\ShaderCompileWorker-WinRT-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -208,10 +208,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT_ARM Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT_ARM Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT_ARM Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\ShaderCompileWorker-WinRT_ARM-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT_ARM Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT_ARM Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT_ARM Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\ShaderCompileWorker-WinRT_ARM-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -225,10 +225,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -242,10 +242,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -259,10 +259,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\ShaderCompileWorker</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\ShaderCompileWorker</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -276,10 +276,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -293,14 +293,14 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT_ARM Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT_ARM Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT_ARM Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker WinRT_ARM Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker WinRT_ARM Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker WinRT_ARM Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);ALLOW_LOG_FILE=0;IS_PROGRAM=1;UE_ROCKET=0;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=0;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;USE_LOGGING_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=0;UBT_COMPILED_PLATFORM=Win64;WIN32=1;_WIN32_WINNT=0x0600;WINVER=0x0600;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="ShaderCompileWorker.exe";SHADERCOMPILEWORKER_API=;UE_ENABLE_ICU=1;WITH_STEAMWORKS=0;WITH_DIRECTXMATH=0;CORE_API=;PROJECTS_API=;SHADERCORE_API=;RHI_API=;RENDERCORE_API=;SANDBOXFILE_API=;TARGETPLATFORM_API=;DESKTOPPLATFORM_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\TIT12UnrealEngine__\Engine\Source;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Private;..\Build\Win64\ShaderCompileWorker\Inc\ShaderCompileWorker;E:\TIT12UnrealEngine__\Engine\Source\Programs\ShaderCompileWorker;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Internationalization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Async;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Concurrency;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Containers;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Delegates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\HAL;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Logging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Math;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Json;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Stats;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Windows;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core;..\Build\Win64\ShaderCompileWorker\Inc\Projects;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects;..\Build\Win64\ShaderCompileWorker\Inc\ShaderCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\ShaderCore\Public;..\Build\Win64\ShaderCompileWorker\Inc\RHI;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RHI\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RHI;..\Build\Win64\ShaderCompileWorker\Inc\RenderCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RenderCore\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RenderCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\ShaderCore;..\Build\Win64\ShaderCompileWorker\Inc\SandboxFile;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SandboxFile\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SandboxFile;..\Build\Win64\ShaderCompileWorker\Inc\TargetPlatform;E:\TIT12UnrealEngine__\Engine\Source\Developer\TargetPlatform\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\TargetPlatform\Public\Common;E:\TIT12UnrealEngine__\Engine\Source\Developer\TargetPlatform\Public\Interfaces;..\Build\Win64\ShaderCompileWorker\Inc\DesktopPlatform;E:\TIT12UnrealEngine__\Engine\Source\Developer\DesktopPlatform\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\DesktopPlatform;E:\TIT12UnrealEngine__\Engine\Source\Developer\TargetPlatform;..\Build\Win64\ShaderCompileWorker\Inc\Launch;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Public;..\Build\Win64\ShaderCompileWorker\Inc\ProfilerService;E:\TIT12UnrealEngine__\Engine\Source\Developer\ProfilerService\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\ProfilerService\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Developer\ProfilerService;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Dokumente\UnrealEngine\Engine\Source;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Private;..\Build\Win64\ShaderCompileWorker\Inc\ShaderCompileWorker;D:\Dokumente\UnrealEngine\Engine\Source\Programs\ShaderCompileWorker;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Async;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Concurrency;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Delegates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Math;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Json;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Stats;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Templates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core;..\Build\Win64\ShaderCompileWorker\Inc\Projects;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects;..\Build\Win64\ShaderCompileWorker\Inc\ShaderCore;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\ShaderCore\Public;..\Build\Win64\ShaderCompileWorker\Inc\RHI;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\RHI\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\RHI;..\Build\Win64\ShaderCompileWorker\Inc\RenderCore;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\RenderCore\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\RenderCore;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\ShaderCore;..\Build\Win64\ShaderCompileWorker\Inc\SandboxFile;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\SandboxFile\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\SandboxFile;..\Build\Win64\ShaderCompileWorker\Inc\TargetPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Developer\TargetPlatform\Public;D:\Dokumente\UnrealEngine\Engine\Source\Developer\TargetPlatform\Public\Common;D:\Dokumente\UnrealEngine\Engine\Source\Developer\TargetPlatform\Public\Interfaces;..\Build\Win64\ShaderCompileWorker\Inc\DesktopPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Developer\DesktopPlatform\Public;D:\Dokumente\UnrealEngine\Engine\Source\Developer\DesktopPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Developer\TargetPlatform;..\Build\Win64\ShaderCompileWorker\Inc\Launch;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Public;..\Build\Win64\ShaderCompileWorker\Inc\ProfilerService;D:\Dokumente\UnrealEngine\Engine\Source\Developer\ProfilerService\Public;D:\Dokumente\UnrealEngine\Engine\Source\Developer\ProfilerService\Public\Interfaces;D:\Dokumente\UnrealEngine\Engine\Source\Developer\ProfilerService;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

@@ -38,6 +38,7 @@ void ARobot::MoveForward(float value)
 {
 	if (Controller && GEngine)
 	{
+		/*
 		// find out which way is forward
 		FRotator Rotation = Controller->GetControlRotation();
 		// Limit pitch when walking or falling
@@ -47,6 +48,10 @@ void ARobot::MoveForward(float value)
 		}
 		// add movement in that direction
 		const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::X);
+		*/
+
+		// find out which way is forward
+		FVector Direction = GetActorForwardVector();
 		AddMovementInput(Direction, value);
 	}
 }
@@ -82,6 +87,25 @@ static int32 LuaMoveForward(lua_State* L) {
 		*/
 	}
 	
+	return 0;  /* number of results */
+}
+
+static int32 LuaRotate(lua_State* L) {
+	double d = lua_tonumber(L, 1);  /* get argument */
+
+
+	ARobot *robot = ARobot::LuaObjectMapping[L];
+	if (robot)
+	{
+		robot->Rotate(d);
+		/*
+		if (GEngine)
+		{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "ROTATE!");
+		}
+		*/
+	}
+
 	return 0;  /* number of results */
 }
 
@@ -169,6 +193,8 @@ void ARobot::LuaRegisterFunctions()
 	//MoveForward(double Speed)
 	lua_pushcfunction(luaState, LuaMoveForward);
 	lua_setglobal(luaState, "MoveForward");
+	lua_pushcfunction(luaState, LuaRotate);
+	lua_setglobal(luaState, "Rotate");
 
 }
 

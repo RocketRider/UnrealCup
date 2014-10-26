@@ -2,36 +2,36 @@
 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{8370BE5E-D1F1-4DED-8E8F-65175939699E}</UniqueIdentifier>
+			<UniqueIdentifier>{D1F38C78-9803-4089-A972-BDBF78B274BC}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{ECCEF2F1-3448-43F3-B926-31008B0228A2}</UniqueIdentifier>
+			<UniqueIdentifier>{5995A29C-39F1-46D9-B544-196F8B662879}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.h">
 			<Filter>Private\Mac</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesMain.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesMain.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{72DBEEF9-E069-41ED-B5D1-57A3BD177B59}</UniqueIdentifier>
+			<UniqueIdentifier>{2E57D0AC-9AC0-4D29-97A9-33C120C72787}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Windows\UE4EditorServicesMain.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Windows\UE4EditorServicesMain.cpp">
 			<Filter>Private\Windows</Filter>
 		</ClCompile >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{9C574E0E-814A-4044-8043-0569BDCB1B78}</UniqueIdentifier>
+			<UniqueIdentifier>{DB0AAEC7-E637-4D6B-83FA-28BDD91650F9}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Resources\Mac">
-			<UniqueIdentifier>{11179544-CA6F-4CD9-B9FF-4B93EECD5740}</UniqueIdentifier>
+			<UniqueIdentifier>{CE8B069E-A4D6-4BCF-A2AB-563925A9FF46}</UniqueIdentifier>
 		</Filter>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Resources\Mac\Info.plist">
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Resources\Mac\Info.plist">
 			<Filter>Resources\Mac</Filter>
 		</None >
 	</ItemGroup>

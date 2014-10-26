@@ -2,13 +2,13 @@
 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Automation.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Automation.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\BuildPatchTool\BuildPatchTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{B0BEA26B-5B03-4875-9E91-08DC0E5B40C8}</UniqueIdentifier>
+			<UniqueIdentifier>{20081651-FF55-401B-AFC7-A2C0ED9E538A}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\BuildPatchTool\Private\BuildPatchToolMain.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\BuildPatchTool\Private\BuildPatchToolMain.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
 	</ItemGroup>

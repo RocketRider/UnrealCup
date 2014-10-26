@@ -68,13 +68,13 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Build.cs" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesMain.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Private\Windows\UE4EditorServicesMain.cpp" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices\Resources\Mac\Info.plist" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\UE4EditorServices.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesAppDelegate.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Mac\UE4EditorServicesMain.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Private\Windows\UE4EditorServicesMain.cpp" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices\Resources\Mac\Info.plist" />
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{6876BFD5-4CCF-42A2-B9BF-EDF44740FBC1}</ProjectGuid>
@@ -137,10 +137,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win32 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win32 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win32 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UE4EditorServices-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win32 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win32 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win32 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\UE4EditorServices-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -154,10 +154,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win64 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win64 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win64 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UE4EditorServices-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win64 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win64 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win64 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\UE4EditorServices-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -171,10 +171,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Mac Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Mac Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Mac Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UE4EditorServices-Mac-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Mac Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Mac Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Mac Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\UE4EditorServices-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -188,10 +188,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UE4EditorServices-WinRT-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\UE4EditorServices-WinRT-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -205,10 +205,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT_ARM Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT_ARM Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT_ARM Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UE4EditorServices-WinRT_ARM-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT_ARM Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT_ARM Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT_ARM Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\UE4EditorServices-WinRT_ARM-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -222,10 +222,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win32 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win32 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win32 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UE4EditorServices.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win32 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win32 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win32 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\UE4EditorServices.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -239,10 +239,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win64 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win64 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win64 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UE4EditorServices.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Win64 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Win64 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Win64 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\UE4EditorServices.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -256,10 +256,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices Mac Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Mac Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Mac Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UE4EditorServices</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices Mac Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices Mac Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices Mac Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\UE4EditorServices</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -273,10 +273,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UE4EditorServices.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\UE4EditorServices.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -290,14 +290,14 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT_ARM Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT_ARM Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT_ARM Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UE4EditorServices.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UE4EditorServices WinRT_ARM Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UE4EditorServices WinRT_ARM Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UE4EditorServices WinRT_ARM Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\UE4EditorServices.exe</NMakeOutput>
 	</PropertyGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;UE_ROCKET=0;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;USE_LOGGING_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_EDITORONLY_DATA=0;WITH_SERVER_CODE=0;UBT_COMPILED_PLATFORM=Win64;WIN32=1;_WIN32_WINNT=0x0600;WINVER=0x0600;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;UE_PROJECT_NAME=UnrealCup;ORIGINAL_FILE_NAME="UE4EditorServices.exe";UE4EDITORSERVICES_API=;UE_ENABLE_ICU=1;WITH_STEAMWORKS=0;WITH_DIRECTXMATH=0;CORE_API=;PROJECTS_API=;DESKTOPPLATFORM_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\TIT12UnrealEngine__\Engine\Source;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Private;..\Build\Win64\UE4EditorServices\Inc\UE4EditorServices;E:\TIT12UnrealEngine__\Engine\Source\Programs\Mac\UE4EditorServices;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Internationalization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Async;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Concurrency;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Containers;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Delegates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\HAL;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Logging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Math;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Json;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Stats;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Windows;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core;..\Build\Win64\UE4EditorServices\Inc\Projects;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects;..\Build\Win64\UE4EditorServices\Inc\DesktopPlatform;E:\TIT12UnrealEngine__\Engine\Source\Developer\DesktopPlatform\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\DesktopPlatform;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Dokumente\UnrealEngine\Engine\Source;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Private;..\Build\Win64\UE4EditorServices\Inc\UE4EditorServices;D:\Dokumente\UnrealEngine\Engine\Source\Programs\Mac\UE4EditorServices;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Async;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Concurrency;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Delegates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Math;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Json;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Stats;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Templates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core;..\Build\Win64\UE4EditorServices\Inc\Projects;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects;..\Build\Win64\UE4EditorServices\Inc\DesktopPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Developer\DesktopPlatform\Public;D:\Dokumente\UnrealEngine\Engine\Source\Developer\DesktopPlatform;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

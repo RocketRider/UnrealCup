@@ -68,90 +68,90 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\UnrealLightmass.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Programs\UnrealLightmass\Config\DefaultEngine.ini" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\UnrealLightmass.Build.cs" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver\CPUSolver.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver\CPUSolver.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\3DVisualizer.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\3DVisualizer.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Exporter.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Exporter.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Importer.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Importer.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassScene.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassScene.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassSwarm.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassSwarm.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Material.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Material.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Mesh.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Mesh.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch\stdafx.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch\stdafx.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnitTest.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnitTest.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnrealLightmass.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BSP.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BSP.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BuildOptions.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Cache.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Cache.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Collision.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Collision.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FinalGather.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FluidSurface.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FluidSurface.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Landscape.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Landscape.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Lighting.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingMesh.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingMesh.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingSystem.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingSystem.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightmapData.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightmapData.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Mappings.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Mappings.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\MonteCarlo.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\MonteCarlo.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\PhotonMapping.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\PrecomputedVisibility.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Raster.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\SampleVolume.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\StaticMesh.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\StaticMesh.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Texture.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\TextureMapping.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting\VolumeDistanceField.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\LMCore.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\LMCore.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMCollision.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMkDOP.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMath.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMath.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMathSSE.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMOctree.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\SFMT.cpp" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMDebug.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMDebug.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMHelpers.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMStats.h" />
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMThreading.cpp" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMThreading.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Templates\LMQueue.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\FluidExport.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\ImportExport.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\LightmassPublic.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\MaterialExport.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\MeshExport.h" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public\SceneExport.h" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\Debug-Win32.manifest" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\Debug-Win64.manifest" />
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\resource.h" />
-		<ResourceCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\Resource.rc" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\Win32.manifest" />
-		<Manifest Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Resources\Win64.manifest" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\UnrealLightmass.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Programs\UnrealLightmass\Config\DefaultEngine.ini" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\UnrealLightmass.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver\CPUSolver.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver\CPUSolver.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\3DVisualizer.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\3DVisualizer.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Exporter.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Exporter.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Importer.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Importer.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassScene.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassScene.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassSwarm.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\LightmassSwarm.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Material.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Material.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Mesh.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport\Mesh.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch\stdafx.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch\stdafx.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnitTest.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnitTest.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch\UnrealLightmass.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BSP.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BSP.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\BuildOptions.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Cache.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Cache.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Collision.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Collision.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FinalGather.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FluidSurface.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\FluidSurface.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Landscape.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Landscape.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Lighting.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingMesh.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingMesh.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingSystem.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightingSystem.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightmapData.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\LightmapData.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Mappings.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Mappings.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\MonteCarlo.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\MonteCarlo.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\PhotonMapping.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\PrecomputedVisibility.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Raster.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\SampleVolume.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\StaticMesh.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\StaticMesh.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\Texture.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\TextureMapping.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting\VolumeDistanceField.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\LMCore.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\LMCore.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMCollision.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMkDOP.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMath.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMath.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMMathSSE.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\LMOctree.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math\SFMT.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMDebug.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMDebug.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMHelpers.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMStats.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMThreading.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc\LMThreading.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Templates\LMQueue.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\FluidExport.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\ImportExport.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\LightmassPublic.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\MaterialExport.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\MeshExport.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public\SceneExport.h" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\Debug-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\Debug-Win64.manifest" />
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\resource.h" />
+		<ResourceCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\Resource.rc" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Resources\Win64.manifest" />
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{22702F0A-E10A-4A9D-86B9-81073F6E221F}</ProjectGuid>
@@ -214,10 +214,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win32 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win32 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win32 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UnrealLightmass-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win32 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win32 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win32 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\UnrealLightmass-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -231,10 +231,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win64 Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win64 Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win64 Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UnrealLightmass-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win64 Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win64 Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win64 Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\UnrealLightmass-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -248,10 +248,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Mac Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Mac Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Mac Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UnrealLightmass-Mac-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Mac Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Mac Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Mac Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\UnrealLightmass-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -265,10 +265,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UnrealLightmass-WinRT-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\UnrealLightmass-WinRT-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -282,10 +282,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT_ARM Debug</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT_ARM Debug</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT_ARM Debug</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UnrealLightmass-WinRT_ARM-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT_ARM Debug</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT_ARM Debug</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT_ARM Debug</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\UnrealLightmass-WinRT_ARM-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -299,10 +299,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win32 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win32 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win32 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UnrealLightmass.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win32 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win32 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win32 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win32\UnrealLightmass.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -316,10 +316,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win64 Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win64 Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win64 Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UnrealLightmass.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Win64 Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Win64 Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Win64 Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Win64\UnrealLightmass.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -333,10 +333,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass Mac Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Mac Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Mac Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UnrealLightmass</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass Mac Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass Mac Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass Mac Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\Mac\UnrealLightmass</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -350,10 +350,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UnrealLightmass.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT\UnrealLightmass.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -367,14 +367,14 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT_ARM Development</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT_ARM Development</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT_ARM Development</NMakeCleanCommandLine>
-		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UnrealLightmass.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Build.bat UnrealLightmass WinRT_ARM Development</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Rebuild.bat UnrealLightmass WinRT_ARM Development</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Dokumente\UnrealEngine\Engine\Build\BatchFiles\Clean.bat UnrealLightmass WinRT_ARM Development</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Dokumente\UnrealEngine\Engine\Binaries\WinRT_ARM\UnrealLightmass.exe</NMakeOutput>
 	</PropertyGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);ALLOW_LOG_FILE=0;IS_PROGRAM=1;UE_ROCKET=0;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=0;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=1;WITH_PLUGIN_SUPPORT=1;USE_LOGGING_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=0;UBT_COMPILED_PLATFORM=Win64;WIN32=1;_WIN32_WINNT=0x0600;WINVER=0x0600;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="UnrealLightmass.exe";UNREALLIGHTMASS_API=;UE_ENABLE_ICU=1;WITH_STEAMWORKS=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;SWARMINTERFACE_API=;PROJECTS_API=;MESSAGING_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\TIT12UnrealEngine__\Engine\Source;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Private;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Launch;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\ImportExport;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\Lighting;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Templates;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Types;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Launch\Public;..\Build\Win64\UnrealLightmass\Inc\UnrealLightmass;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Internationalization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Async;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Concurrency;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Containers;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Delegates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\HAL;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Logging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Math;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Json;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Stats;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Windows;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Classes;..\Build\Win64\UnrealLightmass\Inc\CoreUObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Blueprint;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject;E:\TIT12UnrealEngine__\Engine\Source\ThirdParty\zlib\zlib-1.2.5\Inc;E:\TIT12UnrealEngine__\Engine\Source\ThirdParty\zlib;E:\TIT12UnrealEngine__\Engine\Source\Editor\SwarmInterface\Public;..\Build\Win64\UnrealLightmass\Inc\SwarmInterface;E:\TIT12UnrealEngine__\Engine\Source\Editor\SwarmInterface;..\Build\Win64\UnrealLightmass\Inc\Projects;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects;E:\TIT12UnrealEngine__\Engine\Source\ThirdParty\Windows\DX9;..\Build\Win64\UnrealLightmass\Inc\Messaging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public\Common;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging;E:\TIT12UnrealEngine__\Engine\Source\ThirdParty\Windows\DirectX\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Dokumente\UnrealEngine\Engine\Source;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Private;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Launch;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\ImportExport;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\CPUSolver;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\Lighting;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Misc;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Math;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Templates;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Private\LightmassCore\Types;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Launch\Public;..\Build\Win64\UnrealLightmass\Inc\UnrealLightmass;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass\Public;D:\Dokumente\UnrealEngine\Engine\Source\Programs\UnrealLightmass;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Internationalization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Async;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Concurrency;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Containers;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Delegates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\HAL;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Logging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Math;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Misc;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Json;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Stats;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Templates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\UObject;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core\Public\Windows;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Core;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Classes;..\Build\Win64\UnrealLightmass\Inc\CoreUObject;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Blueprint;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Misc;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Serialization;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\Templates;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject\Public\UObject;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\CoreUObject;D:\Dokumente\UnrealEngine\Engine\Source\ThirdParty\zlib\zlib-1.2.5\Inc;D:\Dokumente\UnrealEngine\Engine\Source\ThirdParty\zlib;D:\Dokumente\UnrealEngine\Engine\Source\Editor\SwarmInterface\Public;..\Build\Win64\UnrealLightmass\Inc\SwarmInterface;D:\Dokumente\UnrealEngine\Engine\Source\Editor\SwarmInterface;..\Build\Win64\UnrealLightmass\Inc\Projects;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Projects;D:\Dokumente\UnrealEngine\Engine\Source\ThirdParty\Windows\DX9;..\Build\Win64\UnrealLightmass\Inc\Messaging;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Messaging\Public;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Messaging\Public\Common;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Messaging\Public\Interfaces;D:\Dokumente\UnrealEngine\Engine\Source\Runtime\Messaging;D:\Dokumente\UnrealEngine\Engine\Source\ThirdParty\Windows\DirectX\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

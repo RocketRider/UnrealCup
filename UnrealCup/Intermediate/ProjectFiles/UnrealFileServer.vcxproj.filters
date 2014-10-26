@@ -2,15 +2,15 @@
 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealFileServer\UnrealFileServer.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealFileServer\UnrealFileServer.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealFileServer\UnrealFileServer.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealFileServer\UnrealFileServer.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{E7345719-13E4-4BBF-8C4C-EC837471A484}</UniqueIdentifier>
+			<UniqueIdentifier>{492C9FC2-47D1-4EFF-96FA-D4F50BE6C8AF}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealFileServer\Private\UnrealFileServer.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealFileServer\Private\UnrealFileServer.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\UnrealFileServer\Private\UnrealFileServer.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\UnrealFileServer\Private\UnrealFileServer.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 	</ItemGroup>

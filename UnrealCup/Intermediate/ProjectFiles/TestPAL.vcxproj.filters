@@ -2,21 +2,21 @@
 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
-		<None Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{522F27AB-82C9-4958-ADE1-499993725C61}</UniqueIdentifier>
+			<UniqueIdentifier>{57AE2871-5725-49CC-A9C0-EE231F8FAF55}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\Private\Main.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\Private\Main.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\Private\Parent.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\Private\Parent.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\Private\Parent.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\Private\Parent.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\..\TIT12UnrealEngine__\Engine\Source\Programs\TestPAL\Private\PrivatePCH.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\Private\PrivatePCH.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 	</ItemGroup>
