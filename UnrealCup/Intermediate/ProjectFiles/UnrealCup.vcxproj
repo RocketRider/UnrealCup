@@ -2,45 +2,261 @@
 
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup Label="ProjectConfigurations">
-		<ProjectConfiguration Include="DebugGame_RocketGame|x64">
-			<Configuration>DebugGame_RocketGame</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="DebugGame_RocketGame|Win32">
-			<Configuration>DebugGame_RocketGame</Configuration>
+		<ProjectConfiguration Include="Debug_Game|Win32">
+			<Configuration>Debug_Game</Configuration>
 			<Platform>Win32</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="DebugGame_Editor|x64">
-			<Configuration>DebugGame_Editor</Configuration>
+		<ProjectConfiguration Include="Debug_Game|x64">
+			<Configuration>Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Editor|Win32">
+			<Configuration>Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Editor|x64">
+			<Configuration>Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Game|Win32">
+			<Configuration>Mac_Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Game|x64">
+			<Configuration>Mac_Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Editor|Win32">
+			<Configuration>Mac_Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Editor|x64">
+			<Configuration>Mac_Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Debug_Game|Win32">
+			<Configuration>WinRT_Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Debug_Game|x64">
+			<Configuration>WinRT_Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Debug_Editor|Win32">
+			<Configuration>WinRT_Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Debug_Editor|x64">
+			<Configuration>WinRT_Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Debug_Game|Win32">
+			<Configuration>WinRT_ARM_Debug_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Debug_Game|x64">
+			<Configuration>WinRT_ARM_Debug_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Debug_Editor|Win32">
+			<Configuration>WinRT_ARM_Debug_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Debug_Editor|x64">
+			<Configuration>WinRT_ARM_Debug_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Game|Win32">
+			<Configuration>DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="DebugGame_Game|x64">
+			<Configuration>DebugGame_Game</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="DebugGame_Editor|Win32">
 			<Configuration>DebugGame_Editor</Configuration>
 			<Platform>Win32</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_RocketGame|x64">
-			<Configuration>Development_RocketGame</Configuration>
+		<ProjectConfiguration Include="DebugGame_Editor|x64">
+			<Configuration>DebugGame_Editor</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_RocketGame|Win32">
-			<Configuration>Development_RocketGame</Configuration>
+		<ProjectConfiguration Include="Mac_DebugGame_Game|Win32">
+			<Configuration>Mac_DebugGame_Game</Configuration>
 			<Platform>Win32</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_Editor|x64">
-			<Configuration>Development_Editor</Configuration>
+		<ProjectConfiguration Include="Mac_DebugGame_Game|x64">
+			<Configuration>Mac_DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Editor|Win32">
+			<Configuration>Mac_DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_DebugGame_Editor|x64">
+			<Configuration>Mac_DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_DebugGame_Game|Win32">
+			<Configuration>WinRT_DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_DebugGame_Game|x64">
+			<Configuration>WinRT_DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_DebugGame_Editor|Win32">
+			<Configuration>WinRT_DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_DebugGame_Editor|x64">
+			<Configuration>WinRT_DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_DebugGame_Game|Win32">
+			<Configuration>WinRT_ARM_DebugGame_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_DebugGame_Game|x64">
+			<Configuration>WinRT_ARM_DebugGame_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_DebugGame_Editor|Win32">
+			<Configuration>WinRT_ARM_DebugGame_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_DebugGame_Editor|x64">
+			<Configuration>WinRT_ARM_DebugGame_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|Win32">
+			<Configuration>Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Game|x64">
+			<Configuration>Development_Game</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Editor|Win32">
 			<Configuration>Development_Editor</Configuration>
 			<Platform>Win32</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Shipping_RocketGame|x64">
-			<Configuration>Shipping_RocketGame</Configuration>
+		<ProjectConfiguration Include="Development_Editor|x64">
+			<Configuration>Development_Editor</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Shipping_RocketGame|Win32">
-			<Configuration>Shipping_RocketGame</Configuration>
+		<ProjectConfiguration Include="Mac_Development_Game|Win32">
+			<Configuration>Mac_Development_Game</Configuration>
 			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Game|x64">
+			<Configuration>Mac_Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Editor|Win32">
+			<Configuration>Mac_Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Editor|x64">
+			<Configuration>Mac_Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Development_Game|Win32">
+			<Configuration>WinRT_Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Development_Game|x64">
+			<Configuration>WinRT_Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Development_Editor|Win32">
+			<Configuration>WinRT_Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Development_Editor|x64">
+			<Configuration>WinRT_Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Development_Game|Win32">
+			<Configuration>WinRT_ARM_Development_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Development_Game|x64">
+			<Configuration>WinRT_ARM_Development_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Development_Editor|Win32">
+			<Configuration>WinRT_ARM_Development_Editor</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Development_Editor|x64">
+			<Configuration>WinRT_ARM_Development_Editor</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|Win32">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Game|x64">
+			<Configuration>Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Game|Win32">
+			<Configuration>Mac_Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Game|x64">
+			<Configuration>Mac_Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Shipping_Game|Win32">
+			<Configuration>WinRT_Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Shipping_Game|x64">
+			<Configuration>WinRT_Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Shipping_Game|Win32">
+			<Configuration>WinRT_ARM_Shipping_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Shipping_Game|x64">
+			<Configuration>WinRT_ARM_Shipping_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Test_Game|Win32">
+			<Configuration>Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Test_Game|x64">
+			<Configuration>Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Test_Game|Win32">
+			<Configuration>Mac_Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Test_Game|x64">
+			<Configuration>Mac_Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Test_Game|Win32">
+			<Configuration>WinRT_Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_Test_Game|x64">
+			<Configuration>WinRT_Test_Game</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Test_Game|Win32">
+			<Configuration>WinRT_ARM_Test_Game</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="WinRT_ARM_Test_Game|x64">
+			<Configuration>WinRT_ARM_Test_Game</Configuration>
+			<Platform>x64</Platform>
 		</ProjectConfiguration>
 	</ItemGroup>
 	<ItemGroup>
@@ -64,7 +280,55 @@
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>UnrealCup</RootNamespace>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_RocketGame|x64'" Label="Configuration">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v120</PlatformToolset>
 	</PropertyGroup>
@@ -72,7 +336,39 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v120</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_RocketGame|x64'" Label="Configuration">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v120</PlatformToolset>
 	</PropertyGroup>
@@ -80,18 +376,78 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v120</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_RocketGame|Win32'" Label="Configuration">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Editor|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Shipping_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v120</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Test_Game|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v110</PlatformToolset>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
 	<PropertyGroup Label="UserMacros" />
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_RocketGame|x64'" Label="PropertySheets">
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_RocketGame|x64'">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|Win32'">
 		<IncludePath />
 		<ReferencePath />
 		<LibraryPath />
@@ -100,9 +456,213 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Build.bat" UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Rebuild.bat" UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Clean.bat" UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\UnrealCup-Win32-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win32 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UE4Editor-Win32-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\UnrealCup-Win64-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win64 Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UE4Editor-Win64-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\UnrealCup-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Mac Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UE4Editor-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT\UnrealCup-WinRT-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UnrealCupEditor-WinRT-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT_ARM\UnrealCup-WinRT_ARM-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Debug_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT_ARM Debug "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UnrealCupEditor-WinRT_ARM-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\UnrealCup-Win32-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win32 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
 		<NMakeOutput>..\..\Binaries\Win64\UnrealCup-Win64-DebugGame.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="PropertySheets">
@@ -117,15 +677,15 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Build.bat" UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Rebuild.bat" UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Clean.bat" UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
-		<NMakeOutput>E:\unreal\Epic Games\4.5\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
 	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_RocketGame|x64'" Label="PropertySheets">
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_RocketGame|x64'">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Game|Win32'">
 		<IncludePath />
 		<ReferencePath />
 		<LibraryPath />
@@ -134,9 +694,145 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Build.bat" UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Rebuild.bat" UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Clean.bat" UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\UnrealCup-Mac-DebugGame</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Mac DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UE4Editor</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT\UnrealCup-WinRT-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UnrealCupEditor-WinRT-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT_ARM\UnrealCup-WinRT_ARM-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_DebugGame_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT_ARM DebugGame "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UnrealCupEditor-WinRT_ARM-DebugGame.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\UnrealCup.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win32 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win32\UE4Editor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
 		<NMakeOutput>..\..\Binaries\Win64\UnrealCup.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="PropertySheets">
@@ -151,15 +847,15 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Build.bat" UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Rebuild.bat" UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Clean.bat" UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
-		<NMakeOutput>E:\unreal\Epic Games\4.5\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Win64 Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
 	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_RocketGame|Win32'" Label="PropertySheets">
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
 	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_RocketGame|Win32'">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Game|Win32'">
 		<IncludePath />
 		<ReferencePath />
 		<LibraryPath />
@@ -168,14 +864,269 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Build.bat" UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Rebuild.bat" UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>"E:\unreal\Epic Games\4.5\Engine\Build\BatchFiles\Clean.bat" UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\UnrealCup</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor Mac Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\Mac\UE4Editor</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT\UnrealCup.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT\UnrealCupEditor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT_ARM\UnrealCup.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Editor|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Development_Editor|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCupEditor WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCupEditor WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCupEditor WinRT_ARM Development "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>E:\TIT12UnrealEngine__\Engine\Binaries\WinRT_ARM\UnrealCupEditor.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win32 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
 		<NMakeOutput>..\..\Binaries\Win32\UnrealCup-Win32-Shipping.exe</NMakeOutput>
 	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win64 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win64 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win64 Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\UnrealCup-Win64-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Mac Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Mac Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Mac Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\UnrealCup-Mac-Shipping</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT\UnrealCup-WinRT-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Shipping_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Shipping_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT_ARM Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT_ARM Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT_ARM Shipping "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT_ARM\UnrealCup-WinRT_ARM-Shipping.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win32 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win32 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win32 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win32\UnrealCup-Win32-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test_Game|x64'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Win64 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Win64 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Win64 Test "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Win64\UnrealCup-Win64-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup Mac Test "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup Mac Test "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup Mac Test "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\Mac\UnrealCup-Mac-Test</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT Test "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT Test "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT Test "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT\UnrealCup-WinRT-Test.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Test_Game|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinRT_ARM_Test_Game|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Build.bat UnrealCup WinRT_ARM Test "$(SolutionDir)$(ProjectName).uproject"</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Rebuild.bat UnrealCup WinRT_ARM Test "$(SolutionDir)$(ProjectName).uproject"</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>E:\TIT12UnrealEngine__\Engine\Build\BatchFiles\Clean.bat UnrealCup WinRT_ARM Test "$(SolutionDir)$(ProjectName).uproject"</NMakeCleanCommandLine>
+		<NMakeOutput>..\..\Binaries\WinRT_ARM\UnrealCup-WinRT_ARM-Test.exe</NMakeOutput>
+	</PropertyGroup>
 	<PropertyGroup>
-		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);UE_GAME=1;IS_PROGRAM=0;UE_ROCKET=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=1;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;USE_LOGGING_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=1;WITH_EDITORONLY_DATA=0;WITH_SERVER_CODE=1;UBT_COMPILED_PLATFORM=Win64;WIN32=1;_WIN32_WINNT=0x0600;WINVER=0x0600;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;UE_ENGINE_DIRECTORY=../../../../../unreal/Epic Games/4.5/Engine/;UE_PROJECT_NAME=UnrealCup;ORIGINAL_FILE_NAME="UnrealCup.exe";WITH_LUA_BINDING=1;UNREALCUP_API=;UE_ENABLE_ICU=1;WITH_STEAMWORKS=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;WITH_PHYSX=1;WITH_APEX=1;WITH_RUNTIME_PHYSICS_COOKING;WITH_BOX2D=1;WITH_RECAST=1;ENGINE_API=;WITH_FREETYPE=1;SLATE_API=;INPUTCORE_API=;SLATECORE_API=;MESSAGING_API=;RENDERCORE_API=;RHI_API=;SHADERCORE_API=;ASSETREGISTRY_API=;ENGINEMESSAGES_API=;ENGINESETTINGS_API=;SYNTHBENCHMARK_API=;RENDERER_API=;AIMODULE_API=;UE_EDITOR=1;UNREALED_API=;BSPMODE_API=;DOCUMENTATION_API=;PROJECTS_API=;SANDBOXFILE_API=;EDITORSTYLE_API=;SOURCECONTROL_API=;UNREALEDMESSAGES_API=;BLUEPRINTGRAPH_API=;XAUDIO2_API=;USERFEEDBACK_API=;COLLECTIONMANAGER_API=;KISMET_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\unreal\Epic Games\4.5\Engine\Source;..\..\Source;..\..\ThirdParty\lua\Include;..\Build\Win64\UnrealCup\Inc\UnrealCup;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Internationalization;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Async;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Concurrency;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Containers;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Delegates;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\HAL;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Logging;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Math;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Misc;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Modules;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Serialization;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Serialization\Json;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Stats;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Templates;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\UObject;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core\Public\Windows;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Core;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\CoreUObject;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public\Blueprint;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public\Misc;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public\Serialization;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public\Templates;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject\Public\UObject;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\CoreUObject;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Engine;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\AI;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\EdGraph;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\Features;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\Landscape;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\Net;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\Slate;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\Tests;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine\Public\AI\Navigation;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Slate;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Application;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Commands;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Docking;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Layout;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Notifications;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Styling;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Text;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Views;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Text\Android;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Framework\Text\IOS;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Colors;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Docking;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Images;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Input;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Layout;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Text;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate\Public\Widgets\Views;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\InputCore\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\InputCore;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\InputCore\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\InputCore;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\SlateCore;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Animation;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Application;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Brushes;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Fonts;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Input;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Layout;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Logging;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Rendering;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Sound;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Styling;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Textures;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Types;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore\Public\Widgets;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SlateCore;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Slate;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Messaging;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Messaging\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Messaging\Public\Common;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Messaging\Public\Interfaces;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Messaging;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\RenderCore;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\RenderCore\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\RenderCore;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\RHI;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\RHI\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\RHI;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\ShaderCore;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\ShaderCore\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\ShaderCore;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\AssetRegistry;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\AssetRegistry\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\AssetRegistry;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineMessages\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\EngineMessages;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineMessages\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineMessages;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineSettings\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\EngineSettings;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineSettings\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\EngineSettings;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\SynthBenchmark;E:\unreal\Epic Games\4.5\Engine\Source\Developer\SynthBenchmark\Public;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Renderer;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Renderer\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Renderer;E:\unreal\Epic Games\4.5\Engine\Source\Developer\SynthBenchmark;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\AIModule\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\AIModule\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\AIModule;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\AIModule;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Engine;..\..\Source\UnrealCup;..\Build\Win64\Inc\UnrealCup;E:\unreal\Epic Games\4.5\Engine\Source\Programs\UnrealLightmass\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\UnrealEd;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Commandlets;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Dialogs;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\DragAndDrop;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Features;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Kismet2;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Layers;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Tests;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd\Public\Toolkits;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\BspMode;E:\unreal\Epic Games\4.5\Engine\Source\Editor\BspMode\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\BspMode;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Documentation;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Documentation\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Documentation;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Projects;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Projects\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Projects\Public\Interfaces;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Projects;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\SandboxFile;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SandboxFile\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\SandboxFile;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\EditorStyle;E:\unreal\Epic Games\4.5\Engine\Source\Editor\EditorStyle\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\EditorStyle\Public\Classes;E:\unreal\Epic Games\4.5\Engine\Source\Editor\EditorStyle\Public\Interfaces;E:\unreal\Epic Games\4.5\Engine\Source\Editor\EditorStyle;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\SourceControl;E:\unreal\Epic Games\4.5\Engine\Source\Developer\SourceControl\Public;E:\unreal\Epic Games\4.5\Engine\Source\Developer\SourceControl\Public\Tests;E:\unreal\Epic Games\4.5\Engine\Source\Developer\SourceControl;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEdMessages\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\UnrealEdMessages;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEdMessages\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEdMessages;E:\unreal\Epic Games\4.5\Engine\Source\Editor\BlueprintGraph\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\BlueprintGraph;E:\unreal\Epic Games\4.5\Engine\Source\Editor\BlueprintGraph\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\BlueprintGraph;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\XAudio2;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Windows\XAudio2\Public;E:\unreal\Epic Games\4.5\Engine\Source\Runtime\Windows\XAudio2;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\UserFeedback;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UserFeedback\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UserFeedback;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\CollectionManager;E:\unreal\Epic Games\4.5\Engine\Source\Developer\CollectionManager\Public;E:\unreal\Epic Games\4.5\Engine\Source\Developer\CollectionManager;E:\unreal\Epic Games\4.5\Engine\Source\Editor\UnrealEd;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Kismet\Classes;E:\unreal\Epic Games\4.5\Engine\Intermediate\Build\Win64\Inc\Kismet;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Kismet\Public;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp;E:\unreal\Epic Games\4.5\Engine\Source\Editor\Kismet;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);UE_GAME=1;IS_PROGRAM=0;UE_ROCKET=0;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=1;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=1;WITH_PLUGIN_SUPPORT=1;USE_LOGGING_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=1;WITH_EDITORONLY_DATA=0;WITH_SERVER_CODE=0;UBT_COMPILED_PLATFORM=Win64;WIN32=1;_WIN32_WINNT=0x0600;WINVER=0x0600;PLATFORM_WINDOWS=1;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;UE_ENGINE_DIRECTORY=../../../../../TIT12UnrealEngine__/Engine/;UE_PROJECT_NAME=UnrealCup;ORIGINAL_FILE_NAME="UnrealCup.exe";WITH_LUA_BINDING=1;UNREALCUP_API=;UE_ENABLE_ICU=1;WITH_STEAMWORKS=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;WITH_PHYSX=1;WITH_APEX=1;WITH_RUNTIME_PHYSICS_COOKING;WITH_BOX2D=1;WITH_RECAST=1;ENGINE_API=;WITH_FREETYPE=0;SLATE_API=;INPUTCORE_API=;SLATECORE_API=;MESSAGING_API=;RENDERCORE_API=;RHI_API=;SHADERCORE_API=;ASSETREGISTRY_API=;ENGINEMESSAGES_API=;ENGINESETTINGS_API=;SYNTHBENCHMARK_API=;RENDERER_API=;AIMODULE_API=;UE_EDITOR=1;UNREALED_API=;BSPMODE_API=;DOCUMENTATION_API=;PROJECTS_API=;SANDBOXFILE_API=;EDITORSTYLE_API=;SOURCECONTROL_API=;UNREALEDMESSAGES_API=;BLUEPRINTGRAPH_API=;XAUDIO2_API=;USERFEEDBACK_API=;COLLECTIONMANAGER_API=;KISMET_API=</NMakePreprocessorDefinitions>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);E:\TIT12UnrealEngine__\Engine\Source;..\..\Source;..\..\ThirdParty\lua\Include;..\Build\Win64\UnrealCup\Inc\UnrealCup;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Internationalization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Async;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Concurrency;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Containers;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Delegates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\GenericPlatform;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\HAL;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Logging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Math;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\ProfilingDebugging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Json;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Serialization\Csv;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Stats;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core\Public\Windows;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Core;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Classes;..\Build\Win64\UnrealCup\Inc\CoreUObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Blueprint;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Misc;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Serialization;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\Templates;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject\Public\UObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\CoreUObject;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Classes;..\Build\Win64\UnrealCup\Inc\Engine;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\AI;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\EdGraph;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\Features;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\Landscape;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\Net;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\Slate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\Tests;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine\Public\AI\Navigation;..\Build\Win64\UnrealCup\Inc\Slate;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Application;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Commands;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Docking;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Layout;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Notifications;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Styling;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Text;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Views;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Text\Android;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Framework\Text\IOS;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Colors;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Docking;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Images;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Input;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Layout;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Text;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate\Public\Widgets\Views;E:\TIT12UnrealEngine__\Engine\Source\Runtime\InputCore\Classes;..\Build\Win64\UnrealCup\Inc\InputCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\InputCore\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\InputCore;..\Build\Win64\UnrealCup\Inc\SlateCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Animation;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Application;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Brushes;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Fonts;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Input;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Layout;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Logging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Rendering;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Sound;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Styling;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Textures;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Types;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore\Public\Widgets;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SlateCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Slate;..\Build\Win64\UnrealCup\Inc\Messaging;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public\Common;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Messaging;..\Build\Win64\UnrealCup\Inc\RenderCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RenderCore\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RenderCore;..\Build\Win64\UnrealCup\Inc\RHI;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RHI\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\RHI;..\Build\Win64\UnrealCup\Inc\ShaderCore;E:\TIT12UnrealEngine__\Engine\Source\Runtime\ShaderCore\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\ShaderCore;..\Build\Win64\UnrealCup\Inc\AssetRegistry;E:\TIT12UnrealEngine__\Engine\Source\Runtime\AssetRegistry\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\AssetRegistry;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineMessages\Classes;..\Build\Win64\UnrealCup\Inc\EngineMessages;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineMessages\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineMessages;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineSettings\Classes;..\Build\Win64\UnrealCup\Inc\EngineSettings;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineSettings\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\EngineSettings;..\Build\Win64\UnrealCup\Inc\SynthBenchmark;E:\TIT12UnrealEngine__\Engine\Source\Developer\SynthBenchmark\Public;..\Build\Win64\UnrealCup\Inc\Renderer;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Renderer\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Renderer;E:\TIT12UnrealEngine__\Engine\Source\Developer\SynthBenchmark;E:\TIT12UnrealEngine__\Engine\Source\Runtime\AIModule\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\AIModule\Classes;..\Build\Win64\UnrealCup\Inc\AIModule;E:\TIT12UnrealEngine__\Engine\Source\Runtime\AIModule;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Engine;..\..\Source\UnrealCup;..\Build\Win64\Inc\UnrealCup;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\CoreUObject;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Engine;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Slate;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\InputCore;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\SlateCore;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Messaging;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\RenderCore;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\RHI;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\ShaderCore;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\AssetRegistry;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\EngineMessages;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\EngineSettings;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\SynthBenchmark;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Renderer;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\AIModule;E:\TIT12UnrealEngine__\Engine\Source\Programs\UnrealLightmass\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Classes;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\UnrealEd;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Commandlets;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Dialogs;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\DragAndDrop;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Features;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Kismet2;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Layers;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Tests;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd\Public\Toolkits;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\BspMode;E:\TIT12UnrealEngine__\Engine\Source\Editor\BspMode\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\BspMode;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Documentation;E:\TIT12UnrealEngine__\Engine\Source\Editor\Documentation\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\Documentation;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Projects;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Projects;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\SandboxFile;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SandboxFile\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\SandboxFile;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\EditorStyle;E:\TIT12UnrealEngine__\Engine\Source\Editor\EditorStyle\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\EditorStyle\Public\Classes;E:\TIT12UnrealEngine__\Engine\Source\Editor\EditorStyle\Public\Interfaces;E:\TIT12UnrealEngine__\Engine\Source\Editor\EditorStyle;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\SourceControl;E:\TIT12UnrealEngine__\Engine\Source\Developer\SourceControl\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\SourceControl\Public\Tests;E:\TIT12UnrealEngine__\Engine\Source\Developer\SourceControl;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEdMessages\Classes;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\UnrealEdMessages;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEdMessages\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEdMessages;E:\TIT12UnrealEngine__\Engine\Source\Editor\BlueprintGraph\Classes;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\BlueprintGraph;E:\TIT12UnrealEngine__\Engine\Source\Editor\BlueprintGraph\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\BlueprintGraph;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\XAudio2;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Windows\XAudio2\Public;E:\TIT12UnrealEngine__\Engine\Source\Runtime\Windows\XAudio2;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\UserFeedback;E:\TIT12UnrealEngine__\Engine\Source\Editor\UserFeedback\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\UserFeedback;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\CollectionManager;E:\TIT12UnrealEngine__\Engine\Source\Developer\CollectionManager\Public;E:\TIT12UnrealEngine__\Engine\Source\Developer\CollectionManager;E:\TIT12UnrealEngine__\Engine\Source\Editor\UnrealEd;E:\TIT12UnrealEngine__\Engine\Source\Editor\Kismet\Classes;E:\TIT12UnrealEngine__\Engine\Intermediate\Build\Win64\Inc\Kismet;E:\TIT12UnrealEngine__\Engine\Source\Editor\Kismet\Public;E:\TIT12UnrealEngine__\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp;E:\TIT12UnrealEngine__\Engine\Source\Editor\Kismet;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

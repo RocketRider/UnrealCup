@@ -29,7 +29,7 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 void ARobot::Tick(float DeltaSeconds)
 {
-	MoveForward(5);
+	//MoveForward(5);
 	//Rotate(10);
 }
 
@@ -67,6 +67,15 @@ void ARobot::Rotate(float value)
 
 static int32 luaMoveForward(lua_State* L) {
 	double d = lua_tonumber(L, 1);  /* get argument */
+
+	/*
+	ARobot *robot = ARobot::LuaObjectMapping[L];
+	if (robot)
+	{
+		robot->MoveForward(d);
+	}
+	*/
+
 
 	if (GEngine)
 	{
@@ -117,6 +126,9 @@ void ARobot::LuaLoad(const char* file)
 		}
 		else
 		{
+			
+			//LuaObjectMapping.Add(luaState, this);
+			//LuaObjectMapping[luaState] = this;
 			int res = lua_pcall(luaState, 0, LUA_MULTRET, 0);
 		}
 	}
@@ -127,6 +139,9 @@ void ARobot::LuaClose()
 	if (luaState)
 	{
 		lua_close(luaState);
+		//LuaObjectMapping[luaState] = NULL;
+		//LuaObjectMapping.Remove(luaState);
+		map[5] = 3.0;
 		luaState = NULL;
 	}
 }

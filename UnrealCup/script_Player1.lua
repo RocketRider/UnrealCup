@@ -1,2 +1,2 @@
 print("Hello LUA!!!")
-MoveForward();
+MoveForward(10);
