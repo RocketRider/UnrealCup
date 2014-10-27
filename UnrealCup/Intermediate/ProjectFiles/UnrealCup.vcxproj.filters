@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\UnrealCup.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{5C657833-4931-488D-95E5-7D9A465CE6F4}</UniqueIdentifier>
+			<UniqueIdentifier>{EB100D28-8FE8-47EE-9D87-CBB1B9DF66B2}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UnrealCup.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{C96F9157-3D23-4B35-BE90-D2FEB922104F}</UniqueIdentifier>
+			<UniqueIdentifier>{385779EC-94BD-4920-B254-39A6269B6979}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -22,7 +22,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\UnrealCup">
-			<UniqueIdentifier>{68EB67FA-BEEF-46D1-8E4F-654FF895CD12}</UniqueIdentifier>
+			<UniqueIdentifier>{EC83E8FE-D015-4181-B7C7-F19A37857EC3}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
 			<Filter>Source\UnrealCup</Filter>
@@ -46,10 +46,10 @@
 			<Filter>Source\UnrealCup</Filter>
 		</ClInclude >
 		<Filter Include="Source\UnrealCup\Resources">
-			<UniqueIdentifier>{B7075B25-869D-4CCB-ADB9-BD93BBABE395}</UniqueIdentifier>
+			<UniqueIdentifier>{35FF7DA2-CC04-41F6-B813-93C5FDC00016}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\UnrealCup\Resources\Windows">
-			<UniqueIdentifier>{61DDC98F-CD62-4D67-8B4C-22BFD50D6202}</UniqueIdentifier>
+			<UniqueIdentifier>{088F23EC-CE4E-4637-8935-E918AE18D145}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
 			<Filter>Source\UnrealCup\Resources\Windows</Filter>
