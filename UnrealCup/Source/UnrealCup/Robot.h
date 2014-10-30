@@ -27,6 +27,8 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	float stamina;
 
+
+
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
@@ -40,6 +42,7 @@ protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
+
 
 	
 	//Lua

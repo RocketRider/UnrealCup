@@ -19,6 +19,22 @@ void ARobot::BeginPlay()
 	//Load lua script
 	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
 	LuaLoad(TCHAR_TO_ANSI(*path));
+
+	
+
+	//Components of Robot:
+	/*
+	TArray<UActorComponent*, FDefaultAllocator> complist;
+	GetComponents(complist);
+	for (int i = 0; i < complist.Num(); i++)
+	{
+		if (complist[i])
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, complist[i]->GetName() + " -> " + complist[i]->GetClass()->GetName());
+		}
+	}
+	*/
+
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -30,8 +46,6 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 void ARobot::Tick(float DeltaSeconds)
 {
 	LuaTick(DeltaSeconds);
-	//MoveForward(5);
-	//Rotate(10);
 }
 
 void ARobot::MoveForward(float value)
@@ -59,7 +73,6 @@ void ARobot::Rotate(float value)
 {
 	if (Controller && GEngine)
 	{
-		//TODO: Does not work correctly!
 		AddActorLocalRotation(FRotator(0, value, 0));
 	}
 }
@@ -79,12 +92,6 @@ static int32 LuaMoveForward(lua_State* L) {
 	if (robot)
 	{
 		robot->MoveForward(d);
-		/*
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "MOVE!");
-		}
-		*/
 	}
 	
 	return 0;  /* number of results */
@@ -98,12 +105,6 @@ static int32 LuaRotate(lua_State* L) {
 	if (robot)
 	{
 		robot->Rotate(d);
-		/*
-		if (GEngine)
-		{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "ROTATE!");
-		}
-		*/
 	}
 
 	return 0;  /* number of results */
