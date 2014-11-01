@@ -3,16 +3,14 @@
 #pragma once
 
 #include "GameFramework/Character.h"
-#include "Map.h"
-#include "../../ThirdParty/lua/Include/lua.h"
-#include "../../ThirdParty/lua/Include/lauxlib.h"
-#include "../../ThirdParty/lua/Include/lualib.h"
+//#include "LuaWorker.h"
 #include "Robot.generated.h"
-//#pragma comment(lib, "Lua.lib")
 
-/**
- * 
- */
+
+//Forward declaration
+//class LuaWorker;
+
+
 UCLASS()
 class UNREALCUP_API ARobot : public ACharacter
 {
@@ -37,20 +35,14 @@ class UNREALCUP_API ARobot : public ACharacter
 	void Rotate(float value);
 
 
-	static TMap<lua_State*, ARobot*> LuaObjectMapping;
+
 protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
 
-
+	//LuaWorker* worker;
 	
-	//Lua
-	lua_State *luaState;
-	void LuaLoad(const char* file);
-	void LuaClose();
-	void LuaOverridePrint();
-	void LuaRegisterFunctions();
-	void LuaTick(float DeltaSeconds);
+
 
 };
