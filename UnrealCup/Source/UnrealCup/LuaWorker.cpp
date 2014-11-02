@@ -4,11 +4,18 @@
 #include "LuaWorker.h"
 TMap<lua_State*, LuaWorker*> LuaWorker::LuaObjectMapping;
 
-LuaWorker::LuaWorker(ARobot* robot, const char* file) 
+LuaWorker::LuaWorker(ARobot* robot, const char* file)
 {
 	luaState = NULL;
 	luafile = file;
 	this->robot = robot;
+
+	//mutex = FGenericPlatformProcess::NewInterprocessSynchObject("mutex", true, 1);
+
+	//WINDOWS ONLY!!!! should be FGenericPlatformProcess
+	mutex = FPlatformProcess::NewInterprocessSynchObject("mutex", true);//ADD RANDOM TO NAME!!!
+	//globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", false);
+
 
 	thread = FRunnableThread::Create(this, TEXT("LuaWorker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
 }
@@ -54,52 +61,34 @@ void LuaWorker::Stop()
 
 
 
-
-
-
-struct FParameters
-{
-	lua_State* L;
-	double d;
-};
-
-static void LuaMoveForward_gameThread(FParameters* params)
-{
-
-	ARobot* robot = LuaWorker::LuaObjectMapping[params->L]->robot;
-	if (robot)
-	{
-		robot->MoveForward(params->d);
-	}
-
-	//Free params after usage!
-	delete params;
-}
-
+FPlatformProcess::FSemaphore* globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
 static int32 LuaMoveForward(lua_State* L)
 {
 	double d = lua_tonumber(L, 1);  /* get argument */
 
-	FParameters* params = new FParameters();
-	params->d = d;
-	params->L = L;
-
-	FSimpleDelegateGraphTask::CreateAndDispatchWhenReady
-		(
-		FSimpleDelegateGraphTask::FDelegate::CreateStatic(&LuaMoveForward_gameThread, params)
-		, TStatId()
-		, nullptr
-		, ENamedThreads::GameThread
-		);
+	globalMutex->Lock();
+	LuaWorker* worker = LuaWorker::LuaObjectMapping[L];
+	globalMutex->Unlock();
 
 
-	//Do not free params here, it is needed in the asyncron task!
+	worker->mutex->Lock();
+	worker->runcounter = worker->runcounter + d;
+	worker->mutex->Unlock();
+
 	return 0;  /* number of results */
 }
 
 static int32 LuaRotate(lua_State* L)
 {
 	double d = lua_tonumber(L, 1);  /* get argument */
+
+	globalMutex->Lock();
+	LuaWorker* worker = LuaWorker::LuaObjectMapping[L];
+	globalMutex->Unlock();
+
+	worker->mutex->Lock();
+	worker->rotatecounter = worker->rotatecounter + d;
+	worker->mutex->Unlock();
 
 	/*
 	ARobot *robot = ARobot::LuaObjectMapping[L];
@@ -156,7 +145,9 @@ void LuaWorker::LuaLoad(const char* file)
 		}
 		else
 		{
+			globalMutex->Lock();
 			LuaObjectMapping.Add(luaState, this);
+			globalMutex->Unlock();
 			int res = lua_pcall(luaState, 0, LUA_MULTRET, 0);
 		}
 	}
@@ -169,7 +160,9 @@ void LuaWorker::LuaClose()
 	if (luaState)
 	{
 		lua_close(luaState);
-		//LuaObjectMapping.Remove(luaState);
+		globalMutex->Lock();
+		LuaObjectMapping.Remove(luaState);
+		globalMutex->Unlock();
 		luaState = NULL;
 	}
 }

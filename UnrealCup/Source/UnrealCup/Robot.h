@@ -8,7 +8,7 @@
 
 
 //Forward declaration
-//class LuaWorker;
+class LuaWorker;
 
 
 UCLASS()
@@ -41,7 +41,7 @@ protected:
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
 
-	//LuaWorker* worker;
+	LuaWorker* worker;
 	
 
 

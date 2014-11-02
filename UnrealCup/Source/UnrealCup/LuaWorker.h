@@ -21,7 +21,6 @@ private:
 	FRunnableThread* thread;
 
 	const char* luafile;
-
 	
 
 	//Lua
@@ -37,6 +36,14 @@ public:
 	static LuaWorker* LuaInit(ARobot* robot, const char* file);
 
 	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
+	//FPlatformProcess::FSemaphore* globalMutex = NULL;
+	FPlatformProcess::FSemaphore* mutex = NULL;
+
+	
+
+
+	double runcounter = 0;
+	double rotatecounter = 0;
 
 	ARobot* robot;
 
