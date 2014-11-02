@@ -20,7 +20,7 @@ void ARobot::BeginPlay()
 	//Load lua script
 	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
 	//worker = LuaWorker(this, TCHAR_TO_ANSI(*path));
-	LuaWorker(this, TCHAR_TO_ANSI(*path));
+	worker = new LuaWorker(this, TCHAR_TO_ANSI(*path));
 
 	//Components of Robot:
 	/*
@@ -47,12 +47,20 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 void ARobot::Tick(float DeltaSeconds)
 {
+
+	worker->mutex->Lock();
+	MoveForward(worker->runcounter);
+	worker->runcounter = 0;
+
+	Rotate(worker->rotatecounter);
+	worker->rotatecounter = 0;
+	worker->mutex->Unlock();
 	//LuaTick(DeltaSeconds);
 }
 
 void ARobot::MoveForward(float value)
 {
-	//if (Controller && GEngine)
+	if (Controller && GEngine)
 	{
 		/*
 		// find out which way is forward

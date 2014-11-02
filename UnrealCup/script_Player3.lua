@@ -5,7 +5,11 @@ function run()
 
 	   counter = counter + 1
 	   
-	    
+	   if (counter % 10000) == 0 then
+		  Rotate(1)
+	   else
+		  
+	   end
 		--  print("run")
 	   if (counter % 100) == 0 then
 		  --Rotate(90)
