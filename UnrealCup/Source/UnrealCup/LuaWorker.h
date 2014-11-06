@@ -21,7 +21,8 @@ private:
 	FRunnableThread* thread;
 
 	const char* luafile;
-	
+
+	double ownX, ownY, ownZ;
 
 	//Lua
 	lua_State *luaState;
@@ -37,9 +38,13 @@ public:
 
 	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
 	//FPlatformProcess::FSemaphore* globalMutex = NULL;
+	//TODO: Multiplatform 
 	FPlatformProcess::FSemaphore* mutex = NULL;
 
-	
+	void setOwnLocation(double x, double y, double z);
+	double getOwnX();
+	double getOwnY();
+	double getOwnZ();
 
 
 	double runcounter = 0;

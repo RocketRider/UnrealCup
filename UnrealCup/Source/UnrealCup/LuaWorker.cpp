@@ -120,7 +120,51 @@ static int32 LuaUnrealLog(lua_State* L)
 	return 0;
 }
 
+static int32 LuaGetOwnLocation(lua_State* L)
+{
+	globalMutex->Lock();
+	LuaWorker* worker = LuaWorker::LuaObjectMapping[L];
+	globalMutex->Unlock();
 
+	lua_pushnumber(L, worker->getOwnX());
+	lua_pushnumber(L, worker->getOwnY());
+	lua_pushnumber(L, worker->getOwnZ());
+
+	return 3; // number of return values
+}
+
+void LuaWorker::setOwnLocation(double x, double y, double z)
+{
+	mutex->Lock();
+	ownX = x;
+	ownY = y;
+	ownZ = z;
+	mutex->Unlock();
+}
+
+double LuaWorker::getOwnX()
+{
+	mutex->Lock();
+	double returnValue = ownX;
+	mutex->Unlock();
+	return returnValue;
+}
+
+double LuaWorker::getOwnY()
+{
+	mutex->Lock();
+	double returnValue = ownY;
+	mutex->Unlock();
+	return returnValue;
+}
+
+double LuaWorker::getOwnZ()
+{
+	mutex->Lock();
+	double returnValue = ownZ;
+	mutex->Unlock();
+	return returnValue;
+}
 
 
 
@@ -191,6 +235,8 @@ void LuaWorker::LuaRegisterFunctions()
 	lua_setglobal(luaState, "MoveForward");
 	lua_pushcfunction(luaState, LuaRotate);
 	lua_setglobal(luaState, "Rotate");
+	lua_pushcfunction(luaState, LuaGetOwnLocation);
+	lua_setglobal(luaState, "GetOwnLocation");
 
 }
 
