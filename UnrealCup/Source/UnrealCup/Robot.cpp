@@ -23,7 +23,7 @@ void ARobot::BeginPlay()
 	worker = new LuaWorker(this, TCHAR_TO_ANSI(*path));
 
 	//Components of Robot:
-	/*
+	
 	TArray<UActorComponent*, FDefaultAllocator> complist;
 	GetComponents(complist);
 	for (int i = 0; i < complist.Num(); i++)
@@ -33,7 +33,7 @@ void ARobot::BeginPlay()
 			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, complist[i]->GetName() + " -> " + complist[i]->GetClass()->GetName());
 		}
 	}
-	*/
+	
 
 }
 
@@ -47,12 +47,14 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 
 void ARobot::Tick(float DeltaSeconds)
 {
+	FVector ownLocation = Controller->GetPawn()->GetActorLocation();
+	worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
 
 	worker->mutex->Lock();
-	MoveForward(worker->runcounter);
+	if (worker->runcounter>0) MoveForward(worker->runcounter);
 	worker->runcounter = 0;
 
-	Rotate(worker->rotatecounter);
+	if(worker->rotatecounter!=0) Rotate(worker->rotatecounter);
 	worker->rotatecounter = 0;
 	worker->mutex->Unlock();
 	//LuaTick(DeltaSeconds);
@@ -79,11 +81,14 @@ void ARobot::MoveForward(float value)
 		AddMovementInput(Direction, value);
 	}
 }
+
+//TODO: does not work correctly...
 void ARobot::Rotate(float value)
 {
 	if (Controller && GEngine)
 	{
-		AddActorLocalRotation(FRotator(0, value, 0));
+		AddActorLocalRotation(FRotator(0, value, 0), true);
+		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, "Rooo");
 	}
 }
 
