@@ -6,6 +6,9 @@ TMap<lua_State*, LuaWorker*> LuaWorker::LuaObjectMapping;
 
 LuaWorker::LuaWorker(ARobot* robot, const char* file)
 {
+	mutex = NULL;
+	runcounter = 0;
+	rotatecounter = 0;
 	luaState = NULL;
 	luafile = file;
 	this->robot = robot;
