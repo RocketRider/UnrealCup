@@ -39,7 +39,7 @@ public:
 	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
 	//FPlatformProcess::FSemaphore* globalMutex = NULL;
 	//TODO: Multiplatform 
-	FPlatformProcess::FSemaphore* mutex = NULL;
+	FPlatformProcess::FSemaphore* mutex;
 
 	void setOwnLocation(double x, double y, double z);
 	double getOwnX();
@@ -47,8 +47,8 @@ public:
 	double getOwnZ();
 
 
-	double runcounter = 0;
-	double rotatecounter = 0;
+	double runcounter;
+	double rotatecounter;
 
 	ARobot* robot;
 
