@@ -1,28 +1,23 @@
-
-   turnedRight = false
-   turnedLeft = true
+runup = false
+--counter = 0
 function run()
-   while 1==1 do
+   while AllowedToRun() do
 	   x,y,z = GetOwnLocation()
+	   --counter = counter +1
 	   
-	   if not turnedRight then
-          --MoveForward(0.2)
-          Rotate(90)
-            a = 0
-         -- for i=0, 10000000, 1 do
-               -- a = a+i
-               -- end
-		  Rotate(180)
-		  turnedRight=true
-		  turnedLeft=false
-	   end
-	   --if (y>=2000) then
-		  --Rotate(180)
-		  --turnedRight=false
-		  --turnedLeft=true
+	   --if (counter%100000 == 0) then
+		 --print("running")
 	   --end
+	   if (y<-2000) and (not runup) then
+          Rotate(90)
+		  runup=true
+	   end
+	   if (y>2000) and (runup) then
+		  Rotate(270)
+		  runup=false
+	   end
 
-	   MoveForward(0.2)
+	   MoveForward(2)
    end
 end
 
