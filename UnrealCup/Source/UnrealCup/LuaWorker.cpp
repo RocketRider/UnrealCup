@@ -51,7 +51,7 @@ uint32 LuaWorker::Run()
 {
 	//Initial wait before starting
 	//FPlatformProcess::Sleep(0.03);
-
+	updateLastTick();
 	LuaRun();
 
 	return 0;
@@ -147,17 +147,27 @@ static int32 LuaGetOwnLocation(lua_State* L)
 
 static int32 LuaAllowedToRun(lua_State* L)
 {
-	FPlatformProcess::Sleep(0.01);
 	LuaWorker* worker = LuaWorker::getLuaWorker(L);
 	if (worker)
 	{
 		lua_pushboolean(L, worker->isAllowedToRun());
+
+		FDateTime now = FDateTime::Now();
+		FDateTime lastTick = worker->getLastTick();
+		FTimespan dif = now - lastTick;
+		double calcTime = dif.GetTotalMilliseconds();
+		if (calcTime < 1) calcTime = 1;
+		FPlatformProcess::Sleep(calcTime/100);
+
+		worker->updateLastTick();
 	}
 	else
 	{
+		//If worker is not there, sleep...
+		FPlatformProcess::Sleep(0.1);
 		lua_pushboolean(L, false);
-
 	}
+
 	return 1; // number of return values
 }
 
@@ -274,6 +284,16 @@ void LuaWorker::setAllowedToRun(bool allowed)
 	}
 }
 
+
+FDateTime LuaWorker::getLastTick()
+{
+	return lastTick;
+}
+
+void LuaWorker::updateLastTick()
+{
+	lastTick = FDateTime::Now();
+}
 
 
 

@@ -5,6 +5,11 @@ function run()
 	   x,y,z = GetOwnLocation()
 	   --counter = counter +1
 	   
+	   --i = 1
+	   --while i  <= 100000 do
+		--	 i = i + 1
+	   --end
+	   
 	   --if (counter%100000 == 0) then
 		 --print("running")
 	   --end

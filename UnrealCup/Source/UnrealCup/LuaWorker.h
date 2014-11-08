@@ -27,6 +27,7 @@ private:
 	double runValue;
 	double rotateValue;
 	bool allowedToRun;
+	FDateTime lastTick;
 
 
 	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
@@ -49,6 +50,7 @@ private:
 public:
 
 	static LuaWorker* LuaInit(ARobot* robot, const char* file);
+	static LuaWorker* getLuaWorker(lua_State* L);
 
 	void setOwnLocation(double x, double y, double z);
 	double getOwnX();
@@ -63,7 +65,10 @@ public:
 	void setRotateValue(double value);
 	void setAllowedToRun(bool allowed);
 
-	static LuaWorker* getLuaWorker(lua_State* L);
+	FDateTime getLastTick();
+	void updateLastTick();
+
+	
 
 
 	// Begin FRunnable interface.
