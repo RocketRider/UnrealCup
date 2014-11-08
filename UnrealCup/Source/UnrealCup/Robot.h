@@ -43,6 +43,6 @@ protected:
 
 	LuaWorker* worker;
 	
-
+	double rotation;
 
 };

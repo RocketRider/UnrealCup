@@ -24,6 +24,18 @@ private:
 
 	double ownX, ownY, ownZ;
 
+	double runValue;
+	double rotateValue;
+	bool allowedToRun;
+
+
+	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
+	//TODO: Multiplatform 
+	FPlatformProcess::FSemaphore* mutex;
+	static FPlatformProcess::FSemaphore* globalMutex;
+
+	ARobot* robot;
+
 	//Lua
 	lua_State *luaState;
 	void LuaLoad(const char* file);
@@ -32,25 +44,27 @@ private:
 	void LuaRegisterFunctions();
 	void LuaRun();
 
+
+
 public:
 
 	static LuaWorker* LuaInit(ARobot* robot, const char* file);
-
-	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
-	//FPlatformProcess::FSemaphore* globalMutex = NULL;
-	//TODO: Multiplatform 
-	FPlatformProcess::FSemaphore* mutex;
 
 	void setOwnLocation(double x, double y, double z);
 	double getOwnX();
 	double getOwnY();
 	double getOwnZ();
 
+	double getRunValue();
+	double getRotateValue();
+	bool isAllowedToRun();
 
-	double runcounter;
-	double rotatecounter;
+	void setRunValue(double value);
+	void setRotateValue(double value);
+	void setAllowedToRun(bool allowed);
 
-	ARobot* robot;
+	static LuaWorker* getLuaWorker(lua_State* L);
+
 
 	// Begin FRunnable interface.
 	virtual bool Init();
