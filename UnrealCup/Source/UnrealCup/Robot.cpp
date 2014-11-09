@@ -57,7 +57,6 @@ void ARobot::Tick(float DeltaSeconds)
 	}
 
 	Rotate(worker->getRotateValue());
-	//worker->setRotateValue(0);
 }
 
 void ARobot::MoveForward(float value)
@@ -72,15 +71,12 @@ void ARobot::MoveForward(float value)
 
 void ARobot::Rotate(float value)
 {
-	//rotation = rotation + value;
-	rotation = value;
+	rotation = FGenericPlatformMath::Fmod(value, 360);
 	if (rotation > 180)rotation = rotation - 360;
 	if (rotation < -180)rotation = rotation + 360;
 
 	if (Controller && GEngine)
 	{
-		//AddActorLocalRotation(FRotator(0, value, 0), true);
-		
 		FRotator Rotation = GetActorRotation();
 		double deltaRotation = rotation - Rotation.Yaw;
 		if (abs(deltaRotation)>0.0001)
