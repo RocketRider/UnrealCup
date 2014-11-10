@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\UnrealCup.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{9B3F0CB9-2B09-4FFC-99B5-5FB6BB3FF10E}</UniqueIdentifier>
+			<UniqueIdentifier>{2F160136-FD31-4E94-806D-E7464A0A5278}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UnrealCup.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{E4A74FDE-4742-4310-8E39-736D9D9E1B73}</UniqueIdentifier>
+			<UniqueIdentifier>{61798F0C-59FB-45BC-B0C3-5D65AF9879B7}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -22,7 +22,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\UnrealCup">
-			<UniqueIdentifier>{84ED6532-BEFD-4CD6-B145-09E787C851B3}</UniqueIdentifier>
+			<UniqueIdentifier>{4F66E956-C7C6-4A06-94BD-F0636EC11450}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\UnrealCup\LuaWorker.cpp">
 			<Filter>Source\UnrealCup</Filter>
@@ -52,10 +52,10 @@
 			<Filter>Source\UnrealCup</Filter>
 		</ClInclude >
 		<Filter Include="Source\UnrealCup\Resources">
-			<UniqueIdentifier>{B4EE11B0-6943-45E6-A18C-95EA0FBE467C}</UniqueIdentifier>
+			<UniqueIdentifier>{7A9F70C7-2F62-4880-9B57-3BF69DADB17F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\UnrealCup\Resources\Windows">
-			<UniqueIdentifier>{3642F64E-3C50-4B0A-A401-2514B2792D97}</UniqueIdentifier>
+			<UniqueIdentifier>{5BE80CC2-A641-4C4F-BB9D-FE73B8F5C31C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
 			<Filter>Source\UnrealCup\Resources\Windows</Filter>
