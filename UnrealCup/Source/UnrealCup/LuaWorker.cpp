@@ -14,6 +14,7 @@ LuaWorker::LuaWorker(ARobot* robot, const char* file)
 	luafile = file;
 	this->robot = robot;
 	allowedToRun = false;
+	stamina = 0;
 	thread = NULL;
 
 	//mutex = FGenericPlatformProcess::NewInterprocessSynchObject("mutex", true, 1);
@@ -82,7 +83,10 @@ static int32 LuaMoveForward(lua_State* L)
 	LuaWorker* worker = LuaWorker::getLuaWorker(L);
 	if (worker)
 	{
-		worker->setRunValue(worker->getRunValue() + d);
+		if (worker->getStaminaValue() >= 0)
+		{
+			worker->setRunValue(worker->getRunValue() + d);
+		}
 	}
 
 	return 0;  /* number of results */
@@ -143,6 +147,20 @@ static int32 LuaGetOwnLocation(lua_State* L)
 		
 	}
 	return 3; // number of return values
+}
+
+static int32 LuaGetStamina(lua_State* L)
+{
+	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushnumber(L, worker->getStaminaValue());
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+	}
+	return 1; // number of return values
 }
 
 static int32 LuaAllowedToRun(lua_State* L)
@@ -256,6 +274,18 @@ bool LuaWorker::isAllowedToRun()
 	return false;
 }
 
+float LuaWorker::getStaminaValue()
+{
+	if (mutex)
+	{
+		mutex->Lock();
+		float returnValue = stamina;
+		mutex->Unlock();
+		return returnValue;
+	}
+	return 0;
+}
+
 void LuaWorker::setRunValue(double value)
 {
 	if (mutex)
@@ -280,6 +310,16 @@ void LuaWorker::setAllowedToRun(bool allowed)
 	{
 		mutex->Lock();
 		allowedToRun = allowed;
+		mutex->Unlock();
+	}
+}
+
+void LuaWorker::setStaminaValue(float value)
+{
+	if (mutex)
+	{
+		mutex->Lock();
+		stamina = value;
 		mutex->Unlock();
 	}
 }
@@ -370,6 +410,8 @@ void LuaWorker::LuaRegisterFunctions()
 	lua_setglobal(luaState, "Rotate");
 	lua_pushcfunction(luaState, LuaGetOwnLocation);
 	lua_setglobal(luaState, "GetOwnLocation");
+	lua_pushcfunction(luaState, LuaGetStamina);
+	lua_setglobal(luaState, "GetStamina");
 
 	lua_pushcfunction(luaState, LuaAllowedToRun);
 	lua_setglobal(luaState, "AllowedToRun");

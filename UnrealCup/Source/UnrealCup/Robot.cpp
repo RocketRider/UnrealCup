@@ -19,6 +19,8 @@ void ARobot::BeginPlay()
 	FRotator Rotation = Controller->GetControlRotation();
 	rotation = Rotation.Yaw;
 
+	staminaTime = 0;
+
 	//Load lua script
 	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
 	worker = new LuaWorker(this, TCHAR_TO_ANSI(*path));
@@ -49,6 +51,10 @@ void ARobot::Tick(float DeltaSeconds)
 {
 	FVector ownLocation = Controller->GetPawn()->GetActorLocation();
 	worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
+	
+	addStamina(DeltaSeconds);
+	worker->setStaminaValue(stamina);
+	
 
 	if (worker->getRunValue() > 0)
 	{
@@ -57,14 +63,19 @@ void ARobot::Tick(float DeltaSeconds)
 	}
 
 	Rotate(worker->getRotateValue());
+	
 }
 
 void ARobot::MoveForward(float value)
 {
 	if (Controller && GEngine)
 	{
-		FVector Direction = GetActorForwardVector();
-		AddMovementInput(Direction, value);
+		if ((stamina - 0.5 * value) > 0)
+		{
+			FVector Direction = GetActorForwardVector();
+			AddMovementInput(Direction, value);
+			stamina -= 0.5 * value;
+		}
 	}
 }
 
@@ -89,6 +100,18 @@ void ARobot::Rotate(float value)
 			AddActorLocalRotation(FRotator(0, deltaRotation, 0));
 		}
 		
+	}
+}
+
+
+void ARobot::addStamina(float DeltaSeconds)
+{
+	staminaTime += DeltaSeconds;
+	if (staminaTime >= 0.01)
+	{
+		staminaTime -= 0.01;
+		stamina += 1;
+		if (stamina > 100) stamina = 100;
 	}
 }
 

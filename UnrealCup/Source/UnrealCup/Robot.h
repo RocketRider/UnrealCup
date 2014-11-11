@@ -41,6 +41,9 @@ protected:
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
 
+	void addStamina(float DeltaSeconds);
+	float staminaTime;
+
 	LuaWorker* worker;
 	
 	double rotation;

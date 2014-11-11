@@ -24,6 +24,8 @@ private:
 
 	double ownX, ownY, ownZ;
 
+	float stamina;
+
 	double runValue;
 	double rotateValue;
 	bool allowedToRun;
@@ -57,9 +59,12 @@ public:
 	double getOwnY();
 	double getOwnZ();
 
+	void setStaminaValue(float value);
+
 	double getRunValue();
 	double getRotateValue();
 	bool isAllowedToRun();
+	float getStaminaValue();
 
 	void setRunValue(double value);
 	void setRotateValue(double value);
