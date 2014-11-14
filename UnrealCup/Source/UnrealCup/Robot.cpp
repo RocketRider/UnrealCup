@@ -58,29 +58,35 @@ void ARobot::Tick(float DeltaSeconds)
 
 	if (worker->getRunValue() > 0)
 	{
-		MoveForward(worker->getRunValue());
+		MoveForward(worker->getRunValue(), DeltaSeconds);
 		worker->setRunValue(0);
 	}
 
-	Rotate(worker->getRotateValue());
+	Rotate(worker->getRotateValue(), DeltaSeconds);
 	
 }
 
-void ARobot::MoveForward(float value)
+void ARobot::MoveForward(float value, float DeltaSeconds)
 {
 	if (Controller && GEngine)
 	{
-		if ((stamina - 0.5 * value) > 0)
+		FVector Direction = GetActorForwardVector();
+		if ((stamina - 0.4 * value) > 0)
 		{
-			FVector Direction = GetActorForwardVector();
 			AddMovementInput(Direction, value);
-			stamina -= 0.5 * value;
+			stamina -= 0.4 * value;
 		}
+		else
+		{
+			stamina = 0;
+			AddMovementInput(Direction, 0.1);
+		}
+
 	}
 }
 
 
-void ARobot::Rotate(float value)
+void ARobot::Rotate(float value, float DeltaSeconds)
 {
 	rotation = FGenericPlatformMath::Fmod(value, 360);
 	if (rotation > 180)rotation = rotation - 360;
@@ -90,13 +96,14 @@ void ARobot::Rotate(float value)
 	{
 		FRotator Rotation = GetActorRotation();
 		double deltaRotation = rotation - Rotation.Yaw;
+		if (abs(deltaRotation)>180) deltaRotation = Rotation.Yaw - rotation;
+
 		if (abs(deltaRotation)>0.0001)
 		{
-			//UE_LOG(LogTemp, Warning, TEXT("Rotate %f -> %f, %f"), Rotation.Yaw, rotation, rotation - Rotation.Yaw);
-			
-			//Should be defined by time and not at the rate of calling this function...
-			if (deltaRotation > 10) deltaRotation = 10;
-			if (deltaRotation < -10) deltaRotation = -10;
+			float maxRotate = DeltaSeconds*400;
+
+			if (deltaRotation > maxRotate) deltaRotation = maxRotate;
+			if (deltaRotation < -maxRotate) deltaRotation = -maxRotate;
 			AddActorLocalRotation(FRotator(0, deltaRotation, 0));
 		}
 		

@@ -30,7 +30,7 @@ function run()
 	      MoveForward(1)
 	   end
 	   
-	   print(stamina)
+	   --print(stamina)
    end
 end
 
