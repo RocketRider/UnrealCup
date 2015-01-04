@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "UnrealCup.h"
-#include "LuaWorker.h"
-TMap<lua_State*, LuaWorker*> LuaWorker::LuaObjectMapping;
-FPlatformProcess::FSemaphore* LuaWorker::globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
+#include "RobotWorker.h"
+TMap<lua_State*, RobotWorker*> RobotWorker::LuaObjectMapping;
+FPlatformProcess::FSemaphore* RobotWorker::globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
 
-LuaWorker::LuaWorker(ARobot* robot, const char* file)
+RobotWorker::RobotWorker(ARobot* robot, const char* file)
 {
 	mutex = NULL;
 	runValue = 0;
@@ -26,13 +26,13 @@ LuaWorker::LuaWorker(ARobot* robot, const char* file)
 	thread = FRunnableThread::Create(this, TEXT("LuaWorker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
 }
 
-LuaWorker* LuaWorker::LuaInit(ARobot* robot, const char* file)
+RobotWorker* RobotWorker::LuaInit(ARobot* robot, const char* file)
 {
-	return new LuaWorker(robot, file);
+	return new RobotWorker(robot, file);
 }
 
 
-LuaWorker::~LuaWorker()
+RobotWorker::~RobotWorker()
 {
 	thread->Kill(true);
 	delete thread;
@@ -41,14 +41,14 @@ LuaWorker::~LuaWorker()
 
 
 
-bool LuaWorker::Init()
+bool RobotWorker::Init()
 {
 	LuaLoad(luafile);
 	return true;
 }
 
 
-uint32 LuaWorker::Run()
+uint32 RobotWorker::Run()
 {
 	//Initial wait before starting
 	//FPlatformProcess::Sleep(0.03);
@@ -59,17 +59,17 @@ uint32 LuaWorker::Run()
 }
 
 //Is challed when thread should exit (thread->kill())
-void LuaWorker::Stop()
+void RobotWorker::Stop()
 {
 	LuaClose();
 }
 
 
 
-LuaWorker* LuaWorker::getLuaWorker(lua_State* L)
+RobotWorker* RobotWorker::getLuaWorker(lua_State* L)
 {
 	globalMutex->Lock();
-	LuaWorker* worker = LuaObjectMapping.FindRef(L);
+	RobotWorker* worker = LuaObjectMapping.FindRef(L);
 	globalMutex->Unlock();
 
 	return worker;
@@ -80,7 +80,7 @@ static int32 LuaMoveForward(lua_State* L)
 {
 	double d = lua_tonumber(L, 1);  /* get argument */
 
-	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	RobotWorker* worker = RobotWorker::getLuaWorker(L);
 	if (worker)
 	{
 		if (worker->getStaminaValue() >= 0)
@@ -96,7 +96,7 @@ static int32 LuaRotate(lua_State* L)
 {
 	double d = lua_tonumber(L, 1);  /* get argument */
 
-	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	RobotWorker* worker = RobotWorker::getLuaWorker(L);
 	if (worker)
 	{
 		//worker->setRotateValue(worker->getRotateValue() + d);
@@ -132,7 +132,7 @@ static int32 LuaUnrealLog(lua_State* L)
 
 static int32 LuaGetOwnLocation(lua_State* L)
 {
-	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	RobotWorker* worker = RobotWorker::getLuaWorker(L);
 	if (worker)
 	{
 		lua_pushnumber(L, worker->getOwnX());
@@ -151,7 +151,7 @@ static int32 LuaGetOwnLocation(lua_State* L)
 
 static int32 LuaGetStamina(lua_State* L)
 {
-	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	RobotWorker* worker = RobotWorker::getLuaWorker(L);
 	if (worker)
 	{
 		lua_pushnumber(L, worker->getStaminaValue());
@@ -165,7 +165,7 @@ static int32 LuaGetStamina(lua_State* L)
 
 static int32 LuaAllowedToRun(lua_State* L)
 {
-	LuaWorker* worker = LuaWorker::getLuaWorker(L);
+	RobotWorker* worker = RobotWorker::getLuaWorker(L);
 	if (worker)
 	{
 		lua_pushboolean(L, worker->isAllowedToRun());
@@ -190,7 +190,7 @@ static int32 LuaAllowedToRun(lua_State* L)
 }
 
 
-void LuaWorker::setOwnLocation(double x, double y, double z)
+void RobotWorker::setOwnLocation(double x, double y, double z)
 {
 	if (mutex)
 	{
@@ -202,7 +202,7 @@ void LuaWorker::setOwnLocation(double x, double y, double z)
 	}
 }
 
-double LuaWorker::getOwnX()
+double RobotWorker::getOwnX()
 {
 	if (mutex)
 	{
@@ -214,7 +214,7 @@ double LuaWorker::getOwnX()
 	return 0;
 }
 
-double LuaWorker::getOwnY()
+double RobotWorker::getOwnY()
 {
 	if (mutex)
 	{
@@ -226,7 +226,7 @@ double LuaWorker::getOwnY()
 	return 0;
 }
 
-double LuaWorker::getOwnZ()
+double RobotWorker::getOwnZ()
 {
 	if (mutex)
 	{
@@ -240,7 +240,7 @@ double LuaWorker::getOwnZ()
 
 
 
-double LuaWorker::getRunValue()
+double RobotWorker::getRunValue()
 {
 	if (mutex)
 	{
@@ -251,7 +251,7 @@ double LuaWorker::getRunValue()
 	}
 	return 0;
 }
-double LuaWorker::getRotateValue()
+double RobotWorker::getRotateValue()
 {
 	if (mutex)
 	{
@@ -262,7 +262,7 @@ double LuaWorker::getRotateValue()
 	}
 	return 0;
 }
-bool LuaWorker::isAllowedToRun()
+bool RobotWorker::isAllowedToRun()
 {
 	if (mutex)
 	{
@@ -274,7 +274,7 @@ bool LuaWorker::isAllowedToRun()
 	return false;
 }
 
-float LuaWorker::getStaminaValue()
+float RobotWorker::getStaminaValue()
 {
 	if (mutex)
 	{
@@ -286,7 +286,7 @@ float LuaWorker::getStaminaValue()
 	return 0;
 }
 
-void LuaWorker::setRunValue(double value)
+void RobotWorker::setRunValue(double value)
 {
 	if (mutex)
 	{
@@ -295,7 +295,7 @@ void LuaWorker::setRunValue(double value)
 		mutex->Unlock();
 	}
 }
-void LuaWorker::setRotateValue(double value)
+void RobotWorker::setRotateValue(double value)
 {
 	if (mutex)
 	{
@@ -304,7 +304,7 @@ void LuaWorker::setRotateValue(double value)
 		mutex->Unlock();
 	}
 }
-void LuaWorker::setAllowedToRun(bool allowed)
+void RobotWorker::setAllowedToRun(bool allowed)
 {
 	if (mutex)
 	{
@@ -314,7 +314,7 @@ void LuaWorker::setAllowedToRun(bool allowed)
 	}
 }
 
-void LuaWorker::setStaminaValue(float value)
+void RobotWorker::setStaminaValue(float value)
 {
 	if (mutex)
 	{
@@ -325,12 +325,12 @@ void LuaWorker::setStaminaValue(float value)
 }
 
 
-FDateTime LuaWorker::getLastTick()
+FDateTime RobotWorker::getLastTick()
 {
 	return lastTick;
 }
 
-void LuaWorker::updateLastTick()
+void RobotWorker::updateLastTick()
 {
 	lastTick = FDateTime::Now();
 }
@@ -338,7 +338,7 @@ void LuaWorker::updateLastTick()
 
 
 //Load Lua script
-void LuaWorker::LuaLoad(const char* file)
+void RobotWorker::LuaLoad(const char* file)
 {
 	luaState = luaL_newstate();
 	if (luaState)
@@ -366,7 +366,7 @@ void LuaWorker::LuaLoad(const char* file)
 
 
 //Free Lua script
-void LuaWorker::LuaClose()
+void RobotWorker::LuaClose()
 {
 	if (luaState)
 	{
@@ -386,7 +386,7 @@ void LuaWorker::LuaClose()
 
 
 //Overwrite print function il Lua
-void LuaWorker::LuaOverridePrint()
+void RobotWorker::LuaOverridePrint()
 {
 	static const luaL_Reg PrintOverride[] =
 	{
@@ -401,7 +401,7 @@ void LuaWorker::LuaOverridePrint()
 
 
 //Register Functions
-void LuaWorker::LuaRegisterFunctions()
+void RobotWorker::LuaRegisterFunctions()
 {
 	//MoveForward(double Speed)
 	lua_pushcfunction(luaState, LuaMoveForward);
@@ -419,7 +419,7 @@ void LuaWorker::LuaRegisterFunctions()
 
 
 //Call Tick(float DeltaSeconds) funtion in Lua script
-void LuaWorker::LuaRun()
+void RobotWorker::LuaRun()
 {
 	if (luaState)
 	{

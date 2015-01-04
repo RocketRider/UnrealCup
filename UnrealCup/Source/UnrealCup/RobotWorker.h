@@ -14,7 +14,7 @@
 /**
  * 
  */
-class UNREALCUP_API LuaWorker : public FRunnable
+class UNREALCUP_API RobotWorker : public FRunnable
 {
 private:
 	/** Thread to run the worker FRunnable on */
@@ -32,7 +32,7 @@ private:
 	FDateTime lastTick;
 
 
-	static TMap<lua_State*, LuaWorker*> LuaObjectMapping;
+	static TMap<lua_State*, RobotWorker*> LuaObjectMapping;
 	//TODO: Multiplatform 
 	FPlatformProcess::FSemaphore* mutex;
 	static FPlatformProcess::FSemaphore* globalMutex;
@@ -51,8 +51,8 @@ private:
 
 public:
 
-	static LuaWorker* LuaInit(ARobot* robot, const char* file);
-	static LuaWorker* getLuaWorker(lua_State* L);
+	static RobotWorker* LuaInit(ARobot* robot, const char* file);
+	static RobotWorker* getLuaWorker(lua_State* L);
 
 	void setOwnLocation(double x, double y, double z);
 	double getOwnX();
@@ -82,6 +82,6 @@ public:
 	virtual void Stop();
 	// End FRunnable interface
 
-	LuaWorker(ARobot* robot, const char* file);
-	~LuaWorker();
+	RobotWorker(ARobot* robot, const char* file);
+	~RobotWorker();
 };

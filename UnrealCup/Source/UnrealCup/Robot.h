@@ -8,7 +8,7 @@
 
 
 //Forward declaration
-class LuaWorker;
+class RobotWorker;
 
 
 UCLASS()
@@ -44,7 +44,7 @@ protected:
 	void addStamina(float DeltaSeconds);
 	float staminaTime;
 
-	LuaWorker* worker;
+	RobotWorker* worker;
 	
 	double rotation;
 

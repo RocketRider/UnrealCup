@@ -2,7 +2,7 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
-#include "LuaWorker.h"
+#include "RobotWorker.h"
 
 
 
@@ -23,7 +23,7 @@ void ARobot::BeginPlay()
 
 	//Load lua script
 	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
-	worker = new LuaWorker(this, TCHAR_TO_ANSI(*path));
+	worker = new RobotWorker(this, TCHAR_TO_ANSI(*path));
 
 	//Components of Robot:
 	/*
