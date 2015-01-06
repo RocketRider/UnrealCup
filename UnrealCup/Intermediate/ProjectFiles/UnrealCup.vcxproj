@@ -49,10 +49,14 @@
 		<None Include="..\..\Source\UnrealCupEditor.Target.cs" />
 		<None Include="..\..\Config\DefaultEditor.ini" />
 		<None Include="..\..\Config\DefaultEngine.ini" />
+		<ClCompile Include="..\..\Source\UnrealCup\LUAScriptWorker.cpp" />
+		<ClInclude Include="..\..\Source\UnrealCup\LUAScriptWorker.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\Robot.cpp" />
 		<ClInclude Include="..\..\Source\UnrealCup\Robot.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\RobotControl.cpp" />
 		<ClInclude Include="..\..\Source\UnrealCup\RobotControl.h" />
+		<ClCompile Include="..\..\Source\UnrealCup\RobotScriptWorker.cpp" />
+		<ClInclude Include="..\..\Source\UnrealCup\RobotScriptWorker.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\RobotWorker.cpp" />
 		<ClInclude Include="..\..\Source\UnrealCup\RobotWorker.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\SoccerLevelScript.cpp" />

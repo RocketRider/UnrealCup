@@ -8,7 +8,7 @@
 
 
 //Forward declaration
-class RobotWorker;
+//class RobotWorker;
 
 
 UCLASS()
@@ -16,6 +16,7 @@ class UNREALCUP_API ARobot : public ACharacter
 {
 	GENERATED_UCLASS_BODY()
 
+	//TODO: Temporary, will be removed when scipts are selected per xml file!
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
 	FString luaFile;
 
@@ -44,7 +45,7 @@ protected:
 	void addStamina(float DeltaSeconds);
 	float staminaTime;
 
-	RobotWorker* worker;
+	//RobotWorker* worker;
 	
 	double rotation;
 

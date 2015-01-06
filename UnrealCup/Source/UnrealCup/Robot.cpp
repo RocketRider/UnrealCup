@@ -2,14 +2,14 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
-#include "RobotWorker.h"
+//#include "RobotWorker.h"
 
 
 
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
-	worker = NULL;
+	//worker = NULL;
 }
 
 void ARobot::BeginPlay()
@@ -22,8 +22,8 @@ void ARobot::BeginPlay()
 	staminaTime = 0;
 
 	//Load lua script
-	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
-	worker = new RobotWorker(this, TCHAR_TO_ANSI(*path));
+	//FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
+	//worker = new RobotWorker(this, TCHAR_TO_ANSI(*path));
 
 	//Components of Robot:
 	/*
@@ -42,28 +42,27 @@ void ARobot::BeginPlay()
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	delete worker;
-	worker = NULL;
+	//delete worker;
+	//worker = NULL;
 }
 
 
 void ARobot::Tick(float DeltaSeconds)
 {
-	FVector ownLocation = Controller->GetPawn()->GetActorLocation();
-	worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
-	
 	addStamina(DeltaSeconds);
-	worker->setStaminaValue(stamina);
-	
 
-	if (worker->getRunValue() > 0)
+	//FVector ownLocation = Controller->GetPawn()->GetActorLocation();
+	//worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
+	//worker->setStaminaValue(stamina);
+	
+	/*if (worker->getRunValue() > 0)
 	{
 		MoveForward(worker->getRunValue(), DeltaSeconds);
 		worker->setRunValue(0);
 	}
 
 	Rotate(worker->getRotateValue(), DeltaSeconds);
-	
+	*/
 }
 
 void ARobot::MoveForward(float value, float DeltaSeconds)

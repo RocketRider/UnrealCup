@@ -4,7 +4,7 @@
 #include "SoccerLevelScript.h"
 #include "Robot.h"
 #include "RobotControl.h"
-#include "RobotWorker.h"
+#include "LUAScriptWorker.h"
 
 
 void ASoccerLevelScript::ReceiveBeginPlay()
@@ -17,8 +17,12 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s %s"), *ActorItr->GetName(), *ActorItr->GetActorLocation().ToString());
-		RobotWorker* worker = NULL;//new RobotWorker();
-		RobotControl* controller = new RobotControl(Cast<ARobot>(*ActorItr), worker);
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+		//TODO: Replace with definition of xml file
+		FString luaFile = robot->luaFile;
+
+		RobotWorker* worker = new LUAScriptWorker();
+		RobotControl* controller = new RobotControl(robot, worker);
 		//TODO: Add to list
 	}
 	
