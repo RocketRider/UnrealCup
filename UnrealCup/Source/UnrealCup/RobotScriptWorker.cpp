@@ -3,8 +3,9 @@
 #include "UnrealCup.h"
 #include "RobotScriptWorker.h"
 
-RobotScriptWorker::RobotScriptWorker()
+RobotScriptWorker::RobotScriptWorker(RobotControl* robotController) : RobotWorker(robotController)
 {
+	
 }
 
 RobotScriptWorker::~RobotScriptWorker()

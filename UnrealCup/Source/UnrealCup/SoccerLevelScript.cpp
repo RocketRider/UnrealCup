@@ -21,7 +21,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 		//TODO: Replace with definition of xml file
 		FString luaFile = robot->luaFile;
 
-		RobotWorker* worker = new LUAScriptWorker();
+		RobotWorker* worker = new LUAScriptWorker(NULL, luaFile);
 		RobotControl* controller = new RobotControl(robot, worker);
 		//TODO: Add to list
 	}

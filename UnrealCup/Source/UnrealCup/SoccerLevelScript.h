@@ -17,8 +17,8 @@ class UNREALCUP_API ASoccerLevelScript : public ALevelScriptActor
 //OVERRIDES
 protected:
 
-	virtual void ReceiveBeginPlay() OVERRIDE;
+	virtual void ReceiveBeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
-	virtual void Tick(float DeltaSeconds) OVERRIDE;
+	virtual void Tick(float DeltaSeconds) override;
 	
 };

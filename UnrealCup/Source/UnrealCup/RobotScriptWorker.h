@@ -9,6 +9,6 @@
 class UNREALCUP_API RobotScriptWorker : public RobotWorker
 {
 public:
-	RobotScriptWorker();
+	RobotScriptWorker(RobotControl* robotController);
 	~RobotScriptWorker();
 };

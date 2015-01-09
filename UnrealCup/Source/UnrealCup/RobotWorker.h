@@ -2,10 +2,8 @@
 
 #pragma once
 
-#include "../../ThirdParty/lua/Include/lua.h"
-#include "../../ThirdParty/lua/Include/lauxlib.h"
-#include "../../ThirdParty/lua/Include/lualib.h"
-#include "Robot.h"
+
+#include "RobotControl.h"
 
 
 //Forward declaration
@@ -19,61 +17,16 @@ class UNREALCUP_API RobotWorker : public FRunnable
 private:
 	/** Thread to run the worker FRunnable on */
 	FRunnableThread* thread;
-
-	const char* luafile;
-
-	double ownX, ownY, ownZ;
-
-	float stamina;
-
-	double runValue;
-	double rotateValue;
 	bool allowedToRun;
 	FDateTime lastTick;
+	RobotControl* robotController;
 
 
-	static TMap<lua_State*, RobotWorker*> LuaObjectMapping;
+protected:
 	//TODO: Multiplatform 
 	FPlatformProcess::FSemaphore* mutex;
-	static FPlatformProcess::FSemaphore* globalMutex;
-
-	ARobot* robot;
-
-	//Lua
-	lua_State *luaState;
-	void LuaLoad(const char* file);
-	void LuaClose();
-	void LuaOverridePrint();
-	void LuaRegisterFunctions();
-	void LuaRun();
-
-
-
-public:
-
-	static RobotWorker* LuaInit(ARobot* robot, const char* file);
-	static RobotWorker* getLuaWorker(lua_State* L);
-
-	void setOwnLocation(double x, double y, double z);
-	double getOwnX();
-	double getOwnY();
-	double getOwnZ();
-
-	void setStaminaValue(float value);
-
-	double getRunValue();
-	double getRotateValue();
-	bool isAllowedToRun();
-	float getStaminaValue();
-
-	void setRunValue(double value);
-	void setRotateValue(double value);
 	void setAllowedToRun(bool allowed);
-
-	FDateTime getLastTick();
-	void updateLastTick();
-
-	
+	void WaitForCompletion();
 
 
 	// Begin FRunnable interface.
@@ -82,6 +35,17 @@ public:
 	virtual void Stop();
 	// End FRunnable interface
 
-	RobotWorker(ARobot* robot, const char* file);
+public:
+	RobotWorker(RobotControl* robotController);
 	~RobotWorker();
+
+	FVector getPosition();
+	FRotator getRotation();
+	float getStamina();
+	void rotate(float angle);
+	void move(float straight, float sideways);
+
+	bool threadIsAllowedToRun();
+	FDateTime getLastTick();
+	void updateLastTick();
 };
