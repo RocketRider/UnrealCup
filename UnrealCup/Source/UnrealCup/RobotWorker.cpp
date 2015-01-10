@@ -23,9 +23,7 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 
 RobotWorker::~RobotWorker()
 {
-	thread->Kill(true);
-	delete thread;
-	thread = NULL;
+	FPlatformProcess::DeleteInterprocessSynchObject(mutex);
 }
 
 bool RobotWorker::threadIsAllowedToRun()
@@ -82,29 +80,38 @@ void RobotWorker::updateLastTick()
 
 FVector RobotWorker::getPosition()
 {
-	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
-
+	/*
+	void* result = robotController->call(RobotControl::Command::getPosition);
+	FVector position = FVector(*(FVector*)result);
+	delete result;
+	return position;
+	*/
 	return FVector(0, 0, 0);
-	//TODO!!!
 }
 
 FRotator RobotWorker::getRotation()
 {
-	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
-
+	/*
+	void* result = robotController->call(RobotControl::Command::getRotation);
+	FRotator rotation = FRotator(*(FRotator*)result);
+	delete result;
+	return rotation;
+	*/
 	return FRotator(0, 0, 0);
-	//TODO!!!
 }
 float RobotWorker::getStamina()
 {
-	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
-
-	return 0;
-	//TODO!!!
+	/*
+	void* result = robotController->call(RobotControl::Command::getStamina);
+	float stamina = ((FFloat32*)result)->FloatValue;
+	delete result;
+	return stamina;
+	*/
+	return 100;
 }
 void RobotWorker::rotate(float angle)
 {
-	//robotController->call(RobotControl::Command::getPosition, new FFloat32(angle));
+	robotController->call(RobotControl::Command::rotate, new FFloat32(angle));
 
 }
 void RobotWorker::move(float straight, float sideways)

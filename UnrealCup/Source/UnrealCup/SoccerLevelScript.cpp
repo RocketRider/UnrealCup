@@ -12,7 +12,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	Super::ReceiveBeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY %s"), *GetName());
 
-	controllerList.Empty();
+
 	//Iterate through all Robots	
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
@@ -39,7 +39,13 @@ void ASoccerLevelScript::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 
+	for (RobotControl* controller : controllerList)
+	{
+		controller->End();//Deletes the worker
+		delete controller;
+	}
 
+	controllerList.Empty();
 }
 
 

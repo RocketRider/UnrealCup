@@ -24,7 +24,10 @@ private:
 	TArray<Command> queueCommands;
 	TArray<void*> queueParams;
 	ARobot* robot;
+	RobotWorker* worker;
 	FPlatformProcess::FSemaphore* mutex;
+	FPlatformProcess::FSemaphore* resultMutex;
+	void* commandResult;
 
 
 public:
@@ -32,7 +35,8 @@ public:
 	~RobotControl();
 	void setWorker(RobotWorker* worker);
 	void Tick(float DeltaSeconds);
-	void* call(Command function, void* param, ...);
+	void End();
+	void* call(Command function, void* param1 = NULL, void* param2 = NULL, void* param3 = NULL, void* param4 = NULL, void* param5 = NULL, void* param6 = NULL);
 
 
 

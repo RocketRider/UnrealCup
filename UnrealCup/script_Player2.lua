@@ -9,6 +9,7 @@ function run()
 	   --if (counter%100000 == 0) then
 		 --print("running")
 	   --end
+
 	   if (y<-2000) and (not runup) then
           Rotate(90)
 		  runup=true

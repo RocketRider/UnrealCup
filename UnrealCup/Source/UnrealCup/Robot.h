@@ -31,10 +31,12 @@ class UNREALCUP_API ARobot : public ACharacter
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-
+public:
 	void Move(float straight, float sideways);
-	void Rotate(float value, float DeltaSeconds);
-
+	void Rotate(float value);
+	float getStamina();
+	FRotator getRotation();
+	FVector getPosition();
 
 
 protected:
@@ -45,8 +47,7 @@ protected:
 	void addStamina(float DeltaSeconds);
 	float staminaTime;
 
-	//RobotWorker* worker;
-	
-	double rotation;
+
+
 
 };

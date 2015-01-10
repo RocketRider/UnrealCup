@@ -146,6 +146,11 @@ LUAScriptWorker::LUAScriptWorker(RobotControl* robotController, FString file) : 
 
 LUAScriptWorker::~LUAScriptWorker()
 {
+	freeLuaScript();
+
+	thread->Kill(true);
+	delete thread;
+	thread = NULL;
 }
 
 

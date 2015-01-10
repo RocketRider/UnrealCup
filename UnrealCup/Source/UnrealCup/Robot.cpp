@@ -2,67 +2,30 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
-//#include "RobotWorker.h"
 
 
 
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
-	//worker = NULL;
+
 }
 
 void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	FRotator Rotation = Controller->GetControlRotation();
-	rotation = Rotation.Yaw;
-
 	staminaTime = 0;
-
-	//Load lua script
-	//FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
-	//worker = new RobotWorker(this, TCHAR_TO_ANSI(*path));
-
-	//Components of Robot:
-	/*
-	TArray<UActorComponent*, FDefaultAllocator> complist;
-	GetComponents(complist);
-	for (int i = 0; i < complist.Num(); i++)
-	{
-		if (complist[i])
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, complist[i]->GetName() + " -> " + complist[i]->GetClass()->GetName());
-		}
-	}
-	*/
-
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	//delete worker;
-	//worker = NULL;
+
 }
 
 
 void ARobot::Tick(float DeltaSeconds)
 {
 	addStamina(DeltaSeconds);
-
-	//FVector ownLocation = Controller->GetPawn()->GetActorLocation();
-	//worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
-	//worker->setStaminaValue(stamina);
-	
-	/*if (worker->getRunValue() > 0)
-	{
-		MoveForward(worker->getRunValue(), DeltaSeconds);
-		worker->setRunValue(0);
-	}
-
-	Rotate(worker->getRotateValue(), DeltaSeconds);
-	*/
 }
 
 void ARobot::Move(float straight, float sideways)
@@ -86,9 +49,10 @@ void ARobot::Move(float straight, float sideways)
 }
 
 
-void ARobot::Rotate(float value, float DeltaSeconds)
+void ARobot::Rotate(float value)
 {
-	rotation = FGenericPlatformMath::Fmod(value, 360);
+
+	float rotation = FGenericPlatformMath::Fmod(value, 360);
 	if (rotation > 180)rotation = rotation - 360;
 	if (rotation < -180)rotation = rotation + 360;
 
@@ -100,7 +64,7 @@ void ARobot::Rotate(float value, float DeltaSeconds)
 
 		if (abs(deltaRotation)>0.0001)
 		{
-			float maxRotate = DeltaSeconds*400;
+			float maxRotate = 10;//TODO: DeltaSeconds*400;
 
 			if (deltaRotation > maxRotate) deltaRotation = maxRotate;
 			if (deltaRotation < -maxRotate) deltaRotation = -maxRotate;
@@ -122,5 +86,17 @@ void ARobot::addStamina(float DeltaSeconds)
 	}
 }
 
+float ARobot::getStamina()
+{
+	return stamina;
+}
 
+FRotator ARobot::getRotation()
+{
+	return  GetActorRotation();
+}
 
+FVector ARobot::getPosition()
+{
+	return GetActorLocation();
+}
