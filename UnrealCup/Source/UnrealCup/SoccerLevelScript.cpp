@@ -12,18 +12,21 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	Super::ReceiveBeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY %s"), *GetName());
 
-
+	controllerList.Empty();
 	//Iterate through all Robots	
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s %s"), *ActorItr->GetName(), *ActorItr->GetActorLocation().ToString());
 		ARobot* robot = Cast<ARobot>(*ActorItr);
 		//TODO: Replace with definition of xml file
-		FString luaFile = robot->luaFile;
+		FString luaFile = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(robot->luaFile);
 
-		RobotWorker* worker = new LUAScriptWorker(NULL, luaFile);
-		RobotControl* controller = new RobotControl(robot, worker);
-		//TODO: Add to list
+
+
+		RobotControl* controller = new RobotControl(robot);
+		RobotWorker* worker = new LUAScriptWorker(controller, luaFile);
+		controller->setWorker(worker);
+		controllerList.Add(controller);
 	}
 	
 
@@ -44,6 +47,11 @@ void ASoccerLevelScript::EndPlay(const EEndPlayReason::Type EndPlayReason)
 void ASoccerLevelScript::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+
+	for (RobotControl* controller : controllerList)
+	{
+		controller->Tick(DeltaSeconds);
+	}
 
 
 }

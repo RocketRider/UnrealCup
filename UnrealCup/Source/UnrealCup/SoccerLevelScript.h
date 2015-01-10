@@ -5,6 +5,8 @@
 #include "Engine/LevelScriptActor.h"
 #include "SoccerLevelScript.generated.h"
 
+class RobotControl;
+
 /**
  * 
  */
@@ -16,6 +18,8 @@ class UNREALCUP_API ASoccerLevelScript : public ALevelScriptActor
 	
 //OVERRIDES
 protected:
+
+	TArray<RobotControl*> controllerList;
 
 	virtual void ReceiveBeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;

@@ -9,9 +9,139 @@ FPlatformProcess::FSemaphore* LUAScriptWorker::globalMutex = FPlatformProcess::N
 
 
 
+
+
+
+static int32 LuaMoveForward(lua_State* L)
+{
+	double d = lua_tonumber(L, 1);  /* get argument */
+
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		worker->move(d, 0);//TODO siteways
+	}
+
+	return 0;  /* number of results */
+}
+
+static int32 LuaRotate(lua_State* L)
+{
+	double d = lua_tonumber(L, 1);  /* get argument */
+
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		worker->rotate(d);
+	}
+	return 0;  /* number of results */
+}
+
+static int32 LuaUnrealLog(lua_State* L)
+{
+	int ArgCount = lua_gettop(L);
+	FString Message;
+
+	for (int ArgIndex = 1; ArgIndex <= ArgCount; ++ArgIndex)
+	{
+		if (lua_isstring(L, ArgIndex))
+		{
+			Message += ANSI_TO_TCHAR(lua_tostring(L, ArgIndex));
+		}
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Lua: %s"), *Message);
+
+	return 0;
+}
+
+static int32 LuaGetOwnLocation(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		FVector pos = worker->getPosition();
+
+		lua_pushnumber(L, pos.X);
+		lua_pushnumber(L, pos.Y);
+		lua_pushnumber(L, pos.Z);
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+
+	}
+	return 3; // number of return values
+}
+
+static int32 LuaGetStamina(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushnumber(L, worker->getStamina());
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+	}
+	return 1; // number of return values
+}
+
+static int32 LuaAllowedToRun(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushboolean(L, worker->threadIsAllowedToRun());
+
+		FDateTime now = FDateTime::Now();
+		FDateTime lastTick = worker->getLastTick();
+		FTimespan dif = now - lastTick;
+		double calcTime = dif.GetTotalMilliseconds();
+		if (calcTime < 1) calcTime = 1;
+		FPlatformProcess::Sleep(calcTime / 100);
+
+		worker->updateLastTick();
+	}
+	else
+	{
+		//If worker is not there, sleep...
+		FPlatformProcess::Sleep(0.1);
+		lua_pushboolean(L, false);
+	}
+
+	return 1; // number of return values
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 LUAScriptWorker::LUAScriptWorker(RobotControl* robotController, FString file) : RobotScriptWorker(robotController)
 {
 	loadLuaScript(TCHAR_TO_ANSI(*file));
+
+
+	//Start the thread:
+	this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
 }
 
 LUAScriptWorker::~LUAScriptWorker()
@@ -115,6 +245,8 @@ uint32 LUAScriptWorker::Run()
 {
 	RobotScriptWorker::Run();
 
+	UE_LOG(LogTemp, Warning, TEXT("LUA RUN!!!"));
+
 	if (luaState)
 	{
 		/* push functions and arguments */
@@ -123,118 +255,9 @@ uint32 LUAScriptWorker::Run()
 		if (lua_pcall(luaState, 0, 0, 0) != 0)
 			UE_LOG(LogTemp, Warning, TEXT("error running function %s"), lua_tostring(luaState, -1));
 	}
-}
-
-
-
-
-
-
-
-static int32 LuaMoveForward(lua_State* L)
-{
-	double d = lua_tonumber(L, 1);  /* get argument */
-
-	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
-	if (worker)
-	{
-		worker->move(d, 0);//TODO siteways
-	}
-
-	return 0;  /* number of results */
-}
-
-static int32 LuaRotate(lua_State* L)
-{
-	double d = lua_tonumber(L, 1);  /* get argument */
-
-	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
-	if (worker)
-	{
-		
-	}
-	return 0;  /* number of results */
-}
-
-static int32 LuaUnrealLog(lua_State* L)
-{
-	int ArgCount = lua_gettop(L);
-	FString Message;
-
-	for (int ArgIndex = 1; ArgIndex <= ArgCount; ++ArgIndex)
-	{
-		if (lua_isstring(L, ArgIndex))
-		{
-			Message += ANSI_TO_TCHAR(lua_tostring(L, ArgIndex));
-		}
-	}
-	UE_LOG(LogTemp, Warning, TEXT("Lua: %s"), *Message);
 
 	return 0;
 }
-
-static int32 LuaGetOwnLocation(lua_State* L)
-{
-	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
-	if (worker)
-	{
-		FVector pos = worker->getPosition();
-
-		lua_pushnumber(L, pos.X);
-		lua_pushnumber(L, pos.Y);
-		lua_pushnumber(L, pos.Z);
-	}
-	else
-	{
-		lua_pushnumber(L, 0);
-		lua_pushnumber(L, 0);
-		lua_pushnumber(L, 0);
-
-	}
-	return 3; // number of return values
-}
-
-static int32 LuaGetStamina(lua_State* L)
-{
-	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
-	if (worker)
-	{
-		lua_pushnumber(L, worker->getStamina());
-	}
-	else
-	{
-		lua_pushnumber(L, 0);
-	}
-	return 1; // number of return values
-}
-
-static int32 LuaAllowedToRun(lua_State* L)
-{
-	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
-	if (worker)
-	{
-		lua_pushboolean(L, worker->threadIsAllowedToRun());
-
-		FDateTime now = FDateTime::Now();
-		FDateTime lastTick = worker->getLastTick();
-		FTimespan dif = now - lastTick;
-		double calcTime = dif.GetTotalMilliseconds();
-		if (calcTime < 1) calcTime = 1;
-		FPlatformProcess::Sleep(calcTime / 100);
-
-		worker->updateLastTick();
-	}
-	else
-	{
-		//If worker is not there, sleep...
-		FPlatformProcess::Sleep(0.1);
-		lua_pushboolean(L, false);
-	}
-
-	return 1; // number of return values
-}
-
-
 
 
 

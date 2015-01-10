@@ -65,15 +65,16 @@ void ARobot::Tick(float DeltaSeconds)
 	*/
 }
 
-void ARobot::MoveForward(float value, float DeltaSeconds)
+void ARobot::Move(float straight, float sideways)
 {
+	//TODO: add sideways walking
 	if (Controller && GEngine)
 	{
 		FVector Direction = GetActorForwardVector();
-		if ((stamina - 0.4 * value) > 0)
+		if ((stamina - 0.4 * straight) > 0)
 		{
-			AddMovementInput(Direction, value);
-			stamina -= 0.4 * value;
+			AddMovementInput(Direction, straight);
+			stamina -= 0.4 * straight;
 		}
 		else
 		{

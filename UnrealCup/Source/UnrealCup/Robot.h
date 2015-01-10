@@ -32,7 +32,7 @@ class UNREALCUP_API ARobot : public ACharacter
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 
-	void MoveForward(float value, float DeltaSeconds);
+	void Move(float straight, float sideways);
 	void Rotate(float value, float DeltaSeconds);
 
 

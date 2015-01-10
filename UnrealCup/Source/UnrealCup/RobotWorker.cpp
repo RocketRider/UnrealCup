@@ -16,7 +16,8 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 	//WINDOWS ONLY!!!! should be FGenericPlatformProcess
 	this->mutex = FPlatformProcess::NewInterprocessSynchObject("mutex", true);//ADD RANDOM TO NAME!!!
 
-	this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
+	//Needs to be called in last subclass!
+	//this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
 }
 
 
@@ -49,6 +50,7 @@ bool RobotWorker::Init()
 }
 
 
+
 uint32 RobotWorker::Run()
 {
 	//Initial wait before starting
@@ -56,6 +58,7 @@ uint32 RobotWorker::Run()
 	updateLastTick();
 	return 0;
 }
+
 
 //Is challed when thread should exit (thread->kill())
 void RobotWorker::Stop()
@@ -79,27 +82,35 @@ void RobotWorker::updateLastTick()
 
 FVector RobotWorker::getPosition()
 {
+	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
+
 	return FVector(0, 0, 0);
 	//TODO!!!
 }
 
 FRotator RobotWorker::getRotation()
 {
+	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
+
 	return FRotator(0, 0, 0);
 	//TODO!!!
 }
 float RobotWorker::getStamina()
 {
+	//void* result = robotController->call(RobotControl::Command::getPosition, NULL);
+
 	return 0;
 	//TODO!!!
 }
 void RobotWorker::rotate(float angle)
 {
-	//TODO!!!
+	//robotController->call(RobotControl::Command::getPosition, new FFloat32(angle));
+
 }
 void RobotWorker::move(float straight, float sideways)
 {
-	//TODO!!!
+	
+	robotController->call(RobotControl::Command::move, new FFloat32(straight), new FFloat32(sideways));
 }
 
 

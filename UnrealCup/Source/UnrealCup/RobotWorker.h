@@ -16,13 +16,15 @@ class UNREALCUP_API RobotWorker : public FRunnable
 {
 private:
 	/** Thread to run the worker FRunnable on */
-	FRunnableThread* thread;
+	
 	bool allowedToRun;
 	FDateTime lastTick;
 	RobotControl* robotController;
 
 
 protected:
+	FRunnableThread* thread;
+
 	//TODO: Multiplatform 
 	FPlatformProcess::FSemaphore* mutex;
 	void setAllowedToRun(bool allowed);
