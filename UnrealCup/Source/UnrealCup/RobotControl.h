@@ -26,7 +26,6 @@ private:
 	ARobot* robot;
 	RobotWorker* worker;
 	FPlatformProcess::FSemaphore* mutex;
-	FPlatformProcess::FSemaphore* resultMutex;
 	void* commandResult;
 
 

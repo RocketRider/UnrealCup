@@ -26,6 +26,7 @@ protected:
 	void registerFunctions();
 
 	virtual uint32 Run();
+	virtual void Stop();
 
 public:
 	LUAScriptWorker(RobotControl* robotController, FString file);

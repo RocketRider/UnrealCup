@@ -96,14 +96,17 @@ static int32 LuaAllowedToRun(lua_State* L)
 	{
 		lua_pushboolean(L, worker->threadIsAllowedToRun());
 
+		//TODO:
+		/*
 		FDateTime now = FDateTime::Now();
 		FDateTime lastTick = worker->getLastTick();
 		FTimespan dif = now - lastTick;
 		double calcTime = dif.GetTotalMilliseconds();
 		if (calcTime < 1) calcTime = 1;
 		FPlatformProcess::Sleep(calcTime / 100);
-
 		worker->updateLastTick();
+		*/
+		FPlatformProcess::Sleep(0.001);
 	}
 	else
 	{
@@ -146,7 +149,7 @@ LUAScriptWorker::LUAScriptWorker(RobotControl* robotController, FString file) : 
 
 LUAScriptWorker::~LUAScriptWorker()
 {
-	freeLuaScript();
+	
 
 	thread->Kill(true);
 	delete thread;
@@ -264,6 +267,14 @@ uint32 LUAScriptWorker::Run()
 	return 0;
 }
 
+
+//Is challed when thread should exit (thread->kill())
+void LUAScriptWorker::Stop()
+{
+	RobotScriptWorker::Stop();
+
+	freeLuaScript();
+}
 
 
 

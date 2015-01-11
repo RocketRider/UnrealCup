@@ -26,6 +26,7 @@ void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 void ARobot::Tick(float DeltaSeconds)
 {
 	addStamina(DeltaSeconds);
+	RotateTick(DeltaSeconds);
 }
 
 void ARobot::Move(float straight, float sideways)
@@ -49,13 +50,16 @@ void ARobot::Move(float straight, float sideways)
 }
 
 
-void ARobot::Rotate(float value)
+void ARobot::Rotate(float angle)
 {
 
-	float rotation = FGenericPlatformMath::Fmod(value, 360);
+	rotation = FGenericPlatformMath::Fmod(angle, 360);
 	if (rotation > 180)rotation = rotation - 360;
 	if (rotation < -180)rotation = rotation + 360;
+}
 
+void ARobot::RotateTick(float DeltaSeconds)
+{
 	if (Controller && GEngine)
 	{
 		FRotator Rotation = GetActorRotation();
@@ -64,13 +68,13 @@ void ARobot::Rotate(float value)
 
 		if (abs(deltaRotation)>0.0001)
 		{
-			float maxRotate = 10;//TODO: DeltaSeconds*400;
+			float maxRotate = DeltaSeconds*400;
 
 			if (deltaRotation > maxRotate) deltaRotation = maxRotate;
 			if (deltaRotation < -maxRotate) deltaRotation = -maxRotate;
 			AddActorLocalRotation(FRotator(0, deltaRotation, 0));
 		}
-		
+
 	}
 }
 

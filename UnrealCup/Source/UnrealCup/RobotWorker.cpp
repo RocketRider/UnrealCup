@@ -14,7 +14,8 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 	//mutex = FGenericPlatformProcess::NewInterprocessSynchObject("mutex", true, 1);
 
 	//WINDOWS ONLY!!!! should be FGenericPlatformProcess
-	this->mutex = FPlatformProcess::NewInterprocessSynchObject("mutex", true);//ADD RANDOM TO NAME!!!
+	FString name = FString("RobotWorker mutex"); name.AppendInt(rand());
+	this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
 
 	//Needs to be called in last subclass!
 	//this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
@@ -52,7 +53,7 @@ bool RobotWorker::Init()
 uint32 RobotWorker::Run()
 {
 	//Initial wait before starting
-	//FPlatformProcess::Sleep(0.03);
+	FPlatformProcess::Sleep(0.1);
 	updateLastTick();
 	return 0;
 }
@@ -80,33 +81,40 @@ void RobotWorker::updateLastTick()
 
 FVector RobotWorker::getPosition()
 {
-	/*
+	
 	void* result = robotController->call(RobotControl::Command::getPosition);
-	FVector position = FVector(*(FVector*)result);
-	delete result;
-	return position;
-	*/
+	if (result != NULL)
+	{
+		FVector position = FVector(*(FVector*)result);
+		delete result;
+		return position;
+	}
 	return FVector(0, 0, 0);
 }
 
 FRotator RobotWorker::getRotation()
 {
-	/*
+	
 	void* result = robotController->call(RobotControl::Command::getRotation);
-	FRotator rotation = FRotator(*(FRotator*)result);
-	delete result;
-	return rotation;
-	*/
+	if (result != NULL)
+	{
+		FRotator rotation = FRotator(*(FRotator*)result);
+		delete result;
+		return rotation;
+	}
 	return FRotator(0, 0, 0);
 }
 float RobotWorker::getStamina()
 {
-	/*
+	
+	
 	void* result = robotController->call(RobotControl::Command::getStamina);
-	float stamina = ((FFloat32*)result)->FloatValue;
-	delete result;
-	return stamina;
-	*/
+	if (result != NULL)
+	{
+		float stamina = ((FFloat32*)result)->FloatValue;
+		delete result;
+		return stamina;
+	}
 	return 100;
 }
 void RobotWorker::rotate(float angle)

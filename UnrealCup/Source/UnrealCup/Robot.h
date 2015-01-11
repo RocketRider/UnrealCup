@@ -34,6 +34,7 @@ class UNREALCUP_API ARobot : public ACharacter
 public:
 	void Move(float straight, float sideways);
 	void Rotate(float value);
+	
 	float getStamina();
 	FRotator getRotation();
 	FVector getPosition();
@@ -43,9 +44,11 @@ protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
-
-	void addStamina(float DeltaSeconds);
 	float staminaTime;
+	void addStamina(float DeltaSeconds);
+	float rotation;
+	void RotateTick(float DeltaSeconds);
+	
 
 
 
