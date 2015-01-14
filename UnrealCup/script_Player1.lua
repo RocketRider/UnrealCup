@@ -2,6 +2,8 @@ runup = false
 run = true
 --counter = 0
 function run()
+	print("script 1")
+	Rotate(270)
    while AllowedToRun() do
 	   x,y,z = GetOwnLocation()
 	   --counter = counter +1
@@ -27,7 +29,7 @@ function run()
 	   end
 	   
 	   if run then
-	      MoveForward(1)
+	      MoveForward(10)
 	   end
 	   
 	   --print(stamina)

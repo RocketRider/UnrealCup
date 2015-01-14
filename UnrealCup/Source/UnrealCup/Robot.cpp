@@ -2,79 +2,43 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
-#include "LuaWorker.h"
 
 
 
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
-	worker = NULL;
+
 }
 
 void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	FRotator Rotation = Controller->GetControlRotation();
-	rotation = Rotation.Yaw;
-
 	staminaTime = 0;
-
-	//Load lua script
-	FString path = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(luaFile);
-	worker = new LuaWorker(this, TCHAR_TO_ANSI(*path));
-
-	//Components of Robot:
-	/*
-	TArray<UActorComponent*, FDefaultAllocator> complist;
-	GetComponents(complist);
-	for (int i = 0; i < complist.Num(); i++)
-	{
-		if (complist[i])
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Yellow, complist[i]->GetName() + " -> " + complist[i]->GetClass()->GetName());
-		}
-	}
-	*/
-
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	delete worker;
-	worker = NULL;
+
 }
 
 
 void ARobot::Tick(float DeltaSeconds)
 {
-	FVector ownLocation = Controller->GetPawn()->GetActorLocation();
-	worker->setOwnLocation(ownLocation.X, ownLocation.Y, ownLocation.Z);
-	
 	addStamina(DeltaSeconds);
-	worker->setStaminaValue(stamina);
-	
-
-	if (worker->getRunValue() > 0)
-	{
-		MoveForward(worker->getRunValue(), DeltaSeconds);
-		worker->setRunValue(0);
-	}
-
-	Rotate(worker->getRotateValue(), DeltaSeconds);
-	
+	RotateTick(DeltaSeconds);
 }
 
-void ARobot::MoveForward(float value, float DeltaSeconds)
+void ARobot::Move(float straight, float sideways)
 {
+	//TODO: add sideways walking
 	if (Controller && GEngine)
 	{
 		FVector Direction = GetActorForwardVector();
-		if ((stamina - 0.4 * value) > 0)
+		if ((stamina - 0.4 * straight) > 0)
 		{
-			AddMovementInput(Direction, value);
-			stamina -= 0.4 * value;
+			AddMovementInput(Direction, straight);
+			stamina -= 0.4 * straight;
 		}
 		else
 		{
@@ -86,12 +50,16 @@ void ARobot::MoveForward(float value, float DeltaSeconds)
 }
 
 
-void ARobot::Rotate(float value, float DeltaSeconds)
+void ARobot::Rotate(float angle)
 {
-	rotation = FGenericPlatformMath::Fmod(value, 360);
+
+	rotation = FGenericPlatformMath::Fmod(angle, 360);
 	if (rotation > 180)rotation = rotation - 360;
 	if (rotation < -180)rotation = rotation + 360;
+}
 
+void ARobot::RotateTick(float DeltaSeconds)
+{
 	if (Controller && GEngine)
 	{
 		FRotator Rotation = GetActorRotation();
@@ -106,7 +74,7 @@ void ARobot::Rotate(float value, float DeltaSeconds)
 			if (deltaRotation < -maxRotate) deltaRotation = -maxRotate;
 			AddActorLocalRotation(FRotator(0, deltaRotation, 0));
 		}
-		
+
 	}
 }
 
@@ -122,5 +90,55 @@ void ARobot::addStamina(float DeltaSeconds)
 	}
 }
 
+float ARobot::getStamina()
+{
+	return stamina;
+}
+
+FRotator ARobot::getRotation()
+{
+	return  GetActorRotation();
+}
+
+FVector ARobot::getPosition()
+{
+	return GetActorLocation();
+}
+
+TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
+{
+	FVector ownLocation = GetActorLocation();
+	FRotator ownRotation = GetActorRotation();
+	TArray<RobotDataTypes::PlayerLocation>* visiblePlayerLocations = new TArray<RobotDataTypes::PlayerLocation>();
+
+	//Iterate through all Robots	
+	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+		if (this == robot) continue;
+		
+		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - robot->getPosition().Y, ownLocation.X - robot->getPosition().X));
+		float deltaAngle = angle - ownRotation.Yaw;
+		if (deltaAngle < -180) deltaAngle += 360;
+		if (deltaAngle > 180) deltaAngle -= 360;
+		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(new ARobot::PlayerLocation{ robot->getTeamId(), robot->getPlayerId, new FVector(robot->getPosition()) });
+	}
+
+	return visiblePlayerLocations;
+}
+
+int32 ARobot::getTeamId()
+{
+	return team;
+}
 
 
+int32 ARobot::getPlayerId()
+{
+	return playerId;
+}
+
+void ARobot::setPlayerId(int32 pId)
+{
+	playerId = pId;
+}

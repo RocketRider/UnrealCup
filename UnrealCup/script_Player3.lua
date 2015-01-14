@@ -1,6 +1,7 @@
 runup = false
 --counter = 0
 function run()
+	print("script 3")
    while AllowedToRun() do
 	   x,y,z = GetOwnLocation()
 	   --counter = counter +1

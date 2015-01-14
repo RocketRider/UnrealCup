@@ -5,10 +5,11 @@
 #include "GameFramework/Character.h"
 //#include "LuaWorker.h"
 #include "Robot.generated.h"
+#include "RobotDataTypes.h"
 
 
 //Forward declaration
-class LuaWorker;
+//class RobotWorker;
 
 
 UCLASS()
@@ -16,11 +17,18 @@ class UNREALCUP_API ARobot : public ACharacter
 {
 	GENERATED_UCLASS_BODY()
 
+	//TODO: Temporary, will be removed when scipts are selected per xml file!
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lua")
 	FString luaFile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	int32 team;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	int32 playerId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	int32 HalfFieldOfView;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	float stamina;
@@ -30,22 +38,30 @@ class UNREALCUP_API ARobot : public ACharacter
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-
-	void MoveForward(float value, float DeltaSeconds);
-	void Rotate(float value, float DeltaSeconds);
-
+public:
+	void Move(float straight, float sideways);
+	void Rotate(float value);
+	
+	float getStamina();
+	FRotator getRotation();
+	FVector getPosition();
+	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayers();
+	int32 getTeamId();
+	int32 getPlayerId();
+	void setPlayerId(int32 pId);
 
 
 protected:
 	
 	//Tick
 	virtual void Tick(float DeltaSeconds) override;
-
-	void addStamina(float DeltaSeconds);
 	float staminaTime;
-
-	LuaWorker* worker;
+	void addStamina(float DeltaSeconds);
+	float rotation;
+	void RotateTick(float DeltaSeconds);
 	
-	double rotation;
+
+
+
 
 };
