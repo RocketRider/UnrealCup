@@ -55,6 +55,8 @@
 		<ClInclude Include="..\..\Source\UnrealCup\Robot.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\RobotControl.cpp" />
 		<ClInclude Include="..\..\Source\UnrealCup\RobotControl.h" />
+		<ClCompile Include="..\..\Source\UnrealCup\RobotDataTypes.cpp" />
+		<ClInclude Include="..\..\Source\UnrealCup\RobotDataTypes.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\RobotScriptWorker.cpp" />
 		<ClInclude Include="..\..\Source\UnrealCup\RobotScriptWorker.h" />
 		<ClCompile Include="..\..\Source\UnrealCup\RobotWorker.cpp" />

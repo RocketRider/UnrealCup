@@ -5,6 +5,7 @@
 #include "GameFramework/Character.h"
 //#include "LuaWorker.h"
 #include "Robot.generated.h"
+#include "RobotDataTypes.h"
 
 
 //Forward declaration
@@ -24,6 +25,12 @@ class UNREALCUP_API ARobot : public ACharacter
 	int32 team;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	int32 playerId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	int32 HalfFieldOfView;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	float stamina;
 
 
@@ -38,6 +45,10 @@ public:
 	float getStamina();
 	FRotator getRotation();
 	FVector getPosition();
+	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayers();
+	int32 getTeamId();
+	int32 getPlayerId();
+	void setPlayerId(int32 pId);
 
 
 protected:

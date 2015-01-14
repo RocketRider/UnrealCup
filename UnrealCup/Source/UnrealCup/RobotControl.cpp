@@ -75,6 +75,11 @@ void RobotControl::Tick(float DeltaSeconds)
 				commandResult = new FRotator(robot->getRotation());
 			}
 			break;
+			case getVisiblePlayers:
+			{
+				commandResult = robot->getVisiblePlayers();
+			}
+			break;
 			}
 
 		}

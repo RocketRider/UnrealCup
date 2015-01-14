@@ -4,6 +4,7 @@
 
 
 #include "RobotControl.h"
+#include "RobotDataTypes.h"
 
 
 //Forward declaration
@@ -46,6 +47,7 @@ public:
 	float getStamina();
 	void rotate(float angle);
 	void move(float straight, float sideways);
+	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayersAbsolute();
 
 	bool threadIsAllowedToRun();
 	FDateTime getLastTick();

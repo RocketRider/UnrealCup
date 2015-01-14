@@ -128,6 +128,18 @@ void RobotWorker::move(float straight, float sideways)
 	robotController->call(RobotControl::Command::move, new FFloat32(straight), new FFloat32(sideways));
 }
 
+// Speicher MUSS nach dem lesen freigegeben werden!!!
+TArray<RobotDataTypes::PlayerLocation>* RobotWorker::getVisiblePlayersAbsolute()
+{
+	void* result = robotController->call(RobotControl::Command::getVisiblePlayers);
+	if (result != NULL)
+	{
+		TArray<RobotDataTypes::PlayerLocation>* visiblePlayersAbsolute = (TArray<RobotDataTypes::PlayerLocation>*)result;
+		return visiblePlayersAbsolute;
+	}
+
+}
+
 
 
 

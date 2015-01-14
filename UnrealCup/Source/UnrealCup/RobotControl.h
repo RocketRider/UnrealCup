@@ -16,7 +16,8 @@ public: enum Command
 		rotate,
 		getRotation,
 		getPosition,
-		getStamina
+		getStamina,
+		getVisiblePlayers
 	};
 
 

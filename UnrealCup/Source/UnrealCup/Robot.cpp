@@ -104,3 +104,41 @@ FVector ARobot::getPosition()
 {
 	return GetActorLocation();
 }
+
+TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
+{
+	FVector ownLocation = GetActorLocation();
+	FRotator ownRotation = GetActorRotation();
+	TArray<RobotDataTypes::PlayerLocation>* visiblePlayerLocations = new TArray<RobotDataTypes::PlayerLocation>();
+
+	//Iterate through all Robots	
+	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+		if (this == robot) continue;
+		
+		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - robot->getPosition().Y, ownLocation.X - robot->getPosition().X));
+		float deltaAngle = angle - ownRotation.Yaw;
+		if (deltaAngle < -180) deltaAngle += 360;
+		if (deltaAngle > 180) deltaAngle -= 360;
+		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(new ARobot::PlayerLocation{ robot->getTeamId(), robot->getPlayerId, new FVector(robot->getPosition()) });
+	}
+
+	return visiblePlayerLocations;
+}
+
+int32 ARobot::getTeamId()
+{
+	return team;
+}
+
+
+int32 ARobot::getPlayerId()
+{
+	return playerId;
+}
+
+void ARobot::setPlayerId(int32 pId)
+{
+	playerId = pId;
+}
