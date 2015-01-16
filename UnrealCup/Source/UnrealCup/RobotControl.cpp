@@ -53,6 +53,14 @@ void RobotControl::Tick(float DeltaSeconds)
 				delete sideways;
 			}
 			break;
+			case moveTo:
+			{
+				FFloat32* targetY = (FFloat32*)(queueParams.Pop());
+				FFloat32* targetX = (FFloat32*)(queueParams.Pop());
+				robot->MoveTo(targetX->FloatValue, targetY->FloatValue);
+				delete targetX;
+				delete targetY;
+			}
 			case rotate:
 			{
 				FFloat32* angle = (FFloat32*)(queueParams.Pop());

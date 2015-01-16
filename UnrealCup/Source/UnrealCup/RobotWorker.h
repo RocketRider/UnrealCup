@@ -47,6 +47,7 @@ public:
 	float getStamina();
 	void rotate(float angle);
 	void move(float straight, float sideways);
+	void moveTo(float targetX, float targetY);
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayersAbsolute();
 
 	bool threadIsAllowedToRun();

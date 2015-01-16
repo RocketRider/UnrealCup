@@ -124,8 +124,12 @@ void RobotWorker::rotate(float angle)
 }
 void RobotWorker::move(float straight, float sideways)
 {
-	
 	robotController->call(RobotControl::Command::move, new FFloat32(straight), new FFloat32(sideways));
+}
+
+void RobotWorker::moveTo(float targetX, float targetY)
+{
+	robotController->call(RobotControl::Command::moveTo, new FFloat32(targetX), new FFloat32(targetY));
 }
 
 // Speicher MUSS nach dem lesen freigegeben werden!!!
@@ -137,7 +141,7 @@ TArray<RobotDataTypes::PlayerLocation>* RobotWorker::getVisiblePlayersAbsolute()
 		TArray<RobotDataTypes::PlayerLocation>* visiblePlayersAbsolute = (TArray<RobotDataTypes::PlayerLocation>*)result;
 		return visiblePlayersAbsolute;
 	}
-
+	return NULL;
 }
 
 

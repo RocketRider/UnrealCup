@@ -3,9 +3,14 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "AIController.h"
+#include "AIModule.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
 //#include "LuaWorker.h"
-#include "Robot.generated.h"
 #include "RobotDataTypes.h"
+#include "Robot.generated.h"
 
 
 //Forward declaration
@@ -40,6 +45,7 @@ class UNREALCUP_API ARobot : public ACharacter
 
 public:
 	void Move(float straight, float sideways);
+	void MoveTo(float targetX, float targetY);
 	void Rotate(float value);
 	
 	float getStamina();

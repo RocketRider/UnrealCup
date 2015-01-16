@@ -8,7 +8,6 @@
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
-
 }
 
 void ARobot::BeginPlay()
@@ -46,6 +45,35 @@ void ARobot::Move(float straight, float sideways)
 			AddMovementInput(Direction, 0.1);
 		}
 
+	}
+}
+
+// Move to a specific location on the map
+void ARobot::MoveTo(float targetX, float targetY)
+{
+	// adapt the height
+	FVector targetPosition = FVector(targetX, targetY, getPosition().Z);
+
+	// calculate distance to move & needed stamina
+	float distance = FMath::Sqrt( pow(targetPosition.X - getPosition().X, 2) + pow(targetPosition.Y - getPosition().Y, 2) );
+	float neededStamina = distance * 0.4;
+
+	// enough stamina -> run full speed
+	if ((stamina - neededStamina) > 0)
+	{
+		// TODO: Set Movement speed to max
+		
+		stamina -= neededStamina;
+	}
+
+	// not enough stamina -> move slower
+	else
+	{
+		float movSpeedRatio = neededStamina / stamina;
+
+		// TODO: Set Movement speed
+		
+		stamina = 0;
 	}
 }
 
@@ -121,7 +149,7 @@ TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
 		float deltaAngle = angle - ownRotation.Yaw;
 		if (deltaAngle < -180) deltaAngle += 360;
 		if (deltaAngle > 180) deltaAngle -= 360;
-		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(new ARobot::PlayerLocation{ robot->getTeamId(), robot->getPlayerId, new FVector(robot->getPosition()) });
+		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(RobotDataTypes::PlayerLocation{ robot->getTeamId(), robot->getPlayerId(), new FVector(robot->getPosition()) });
 	}
 
 	return visiblePlayerLocations;

@@ -25,6 +25,20 @@ static int32 LuaMoveForward(lua_State* L)
 	return 0;  /* number of results */
 }
 
+static int32 LuaMoveTo(lua_State* L)
+{
+	double x = lua_tonumber(L, 1);
+	double y = lua_tonumber(L, 2);
+
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		worker->moveTo(x, y);
+	}
+
+	return 0;
+}
+
 static int32 LuaRotate(lua_State* L)
 {
 	double d = lua_tonumber(L, 1);  /* get argument */

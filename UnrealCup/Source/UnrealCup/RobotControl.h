@@ -13,6 +13,7 @@ class UNREALCUP_API RobotControl
 public: enum Command
 	{
 		move,
+		moveTo,
 		rotate,
 		getRotation,
 		getPosition,
