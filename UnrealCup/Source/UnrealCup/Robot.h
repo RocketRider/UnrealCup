@@ -15,6 +15,7 @@
 
 //Forward declaration
 //class RobotWorker;
+class ABall;
 
 
 UCLASS()
@@ -47,6 +48,7 @@ public:
 	void Move(float straight, float sideways);
 	void MoveTo(float targetX, float targetY);
 	void Rotate(float value);
+	void Kick(FVector direction, float force);
 	
 	float getStamina();
 	FRotator getRotation();
@@ -55,6 +57,7 @@ public:
 	int32 getTeamId();
 	int32 getPlayerId();
 	void setPlayerId(int32 pId);
+	void setBall(ABall* p_ball);
 
 
 protected:
@@ -66,7 +69,8 @@ protected:
 	float rotation;
 	void RotateTick(float DeltaSeconds);
 	
-
+	ABall* ball;
+	bool hasBall;
 
 
 

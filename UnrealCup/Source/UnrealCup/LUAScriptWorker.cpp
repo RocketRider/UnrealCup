@@ -51,6 +51,22 @@ static int32 LuaRotate(lua_State* L)
 	return 0;  /* number of results */
 }
 
+static int32 LuaKick(lua_State* L)
+{
+	double x = lua_tonumber(L, 1);
+	double y = lua_tonumber(L, 2);
+	double z = lua_tonumber(L, 3);
+	double force = lua_tonumber(L, 4);
+
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		FVector direction = FVector(x, y, z);
+		worker->kick(direction, force);
+	}
+	return 0;
+}
+
 static int32 LuaUnrealLog(lua_State* L)
 {
 	int ArgCount = lua_gettop(L);
@@ -252,6 +268,8 @@ void LUAScriptWorker::registerFunctions()
 	lua_setglobal(luaState, "MoveForward");
 	lua_pushcfunction(luaState, LuaRotate);
 	lua_setglobal(luaState, "Rotate");
+	lua_pushcfunction(luaState, LuaKick);
+	lua_setglobal(luaState, "Kick");
 	lua_pushcfunction(luaState, LuaGetOwnLocation);
 	lua_setglobal(luaState, "GetOwnLocation");
 	lua_pushcfunction(luaState, LuaGetStamina);

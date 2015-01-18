@@ -132,6 +132,11 @@ void RobotWorker::moveTo(float targetX, float targetY)
 	robotController->call(RobotControl::Command::moveTo, new FFloat32(targetX), new FFloat32(targetY));
 }
 
+void RobotWorker::kick(FVector direction, float force)
+{
+	robotController->call(RobotControl::Command::kick, new FVector(direction), new FFloat32(force));
+}
+
 // Speicher MUSS nach dem lesen freigegeben werden!!!
 TArray<RobotDataTypes::PlayerLocation>* RobotWorker::getVisiblePlayersAbsolute()
 {

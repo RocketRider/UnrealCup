@@ -68,6 +68,15 @@ void RobotControl::Tick(float DeltaSeconds)
 				delete angle;
 			}
 			break;
+			case kick:
+			{
+				FVector* direction = (FVector*)(queueParams.Pop());
+				FFloat32* force = (FFloat32*)(queueParams.Pop());
+				FVector* dir = new FVector(*direction);
+				robot->Kick(*dir, force->FloatValue);
+				delete direction;
+				delete force;
+			}
 			case getStamina:
 			{
 				commandResult = new FFloat32(robot->getStamina());

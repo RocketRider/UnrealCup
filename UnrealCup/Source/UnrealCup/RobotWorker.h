@@ -48,6 +48,7 @@ public:
 	void rotate(float angle);
 	void move(float straight, float sideways);
 	void moveTo(float targetX, float targetY);
+	void kick(FVector direction, float force);
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayersAbsolute();
 
 	bool threadIsAllowedToRun();

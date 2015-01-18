@@ -5,12 +5,21 @@
 #include "Robot.h"
 #include "RobotControl.h"
 #include "LUAScriptWorker.h"
+#include "Ball.h"
 
 
 void ASoccerLevelScript::ReceiveBeginPlay()
 {
 	Super::ReceiveBeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY %s"), *GetName());
+
+	ABall* ball = nullptr;
+	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ball = Cast<ABall>(*ActorItr);
+		UE_LOG(LogTemp, Error, TEXT("%s %s"), *ball->GetName(), *ball->GetActorLocation().ToString());
+		break;
+	}
 
 
 	//Iterate through all Robots	
@@ -21,7 +30,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 		//TODO: Replace with definition of xml file
 		FString luaFile = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(robot->luaFile);
 
-
+		robot->setBall(ball);
 
 		RobotControl* controller = new RobotControl(robot);
 		RobotWorker* worker = new LUAScriptWorker(controller, luaFile);

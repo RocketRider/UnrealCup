@@ -2,6 +2,7 @@
 
 #include "UnrealCup.h"
 #include "Robot.h"
+#include "Ball.h"
 
 
 
@@ -14,6 +15,7 @@ void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
 	staminaTime = 0;
+	hasBall = true;
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -106,6 +108,30 @@ void ARobot::RotateTick(float DeltaSeconds)
 	}
 }
 
+void ARobot::Kick(FVector direction, float force)
+{
+	if (hasBall && ball != nullptr)
+	{
+		float neededStamina = force * 0;
+
+		// enough stamina -> kick full force
+		if ((stamina - neededStamina) > 0)
+		{
+			ball->addForce(direction, force);
+			stamina -= neededStamina;
+		}
+
+		// not enough stamina -> kick weaker
+		else
+		{
+			float forceRatio = neededStamina / stamina;
+			ball->addForce(direction, force * forceRatio);
+			stamina = 0;
+		}
+	}
+}
+
+
 
 void ARobot::addStamina(float DeltaSeconds)
 {
@@ -169,4 +195,9 @@ int32 ARobot::getPlayerId()
 void ARobot::setPlayerId(int32 pId)
 {
 	playerId = pId;
+}
+
+void ARobot::setBall(ABall*	p_ball)
+{
+	ball = p_ball;
 }

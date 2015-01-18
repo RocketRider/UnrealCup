@@ -15,6 +15,7 @@ public: enum Command
 		move,
 		moveTo,
 		rotate,
+		kick,
 		getRotation,
 		getPosition,
 		getStamina,
