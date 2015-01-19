@@ -11,9 +11,12 @@ FVector ABall::getLocation()
 
 void ABall::addForce(FVector direction, float force)
 {
-	AddMovementInput(direction, force, true);
-	ConsumeMovementInputVector();
-	//ToDo
+	addImpulseBlueprint(direction, force);
+}
+
+void ABall::addImpulseBlueprint_Implementation(FVector direction, float force)
+{
+
 }
 
 

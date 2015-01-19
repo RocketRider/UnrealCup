@@ -7,7 +7,7 @@ function run()
 		counter = counter +1
 
 		if(counter == 1) then
-			Kick(1,0,0,1000)
+			Kick(1,0,0,5000)
 		end
 		if (y<-2000) and (not runup) then
 			Rotate(90)

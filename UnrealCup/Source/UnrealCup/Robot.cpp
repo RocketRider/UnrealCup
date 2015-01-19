@@ -112,7 +112,7 @@ void ARobot::Kick(FVector direction, float force)
 {
 	if (hasBall && ball != nullptr)
 	{
-		float neededStamina = force * 0;
+		float neededStamina = force * 0.01;
 
 		// enough stamina -> kick full force
 		if ((stamina - neededStamina) > 0)
