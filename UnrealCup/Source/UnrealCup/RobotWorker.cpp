@@ -137,6 +137,11 @@ void RobotWorker::kick(FVector direction, float force)
 	robotController->call(RobotControl::Command::kick, new FVector(direction), new FFloat32(force));
 }
 
+void RobotWorker::stopBall()
+{
+	robotController->call(RobotControl::Command::stopBall, new FDateTime(FDateTime::Now()));
+}
+
 // Speicher MUSS nach dem lesen freigegeben werden!!!
 TArray<RobotDataTypes::PlayerLocation>* RobotWorker::getVisiblePlayersAbsolute()
 {

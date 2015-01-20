@@ -9,6 +9,9 @@
 
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
+	// tweak player performance
+	staminaRatioMove = 0.4;
+	staminaRatioKick = 0.01;
 }
 
 void ARobot::BeginPlay()
@@ -16,6 +19,8 @@ void ARobot::BeginPlay()
 	Super::BeginPlay();
 	staminaTime = 0;
 	hasBall = true;
+
+
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -36,10 +41,10 @@ void ARobot::Move(float straight, float sideways)
 	if (Controller && GEngine)
 	{
 		FVector Direction = GetActorForwardVector();
-		if ((stamina - 0.4 * straight) > 0)
+		if ((stamina - staminaRatioMove * straight) > 0)
 		{
 			AddMovementInput(Direction, straight);
-			stamina -= 0.4 * straight;
+			stamina -= staminaRatioMove * straight;
 		}
 		else
 		{
@@ -58,12 +63,13 @@ void ARobot::MoveTo(float targetX, float targetY)
 
 	// calculate distance to move & needed stamina
 	float distance = FMath::Sqrt( pow(targetPosition.X - getPosition().X, 2) + pow(targetPosition.Y - getPosition().Y, 2) );
-	float neededStamina = distance * 0.4;
+	float neededStamina = distance * staminaRatioMove;
 
 	// enough stamina -> run full speed
 	if ((stamina - neededStamina) > 0)
 	{
 		// TODO: Set Movement speed to max
+		// TODO: SimpleMoveToLocation not usable from here??
 		
 		stamina -= neededStamina;
 	}
@@ -71,14 +77,14 @@ void ARobot::MoveTo(float targetX, float targetY)
 	// not enough stamina -> move slower
 	else
 	{
-		float movSpeedRatio = neededStamina / stamina;
+		float movSpeedRatio = stamina / neededStamina;
 
 		// TODO: Set Movement speed
+		// TODO: SimpleMoveToLocation not usable from here??
 		
 		stamina = 0;
 	}
 }
-
 
 void ARobot::Rotate(float angle)
 {
@@ -112,7 +118,7 @@ void ARobot::Kick(FVector direction, float force)
 {
 	if (hasBall && ball != nullptr)
 	{
-		float neededStamina = force * 0.01;
+		float neededStamina = force * staminaRatioKick;
 
 		// enough stamina -> kick full force
 		if ((stamina - neededStamina) > 0)
@@ -131,7 +137,11 @@ void ARobot::Kick(FVector direction, float force)
 	}
 }
 
-
+// set the time when the player stopped the ball
+void ARobot::StopBall(FDateTime timer)
+{
+	stopCommandTime = timer;
+}
 
 void ARobot::addStamina(float DeltaSeconds)
 {

@@ -61,6 +61,7 @@ void RobotControl::Tick(float DeltaSeconds)
 				delete targetX;
 				delete targetY;
 			}
+			break;
 			case rotate:
 			{
 				FFloat32* angle = (FFloat32*)(queueParams.Pop());
@@ -77,6 +78,13 @@ void RobotControl::Tick(float DeltaSeconds)
 				delete direction;
 				delete force;
 			}
+			break;
+			case stopBall:
+			{
+				FDateTime* stopTime = (FDateTime*)(queueParams.Pop());
+				robot->StopBall(*stopTime);
+			}
+			break;
 			case getStamina:
 			{
 				commandResult = new FFloat32(robot->getStamina());

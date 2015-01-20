@@ -67,6 +67,15 @@ static int32 LuaKick(lua_State* L)
 	return 0;
 }
 
+static int32 LuaStopBall(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		worker->stopBall();
+	}
+}
+
 static int32 LuaUnrealLog(lua_State* L)
 {
 	int ArgCount = lua_gettop(L);

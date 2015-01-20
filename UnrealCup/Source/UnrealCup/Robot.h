@@ -39,16 +39,21 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	float stamina;
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	FDateTime stopCommandTime;
 
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 public:
+	//UFUNCTION(BlueprintNativeEvent, Category = "Move")
+	//void moveToLoc(FVector direction);
+
 	void Move(float straight, float sideways);
 	void MoveTo(float targetX, float targetY);
 	void Rotate(float value);
 	void Kick(FVector direction, float force);
+	void StopBall(FDateTime timer);
 	
 	float getStamina();
 	FRotator getRotation();
@@ -72,6 +77,8 @@ protected:
 	ABall* ball;
 	bool hasBall;
 
-
+	// player performance settings
+	float staminaRatioMove;
+	float staminaRatioKick;
 
 };
