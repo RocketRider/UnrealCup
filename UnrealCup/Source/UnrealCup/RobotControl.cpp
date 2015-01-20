@@ -70,8 +70,8 @@ void RobotControl::Tick(float DeltaSeconds)
 			break;
 			case kick:
 			{
-				FVector* direction = (FVector*)(queueParams.Pop());
 				FFloat32* force = (FFloat32*)(queueParams.Pop());
+				FVector* direction = (FVector*)(queueParams.Pop());
 				FVector* dir = new FVector(*direction);
 				robot->Kick(*dir, force->FloatValue);
 				delete direction;
