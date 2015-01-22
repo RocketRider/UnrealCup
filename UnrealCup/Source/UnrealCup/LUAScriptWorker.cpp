@@ -275,6 +275,8 @@ void LUAScriptWorker::registerFunctions()
 	//MoveForward(double Speed)
 	lua_pushcfunction(luaState, LuaMoveForward);
 	lua_setglobal(luaState, "MoveForward");
+	lua_pushcfunction(luaState, LuaMoveTo);
+	lua_setglobal(luaState, "MoveTo");
 	lua_pushcfunction(luaState, LuaRotate);
 	lua_setglobal(luaState, "Rotate");
 	lua_pushcfunction(luaState, LuaKick);

@@ -46,8 +46,8 @@ class UNREALCUP_API ARobot : public ACharacter
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 public:
-	//UFUNCTION(BlueprintNativeEvent, Category = "Move")
-	//void moveToLoc(FVector direction);
+	UFUNCTION(BlueprintNativeEvent, Category = "Move")
+	void moveToLoc(FVector location);
 
 	void Move(float straight, float sideways);
 	void MoveTo(float targetX, float targetY);

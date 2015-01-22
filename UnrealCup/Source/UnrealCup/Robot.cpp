@@ -69,7 +69,7 @@ void ARobot::MoveTo(float targetX, float targetY)
 	if ((stamina - neededStamina) > 0)
 	{
 		// TODO: Set Movement speed to max
-		// TODO: SimpleMoveToLocation not usable from here??
+		moveToLoc(targetPosition);
 		
 		stamina -= neededStamina;
 	}
@@ -80,10 +80,16 @@ void ARobot::MoveTo(float targetX, float targetY)
 		float movSpeedRatio = stamina / neededStamina;
 
 		// TODO: Set Movement speed
-		// TODO: SimpleMoveToLocation not usable from here??
+		moveToLoc(targetPosition);
 		
 		stamina = 0;
 	}
+}
+
+// For usage of event in blueprint
+void ARobot::moveToLoc_Implementation(FVector location)
+{
+
 }
 
 void ARobot::Rotate(float angle)
