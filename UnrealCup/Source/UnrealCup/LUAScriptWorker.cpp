@@ -74,6 +74,8 @@ static int32 LuaStopBall(lua_State* L)
 	{
 		worker->stopBall();
 	}
+
+	return 0;
 }
 
 static int32 LuaUnrealLog(lua_State* L)
@@ -281,6 +283,8 @@ void LUAScriptWorker::registerFunctions()
 	lua_setglobal(luaState, "Rotate");
 	lua_pushcfunction(luaState, LuaKick);
 	lua_setglobal(luaState, "Kick");
+	lua_pushcfunction(luaState, LuaStopBall);
+	lua_setglobal(luaState, "StopBall");
 	lua_pushcfunction(luaState, LuaGetOwnLocation);
 	lua_setglobal(luaState, "GetOwnLocation");
 	lua_pushcfunction(luaState, LuaGetStamina);

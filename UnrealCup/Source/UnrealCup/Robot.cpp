@@ -18,7 +18,8 @@ void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
 	staminaTime = 0;
-	hasBall = true;
+	ballInRange = false;
+	tryStopBall = false;
 
 
 }
@@ -122,7 +123,7 @@ void ARobot::RotateTick(float DeltaSeconds)
 
 void ARobot::Kick(FVector direction, float force)
 {
-	if (hasBall && ball != nullptr)
+	if (ballInRange && ball != nullptr)
 	{
 		float neededStamina = force * staminaRatioKick;
 
@@ -143,10 +144,30 @@ void ARobot::Kick(FVector direction, float force)
 	}
 }
 
-// set the time when the player stopped the ball
+// Stop the Ball
 void ARobot::StopBall(FDateTime timer)
 {
-	stopCommandTime = timer;
+	// ball is already in range: try to stop it right away
+	// and dont try to stop it again when it enters the range again
+	if (ballInRange)
+	{
+		tryStopBall = false;
+		stopBallNow();
+	}
+	// set a timer and try to stop the ball when it enters the range
+	// the allowed time between stop-Command and actually stopping can
+	// be set in the blueprint
+	else
+	{
+		tryStopBall = true;
+		stopCommandTime = timer;
+	}	
+}
+
+// stop ball now (event for blueprint)
+void ARobot::stopBallNow_Implementation()
+{
+
 }
 
 void ARobot::addStamina(float DeltaSeconds)
