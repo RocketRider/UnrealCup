@@ -40,6 +40,9 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	
 
 
+	//Fast Tick
+	GetWorldTimerManager().SetTimer(this, &ASoccerLevelScript::FastTick, 0.0001f, true);
+
 }
 
 
@@ -47,6 +50,9 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 void ASoccerLevelScript::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
+
+	GetWorldTimerManager().ClearAllTimersForObject(this);
+
 
 	for (RobotControl* controller : controllerList)
 	{
@@ -58,15 +64,32 @@ void ASoccerLevelScript::EndPlay(const EEndPlayReason::Type EndPlayReason)
 }
 
 
-
+//Called onece per frame
 void ASoccerLevelScript::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+
+	//Use Fast Tick for more ticks per secound
+	/*
+	for (RobotControl* controller : controllerList)
+	{
+		controller->Tick(DeltaSeconds);
+	}
+	*/
+
+
+}
+
+
+void ASoccerLevelScript::FastTick()
+{
+	//Not perfect but should be good enouth (is the wanted rate, not the actual time between two ticks)
+	float DeltaSeconds = GetWorldTimerManager().GetTimerRate(this, &ASoccerLevelScript::FastTick);
+
 
 	for (RobotControl* controller : controllerList)
 	{
 		controller->Tick(DeltaSeconds);
 	}
-
 
 }

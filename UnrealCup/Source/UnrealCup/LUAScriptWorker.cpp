@@ -144,10 +144,11 @@ static int32 LuaAllowedToRun(lua_State* L)
 		FTimespan dif = now - lastTick;
 		double calcTime = dif.GetTotalMilliseconds();
 		if (calcTime < 1) calcTime = 1;
+		if (calcTime > 10) calcTime = 10;
 		FPlatformProcess::Sleep(calcTime / 100);
 		worker->updateLastTick();
 		*/
-		FPlatformProcess::Sleep(0.001);
+		FPlatformProcess::Sleep(0.0001);
 	}
 	else
 	{
