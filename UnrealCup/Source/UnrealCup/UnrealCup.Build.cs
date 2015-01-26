@@ -19,7 +19,7 @@ public class UnrealCup : ModuleRules
 
 	public UnrealCup(TargetInfo Target)
 	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AIModule"});
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AIModule", "XmlParser"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
