@@ -95,6 +95,11 @@ void RobotControl::Tick(float DeltaSeconds)
 				commandResult = new FVector(robot->getPosition());
 			}
 			break;
+			case getBallPosition:
+			{
+				commandResult = new FVector(robot->getBallPosition());
+			}
+			break;
 			case getRotation:
 			{
 				commandResult = new FRotator(robot->getRotation());
@@ -142,7 +147,8 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 
 
 		//All functions with a return value have to wait for the result
-		if (function == Command::getPosition || function == Command::getRotation || function == Command::getStamina)
+		if (function == Command::getPosition || function == Command::getRotation || function == Command::getStamina || function == Command::getBallPosition || 
+			function == Command::getVisiblePlayers)
 		{
 			waitForResult = true;
 		}

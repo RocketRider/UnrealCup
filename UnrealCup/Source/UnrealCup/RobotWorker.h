@@ -43,6 +43,7 @@ public:
 	~RobotWorker();
 
 	FVector getPosition();
+	FVector getBallPosition();
 	FRotator getRotation();
 	float getStamina();
 	void rotate(float angle);

@@ -196,6 +196,21 @@ FVector ARobot::getPosition()
 	return GetActorLocation();
 }
 
+FVector ARobot::getBallPosition()
+{
+	if (ball != nullptr)
+	{
+		FVector ownLocation = GetActorLocation();
+		FRotator ownRotation = GetActorRotation();
+		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - ball->getLocation().Y, ownLocation.X - ball->getLocation().X));
+		float deltaAngle = angle - ownRotation.Yaw;
+		if (deltaAngle < -180) deltaAngle += 360;
+		if (deltaAngle > 180) deltaAngle -= 360;
+		if (abs(deltaAngle <= HalfFieldOfView)) return ball->getLocation();
+	}
+	return FVector(0, 0, 0);
+}
+
 TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
 {
 	FVector ownLocation = GetActorLocation();

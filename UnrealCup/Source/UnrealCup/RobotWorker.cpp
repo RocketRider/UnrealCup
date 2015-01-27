@@ -92,6 +92,18 @@ FVector RobotWorker::getPosition()
 	return FVector(0, 0, 0);
 }
 
+FVector RobotWorker::getBallPosition()
+{
+	void* result = robotController->call(RobotControl::Command::getBallPosition);
+	if (result != NULL)
+	{
+		FVector ballPosition = FVector(*(FVector*)result);
+		delete result;
+		return ballPosition;
+	}
+	return FVector(0, 0, 0);
+}
+
 FRotator RobotWorker::getRotation()
 {
 	

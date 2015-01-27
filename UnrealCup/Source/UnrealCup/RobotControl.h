@@ -20,7 +20,8 @@ public: enum Command
 		getRotation,
 		getPosition,
 		getStamina,
-		getVisiblePlayers
+		getVisiblePlayers,
+		getBallPosition
 	};
 
 

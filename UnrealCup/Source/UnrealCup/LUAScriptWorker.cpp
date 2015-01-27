@@ -116,6 +116,26 @@ static int32 LuaGetOwnLocation(lua_State* L)
 	return 3; // number of return values
 }
 
+static int32 LuaGetBallPosition(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		FVector pos = worker->getBallPosition();
+
+		lua_pushnumber(L, pos.X);
+		lua_pushnumber(L, pos.Y);
+		lua_pushnumber(L, pos.Z);
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+	}
+	return 3;
+}
+
 static int32 LuaGetStamina(lua_State* L)
 {
 	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
@@ -288,6 +308,8 @@ void LUAScriptWorker::registerFunctions()
 	lua_setglobal(luaState, "StopBall");
 	lua_pushcfunction(luaState, LuaGetOwnLocation);
 	lua_setglobal(luaState, "GetOwnLocation");
+	lua_pushcfunction(luaState, LuaGetBallPosition);
+	lua_setglobal(luaState, "GetBallPosition");
 	lua_pushcfunction(luaState, LuaGetStamina);
 	lua_setglobal(luaState, "GetStamina");
 

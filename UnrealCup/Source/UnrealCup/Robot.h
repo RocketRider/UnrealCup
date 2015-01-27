@@ -67,6 +67,7 @@ public:
 	float getStamina();
 	FRotator getRotation();
 	FVector getPosition();
+	FVector getBallPosition();
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayers();
 	int32 getTeamId();
 	int32 getPlayerId();
