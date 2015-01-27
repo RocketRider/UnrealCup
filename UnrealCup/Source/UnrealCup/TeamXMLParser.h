@@ -9,6 +9,8 @@ class UNREALCUP_API TeamXMLParser
 {
 public:
 	TeamXMLParser();
-	//UFUNCTION(BlueprintCallable, Category = "Xml")
-	FString GetNameTeam1();	//UFUNCTION(BlueprintCallable, Category = "Xml")	FString GetNameTeam2();
+	UFUNCTION(BlueprintCallable, Category = "Xml")
+	FString GetNameTeam1XML();
+	UFUNCTION(BlueprintCallable, Category = "Xml")
+	FString GetNameTeam2XML();
 };

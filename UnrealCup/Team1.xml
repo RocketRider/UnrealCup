@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Players>
+  <Player ScriptLocation="script_Player1.lua" Name="Player1" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player2" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player3" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player4" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player5" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player6" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player7" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player8" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player9" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player10" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Player11" X="100" Y="100"></Player>
+</Players>
