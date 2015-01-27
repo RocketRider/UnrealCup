@@ -198,6 +198,7 @@ FVector ARobot::getPosition()
 
 FVector ARobot::getBallPosition()
 {
+	FVector returnvalue = FVector(0, 0, 0);
 	if (ball != nullptr)
 	{
 		FVector ownLocation = GetActorLocation();
@@ -206,9 +207,10 @@ FVector ARobot::getBallPosition()
 		float deltaAngle = angle - ownRotation.Yaw;
 		if (deltaAngle < -180) deltaAngle += 360;
 		if (deltaAngle > 180) deltaAngle -= 360;
-		if (abs(deltaAngle <= HalfFieldOfView)) return ball->getLocation();
+		if (abs(deltaAngle) <= HalfFieldOfView)
+			returnvalue = ball->getLocation();
 	}
-	return FVector(0, 0, 0);
+	return returnvalue;
 }
 
 TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
