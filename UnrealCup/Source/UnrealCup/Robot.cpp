@@ -66,6 +66,11 @@ void ARobot::MoveTo(float targetX, float targetY)
 	float distance = FMath::Sqrt( pow(targetPosition.X - getPosition().X, 2) + pow(targetPosition.Y - getPosition().Y, 2) );
 	float neededStamina = distance * staminaRatioMove;
 
+	FVector ownLocation = GetActorLocation();
+	FRotator ownRotation = GetActorRotation();
+	float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - ball->getLocation().Y, ownLocation.X - ball->getLocation().X));
+	Rotate(angle);
+
 	// enough stamina -> run full speed
 	if ((stamina - neededStamina) > 0)
 	{
@@ -79,8 +84,8 @@ void ARobot::MoveTo(float targetX, float targetY)
 	else
 	{
 		float movSpeedRatio = stamina / neededStamina;
-
 		// TODO: Set Movement speed
+
 		moveToLoc(targetPosition);
 		
 		stamina = 0;
