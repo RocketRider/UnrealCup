@@ -5,29 +5,43 @@
 #include "Runtime/XmlParser/Public/XmlFile.h"
 #include "Runtime/XmlParser/Public/XmlParser.h"
 
-/*
-FXmlFile* testXml;
 
+FXmlFile* TeamsXml;
+FXmlFile* Team1Xml;
+FXmlFile* Team2Xml;
+
+
+//TODO Fehlerbehandlungen!
 
 TeamXMLParser::TeamXMLParser()
 {
-	testXml = new FXmlFile("Teams.xml");
+	FString Team1Path;
+	FString Team2Path;
+	FXmlNode* node;
 
-	//testXml->loadFile("Teams.xml");
+	TeamsXml = new FXmlFile("Teams.xml");
+
+	node = (FXmlNode*)TeamsXml->GetRootNode()->GetFirstChildNode();
+
+	Team1Path = node->GetAttribute("XMLLocation");
+	node =     (FXmlNode*)node->GetNextNode();
+	Team2Path = node->GetAttribute("XMLLocation");
+
+	Team1Xml = new FXmlFile(Team1Path);
+	Team2Xml = new FXmlFile(Team2Path);
 }
 
 
-FString GetNameTeam1()
+FString GetNameTeam1XML()
 {
 	FXmlNode* node;
 	
-	if FXmlFile.IsValid()
+	if (TeamsXml->IsValid())
 	{
-		node = FXmlFile->GetrootNode();
+		node = TeamsXml->GetRootNode();
+		node = (FXmlNode*)node->GetFirstChildNode();
 
-		node = node.GetFirstChildNode();
-
-		return node.GetAttribute("Name");
+		return node->GetAttribute("Name");
 	}
 	else
 	{
@@ -38,17 +52,15 @@ FString GetNameTeam1()
 }
 
 
-FString GetNameTeam2()
+FString GetNameTeam2XML()
 {
 	FXmlNode* node;
 
-	if FXmlFile.IsValid()
+	if (TeamsXml->IsValid())
 	{
-		node = FXmlFile.GetrootNode();
-
-		node = node.GetFirstChildNode();
-		node = node.GetNextNode();
-
+		node = TeamsXml->GetRootNode();
+		node = (FXmlNode*)node->GetFirstChildNode();
+		node = (FXmlNode*)node->GetNextNode();
 
 		return node->GetAttribute("Name");
 	}
@@ -60,4 +72,3 @@ FString GetNameTeam2()
 	return "Error";
 }
 
-*/
