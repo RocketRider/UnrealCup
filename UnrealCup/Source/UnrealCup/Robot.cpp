@@ -18,7 +18,7 @@ void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
 	staminaTime = 0;
-	ballInRange = false;
+	//ballInRange = true;//false;
 	tryStopBall = false;
 
 
@@ -127,6 +127,7 @@ void ARobot::RotateTick(float DeltaSeconds)
 
 void ARobot::Kick(FVector direction, float force)
 {
+
 	if (ballInRange && ball != nullptr)
 	{
 		float neededStamina = force * staminaRatioKick;
@@ -208,7 +209,7 @@ FVector ARobot::getBallPosition()
 		FVector ownLocation = GetActorLocation();
 		FRotator ownRotation = GetActorRotation();
 		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - ball->getLocation().Y, ownLocation.X - ball->getLocation().X));
-		float deltaAngle = angle - ownRotation.Yaw;
+		float deltaAngle = angle - ownRotation.Yaw + 180;
 		if (deltaAngle < -180) deltaAngle += 360;
 		if (deltaAngle > 180) deltaAngle -= 360;
 		if (abs(deltaAngle) <= HalfFieldOfView)
