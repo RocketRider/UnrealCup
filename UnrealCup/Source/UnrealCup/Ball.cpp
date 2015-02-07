@@ -11,7 +11,18 @@ FVector ABall::getLocation()
 
 void ABall::addForce(FVector direction, float force)
 {
+	if (force < 1)
+		force = 1;
+	if (force > 100000)//Just to makte sure that it is not +INF
+		force = 100000;
+
+	//NEVER CALL THIS FUNCTION WITH INVALID NUMBERS LIKE 1.INF. It will crash the collision system!!!
 	addImpulseBlueprint(direction, force);
+	
+
+	UE_LOG(LogTemp, Warning, TEXT("kick: %f,%f,%f   %f"), direction.X, direction.Y, direction.Z, force);
+	
+
 }
 
 void ABall::addImpulseBlueprint_Implementation(FVector direction, float force)

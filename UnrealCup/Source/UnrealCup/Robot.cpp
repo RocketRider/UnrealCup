@@ -11,7 +11,7 @@ ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCI
 {
 	// tweak player performance
 	staminaRatioMove = 0.4;
-	staminaRatioKick = 0.01;
+	staminaRatioKick = 0.001;
 }
 
 void ARobot::BeginPlay()
@@ -127,23 +127,22 @@ void ARobot::RotateTick(float DeltaSeconds)
 
 void ARobot::Kick(FVector direction, float force)
 {
+	//return;
 
-	if (ballInRange && ball != nullptr)
+	if (ballInRange && ball != nullptr && stamina > 0)
 	{
 		float neededStamina = force * staminaRatioKick;
 
 		// enough stamina -> kick full force
-		if ((stamina - neededStamina) > 0)
+		if (stamina >= neededStamina)
 		{
 			ball->addForce(direction, force);
 			stamina -= neededStamina;
 		}
-
-		// not enough stamina -> kick weaker
-		else
+		else// not enough stamina -> kick weaker
 		{
-			float forceRatio = neededStamina / stamina;
-			ball->addForce(direction, force * forceRatio);
+			float force = stamina / staminaRatioKick;
+			ball->addForce(direction, force);
 			stamina = 0;
 		}
 	}
@@ -152,6 +151,8 @@ void ARobot::Kick(FVector direction, float force)
 // Stop the Ball
 void ARobot::StopBall(FDateTime timer)
 {
+	//return;
+
 	// ball is already in range: try to stop it right away
 	// and dont try to stop it again when it enters the range again
 	if (ballInRange)

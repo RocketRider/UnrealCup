@@ -163,12 +163,14 @@ static int32 LuaAllowedToRun(lua_State* L)
 		FDateTime lastTick = worker->getLastTick();
 		FTimespan dif = now - lastTick;
 		double calcTime = dif.GetTotalMilliseconds();
-		if (calcTime < 1) calcTime = 1;
-		if (calcTime > 10) calcTime = 10;
-		FPlatformProcess::Sleep(calcTime / 100);
-		worker->updateLastTick();
+		if (calcTime > 5)
+		{
+			if (calcTime > 10)calcTime = 10;
+			FPlatformProcess::Sleep(calcTime / 100);
+			worker->updateLastTick();
+		}
 		*/
-		FPlatformProcess::Sleep(0.0001);
+		FPlatformProcess::Sleep(0.001);
 	}
 	else
 	{
@@ -323,7 +325,7 @@ uint32 LUAScriptWorker::Run()
 {
 	RobotScriptWorker::Run();
 
-	UE_LOG(LogTemp, Warning, TEXT("LUA RUN!!!"));
+	//UE_LOG(LogTemp, Warning, TEXT("LUA RUN!!!"));
 
 	if (luaState)
 	{
