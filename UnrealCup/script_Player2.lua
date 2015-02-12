@@ -1,25 +1,28 @@
 runup = false
---counter = 0
+counter = 100
+rotation = 0
 function run()
-	print("script 2")
-	Rotate(270)
-   while AllowedToRun() do
-	   x,y,z = GetOwnLocation()
-	   --counter = counter +1
-	   
-	   --if (counter%100000 == 0) then
-		 --print("running")
-	   --end
-	   if (y<-2000) and (not runup) then
-          Rotate(90)
-		  runup=true
-	   end
-	   if (y>2000) and (runup) then
-		  Rotate(270)
-		  runup=false
-	   end
+	
+	goal1_x,goal1_y,goal1_z = GetGoal1Position()
+	goal2_x,goal2_y,goal2_z = GetGoal2Position()
+	print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
+	print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
+	while AllowedToRun() do
+        x,y,z = GetOwnLocation()
+        ballX, ballY, ballZ = GetBallPosition()
+        
+        if(math.abs(x-ballX)<150 and math.abs(y-ballY)<150) then
+			--print("Kick")
+            Kick(goal2_x-x, goal2_y-y,0,10000)
+        end
+		if not (ballZ == 0 and ballY == 0 and ballX == 0) then
+            MoveTo(ballX, ballY)
+        else
+			--print("Run To goal")
+            --MoveTo(goal1_x-500, goal1_y)
+			rotation = rotation + 10
+			Rotate(rotation)
+        end  
 
-	   MoveForward(2)
-   end
+	end
 end
-
