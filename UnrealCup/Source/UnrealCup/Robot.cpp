@@ -219,6 +219,21 @@ FVector ARobot::getBallPosition()
 	return returnvalue;
 }
 
+FVector ARobot::getGoal1Position()
+{
+	if (goal1 != NULL)
+		return goal1->GetActorLocation();
+	else
+		return FVector(0, 0, 0);
+}
+FVector ARobot::getGoal2Position()
+{
+	if (goal2 != NULL)
+		return goal2->GetActorLocation();
+	else
+		return FVector(0, 0, 0);
+}
+
 TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
 {
 	FVector ownLocation = GetActorLocation();
@@ -260,4 +275,10 @@ void ARobot::setPlayerId(int32 pId)
 void ARobot::setBall(ABall*	p_ball)
 {
 	ball = p_ball;
+}
+
+void ARobot::setGoals(AActor* p_goal1, AActor* p_goal2)
+{
+	goal1 = p_goal1;
+	goal2 = p_goal2;
 }

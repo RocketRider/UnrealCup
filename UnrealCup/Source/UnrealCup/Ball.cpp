@@ -17,6 +17,7 @@ void ABall::addForce(FVector direction, float force)
 		force = 100000;
 
 	//NEVER CALL THIS FUNCTION WITH INVALID NUMBERS LIKE 1.INF. It will crash the collision system!!!
+	direction.Normalize();
 	addImpulseBlueprint(direction, force);
 	
 

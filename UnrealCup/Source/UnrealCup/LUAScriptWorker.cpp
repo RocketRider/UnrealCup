@@ -136,6 +136,46 @@ static int32 LuaGetBallPosition(lua_State* L)
 	return 3;
 }
 
+static int32 LuaGetGoal1Position(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		FVector pos = worker->getGoal1Position();
+
+		lua_pushnumber(L, pos.X);
+		lua_pushnumber(L, pos.Y);
+		lua_pushnumber(L, pos.Z);
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+	}
+	return 3;
+}
+
+static int32 LuaGetGoal2Position(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		FVector pos = worker->getGoal2Position();
+
+		lua_pushnumber(L, pos.X);
+		lua_pushnumber(L, pos.Y);
+		lua_pushnumber(L, pos.Z);
+	}
+	else
+	{
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+		lua_pushnumber(L, 0);
+	}
+	return 3;
+}
+
 static int32 LuaGetStamina(lua_State* L)
 {
 	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
@@ -312,6 +352,12 @@ void LUAScriptWorker::registerFunctions()
 	lua_setglobal(luaState, "GetOwnLocation");
 	lua_pushcfunction(luaState, LuaGetBallPosition);
 	lua_setglobal(luaState, "GetBallPosition");
+
+	lua_pushcfunction(luaState, LuaGetGoal1Position);
+	lua_setglobal(luaState, "GetGoal1Position");
+	lua_pushcfunction(luaState, LuaGetGoal2Position);
+	lua_setglobal(luaState, "GetGoal2Position");
+
 	lua_pushcfunction(luaState, LuaGetStamina);
 	lua_setglobal(luaState, "GetStamina");
 

@@ -68,12 +68,14 @@ public:
 	FRotator getRotation();
 	FVector getPosition();
 	FVector getBallPosition();
+	FVector getGoal1Position();
+	FVector getGoal2Position();
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayers();
 	int32 getTeamId();
 	int32 getPlayerId();
 	void setPlayerId(int32 pId);
 	void setBall(ABall* p_ball);
-
+	void setGoals(AActor* p_goal1, AActor* p_goal2);
 
 protected:
 	
@@ -85,6 +87,9 @@ protected:
 	void RotateTick(float DeltaSeconds);
 	
 	ABall* ball;
+	AActor* goal1;
+	AActor* goal2;
+
 
 	// player performance settings
 	float staminaRatioMove;

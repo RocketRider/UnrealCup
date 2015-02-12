@@ -44,6 +44,8 @@ public:
 
 	FVector getPosition();
 	FVector getBallPosition();
+	FVector getGoal1Position();
+	FVector getGoal2Position();
 	FRotator getRotation();
 	float getStamina();
 	void rotate(float angle);

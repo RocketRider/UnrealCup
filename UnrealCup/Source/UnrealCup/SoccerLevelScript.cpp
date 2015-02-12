@@ -17,20 +17,35 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
 		ball = Cast<ABall>(*ActorItr);
-		UE_LOG(LogTemp, Error, TEXT("%s %s"), *ball->GetName(), *ball->GetActorLocation().ToString());
+		//UE_LOG(LogTemp, Error, TEXT("%s %s"), *ball->GetName(), *ball->GetActorLocation().ToString());
 		break;
+	}
+
+	AActor* goal1 = nullptr;
+	AActor* goal2 = nullptr;
+	for (TActorIterator<AActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		if (ActorItr->GetName().Equals("football_goal_C_0"))
+		{
+			goal1 = Cast<AActor>(*ActorItr);
+		}
+		if (ActorItr->GetName().Equals("football_goal_C_1"))
+		{
+			goal2 = Cast<AActor>(*ActorItr);
+		}
 	}
 
 
 	//Iterate through all Robots	
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("%s %s"), *ActorItr->GetName(), *ActorItr->GetActorLocation().ToString());
+		//UE_LOG(LogTemp, Error, TEXT("%s %s"), *ActorItr->GetName(), *ActorItr->GetActorLocation().ToString());
 		ARobot* robot = Cast<ARobot>(*ActorItr);
 		//TODO: Replace with definition of xml file
 		FString luaFile = FPaths::ConvertRelativePathToFull(FPaths::GameDir()).Append(robot->luaFile);
 
 		robot->setBall(ball);
+		robot->setGoals(goal1, goal2);
 
 		RobotControl* controller = new RobotControl(robot);
 		RobotWorker* worker = new LUAScriptWorker(controller, luaFile);
@@ -38,6 +53,9 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 		controllerList.Add(controller);
 	}
 	
+
+
+
 
 
 	//Fast Tick

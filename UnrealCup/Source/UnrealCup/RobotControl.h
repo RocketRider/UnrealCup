@@ -21,7 +21,9 @@ public: enum Command
 		getPosition,
 		getStamina,
 		getVisiblePlayers,
-		getBallPosition
+		getBallPosition,
+		getGoal1Position,
+		getGoal2Position
 	};
 
 

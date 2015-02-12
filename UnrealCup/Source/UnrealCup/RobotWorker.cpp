@@ -104,6 +104,32 @@ FVector RobotWorker::getBallPosition()
 	return FVector(0, 0, 0);
 }
 
+
+FVector RobotWorker::getGoal1Position()
+{
+	void* result = robotController->call(RobotControl::Command::getGoal1Position);
+	if (result != NULL)
+	{
+		FVector goal1Position = FVector(*(FVector*)result);
+		delete result;
+		return goal1Position;
+	}
+	return FVector(0, 0, 0);
+}
+
+
+FVector RobotWorker::getGoal2Position()
+{
+	void* result = robotController->call(RobotControl::Command::getGoal2Position);
+	if (result != NULL)
+	{
+		FVector goal2Position = FVector(*(FVector*)result);
+		delete result;
+		return goal2Position;
+	}
+	return FVector(0, 0, 0);
+}
+
 FRotator RobotWorker::getRotation()
 {
 	
