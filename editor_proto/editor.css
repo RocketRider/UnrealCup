@@ -1,0 +1,134 @@
+#submitSection input {
+    width: 150;
+    height: 35;
+    background-color: rgb(99,99,250);
+}
+.blockFactory {
+    height: auto;
+    width: 150px;
+    height: 35px;
+    overflow: hidden;
+    border: 2px solid #666666;
+    background-color: #ccc;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px #000;
+    text-align: center;
+    cursor: move;
+}
+.blockFactory header {
+    background-color: #fff;
+    text-shadow: #000 0 1px;
+    box-shadow: 5px;
+    margin: 2px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.blockFactory input {
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    padding: 2px;
+    width: 100px;
+}
+.block {
+    height: auto;
+    width: 150px;
+    border: 2px solid #666666;
+    background-color: #ccc;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px #000;
+    text-align: center;
+    cursor: move;
+}
+.block header {
+    background-color: #fff;
+    text-shadow: #000 0 1px;
+    box-shadow: 5px;
+    margin: 2px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.block input {
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    padding: 2px;
+    width: 100px;
+}
+#getBlockDiv {
+    position: absolute;
+    float: left;
+    display: table-cell;
+    width: 170px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(60,160,160);
+    display: block;
+}
+#getBlockDiv h2 {
+    align-content: center;
+    align-self: center;
+}
+#secondDiv {
+    position: absolute;
+    left: 170px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    float: right;
+}
+#editDiv {
+    position: absolute;
+    background-image: url("http://www.easilearn.com/de/attachments/95120fdb-a945-4085-a899-3b04622610c5.png");
+    top: 60px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+#editDiv header {
+    width: auto;
+}
+#deleteDiv {
+    position: absolute;
+    height: 60px;
+    top: 0px;
+    bottom: 60px;
+    left: 0px;
+    right: 0px;
+    background-color: rgb(160,60,60);
+}
+#mainSection {
+    height: 500px;
+    width: 100%;
+    min-width: 470px;
+    display:block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red; 
+    padding:5px;
+}
+.conIn {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(70,70,70);
+    margin-bottom: 2px;
+    margin-left: 2px;
+    float: left;
+}
+.conOut {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(100,100,100);
+    margin-bottom: 2px;
+    margin-right: 2px;
+    cursor: crosshair;
+}

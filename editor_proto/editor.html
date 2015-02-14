@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UC-Editor</title>
+        <link rel="stylesheet" type="text/css" href="editor.css"/>
+        
+        <script src="jsPlumb-1.7.2\dist\js\dom.jsPlumb-1.7.2-min.js "></script>
+        <script type="text/javascript">
+            var counter = 0;
+            
+            // Parse the XML-File to get possible blocks
+            function parseXml() {
+                // TODO
+            }
+            
+            // AllowDrop function
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            
+            // drag function -> save id of dragged element
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            // drop function of edit div
+            // if blockFactory -> create block
+            // if block -> change block position
+            function drop(ev) {
+                counter++;
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var selected = document.getElementById(data);
+                if(!(ev.target == selected))
+               {
+                    var rect = ev.target.getBoundingClientRect();
+                    var x = ev.pageX - rect.left;
+                    var y = ev.pageY - rect.top;
+
+                    if(selected.className.indexOf("Factory") != -1)
+                    {
+                        var node = createBlock(data);
+                        ev.target.appendChild(node);
+                        placeDiv(x,y,node);
+                    }
+                    else placeDiv(x,y,selected);
+               }
+            }
+            
+            // drop function of delete div
+            // delete the dropped element
+            function deleteMe(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var selected = document.getElementById(data);
+                selected.parentElement.removeChild(selected);
+            }
+            
+            // TEST
+            function dropCon(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var connectorA = document.getElementById(data);
+                var connectorB = ev.target.getBoundingClientRect();
+                
+                jsPlumb.connect(connectorA, connectorB);
+            }
+            
+            // create a new Block from a blockFactory
+            function createBlock(data)
+            {
+                var returnNode = document.createElement("div");
+                returnNode.className = "block";
+                returnNode.id = data + "_" + parseInt(counter); /* We cannot use the same ID */
+                returnNode.setAttribute("draggable", "true");
+                returnNode.setAttribute("ondragstart", "drag(event)");
+
+                var current = document.getElementById(data);
+                for(var child = current.firstChild; child; child = child.nextSibling)
+                {
+                    returnNode.appendChild(child.cloneNode(true));
+                }
+                
+                /*var connectionOut = document.createElement("div");
+                connectionOut.className = "conOut";
+                connectionOut.id = returnNode.id + "_out";
+                connectionOut.setAttribute("draggable", "true");
+                connectionOut.setAttribute("ondragstart", "drag(event)");
+                returnNode.appendChild(connectionOut);
+                
+                var connectionIn = document.createElement("div");
+                connectionIn.className = "conIn";
+                connectionIn.id = returnNode.id + "_in";
+                connectionIn.setAttribute("ondragover", "allowDrop(event)");
+                connectionIn.setAttribute("ondrop", "dropCon(event)");
+                returnNode.appendChild(connectionIn);*/
+                
+                return returnNode;
+            }
+            
+            // set the position of an element
+            function placeDiv(x_pos, y_pos, element) {
+                element.style.position = "absolute";
+                element.style.left = x_pos+'px';
+                element.style.top = y_pos+'px';
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>UC-Editor</h1>
+        </header>
+        <section id="mainSection">
+            <div id="getBlockDiv">
+                <h2>Add Blocks:</h2>
+                <div class="blockFactory" id="MoveTo" draggable="true" ondragstart="drag(event)">
+                    <header>MoveTo</header>
+                    <table>
+                        <tr>
+                            <td>></td>
+                            <td><input type="text" placeholder="Target X"/></td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><input type="text" placeholder="Target Y"/></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blockFactory" id="Kick" draggable="true" ondragstart="drag(event)">
+                    <header>kick</header>
+                    <table>
+                        <tr>
+                            <td>></td>
+                            <td><input type="text" placeholder="strength"/></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blockFactory" id="getPlayerLocation" draggable="true" ondragstart="drag(event)">
+                    <header>getPlayerLocation</header>
+                    <table>
+                        <tr>
+                            <td>xPosition</td>
+                            <td>></td>
+                        </tr>
+                        <tr>
+                            <td>yPosition</td>
+                            <td>></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="secondDiv">
+                <div id="editDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>edit here:</h2>
+                </div>
+                <div id="deleteDiv" ondrop="deleteMe(event)" ondragover="allowDrop(event)">
+                    <h2>delete blocks:</h2>
+                </div>
+            </div>
+        </section>
+        <section id="submitSection">
+            <input type="button" value="Done!">
+        </section>
+        <footer>
+            UnrealCup 2015
+        </footer>
+    </body>
+</html>
