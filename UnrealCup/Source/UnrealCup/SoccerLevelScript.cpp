@@ -25,11 +25,13 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	AActor* goal2 = nullptr;
 	for (TActorIterator<AActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
-		if (ActorItr->GetName().Equals("football_goal_C_0"))
+
+		//TODO: Improve finding goals! These name change if the goal is modified!
+		if (ActorItr->GetName().Equals("football_goal_C_0") || ActorItr->GetName().Equals("football_goal_C_2"))
 		{
 			goal1 = Cast<AActor>(*ActorItr);
 		}
-		if (ActorItr->GetName().Equals("football_goal_C_1"))
+		if (ActorItr->GetName().Equals("football_goal_C_1") || ActorItr->GetName().Equals("football_goal_C_3"))
 		{
 			goal2 = Cast<AActor>(*ActorItr);
 		}

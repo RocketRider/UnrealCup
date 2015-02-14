@@ -5,6 +5,7 @@ function run()
 	
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
+	--goal2_y = goal2_y + 500
 	print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
 	print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
 	while AllowedToRun() do

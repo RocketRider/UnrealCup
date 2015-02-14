@@ -16,7 +16,7 @@ function run()
            Kick(goal1_x-x, goal1_y-y,0,10000)
         end
 		if not (ballZ == 0 and ballY == 0 and ballX == 0) then
-            MoveTo(ballX, ballY)
+            --MoveTo(ballX, ballY)
         else
 			--print("Run To goal")
             --MoveTo(goal2_x+500,goal2_y)
