@@ -50,7 +50,7 @@ public:
 	float getStamina();
 	void rotate(float angle);
 	void move(float straight, float sideways);
-	void moveTo(float targetX, float targetY);
+	void moveTo(float targetX, float targetY, float speed);
 	void kick(FVector direction, float force);
 	void stopBall();
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayersAbsolute();

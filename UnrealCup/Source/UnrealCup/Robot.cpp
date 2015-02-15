@@ -10,8 +10,8 @@
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
 	// tweak player performance
-	staminaRatioMove = 0.006;
-	staminaRatioKick = 0.001;
+	staminaRatioMove = 1 / (5000 * factorSpeed); // 0.00004; // with this value the player can move half the field with full speed
+	staminaRatioKick = 1 / factorKick; // 0.001; // with this value the player can kick one time with full force
 }
 
 void ARobot::BeginPlay()
@@ -20,8 +20,10 @@ void ARobot::BeginPlay()
 	staminaTime = 0;
 	//ballInRange = true;//false;
 	tryStopBall = false;
-
-
+	oldMoveToTarget = FVector::ZeroVector;
+	oldMoveToSpeed = 0;
+	oldMoveToStamina = 0;
+	oldMoveToDistance = 0;
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -52,38 +54,55 @@ void ARobot::Move(float straight, float sideways)
 			stamina = 0;
 			AddMovementInput(Direction, 0.1);
 		}
-
 	}
 }
 
 // Move to a specific location on the map
-void ARobot::MoveTo(float targetX, float targetY)
+void ARobot::MoveTo(float targetX, float targetY, float speed)
 {
+	// return stamina from last MoveTo
+	if (!oldMoveToTarget.IsZero())
+	{
+		FVector pos = getPosition();
+		float distance = FMath::Sqrt(pow(oldMoveToTarget.X - pos.X, 2) + pow(oldMoveToTarget.Y - pos.Y, 2));
+		float returnStamina = distance * oldMoveToSpeed *staminaRatioMove;
+		if (returnStamina > this->oldMoveToStamina)
+			UE_LOG(LogTemp, Error, TEXT("stamina error"));
+			// TODO: Distanz zum alten Target größer als vor dem MoveTo?!? Sollte eigentlich nicht gehen, Spieler läuft ja in Richtung von seinem Ziel
+		stamina += returnStamina;
+		if (stamina > 100)
+			stamina = 100;
+	}
+
+	// clamp input speed
+	if (speed > 100)
+		speed = 100;
+	float moveSpeed = speed * factorSpeed;
+	
 	// adapt the height
 	FVector targetPosition = FVector(targetX, targetY, getPosition().Z);
 
 	// calculate distance to move & needed stamina
 	float distance = FMath::Sqrt( pow(targetPosition.X - getPosition().X, 2) + pow(targetPosition.Y - getPosition().Y, 2) );
-	float neededStamina = distance * staminaRatioMove;
+	float neededStamina = distance * moveSpeed * staminaRatioMove;
 
 	FVector ownLocation = GetActorLocation();
 	float angle = FMath::RadiansToDegrees(atan2(targetY - ownLocation.Y, targetX - ownLocation.X));
 	Rotate(angle);
 
-	// enough stamina -> run full speed
-	if ((stamina - neededStamina) > 0)
+	if (neededStamina > stamina) // not enough stamina -> run slower
 	{
-		moveToLoc(targetPosition, 600);
-		stamina -= neededStamina;
+		moveSpeed = stamina / (distance * staminaRatioMove);
+		neededStamina = distance * moveSpeed * staminaRatioMove;
 	}
 
-	// not enough stamina -> move slower
-	else
-	{
-		float speed = stamina / staminaRatioMove;
-		moveToLoc(targetPosition, speed);
-		stamina = 0;
-	}
+	stamina -= neededStamina;
+	moveToLoc(targetPosition, moveSpeed);
+
+	oldMoveToSpeed = moveSpeed;
+	oldMoveToTarget = targetPosition;
+	oldMoveToStamina = neededStamina;
+	oldMoveToDistance = distance;
 }
 
 // For usage of event in blueprint
@@ -126,6 +145,10 @@ void ARobot::Kick(FVector direction, float force)
 
 	if (ballInRange && ball != nullptr && stamina > 0)
 	{
+		if (force > 100)
+			force = 100;
+		force *= factorKick;
+
 		float neededStamina = force * staminaRatioKick;
 
 		// enough stamina -> kick full force

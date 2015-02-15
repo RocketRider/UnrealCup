@@ -14,10 +14,10 @@ function run()
         
         if(math.abs(x-ballX)<150 and math.abs(y-ballY)<150) then
 			--print("Kick")
-            Kick(goal2_x-x, goal2_y-y,0,10000)
+            Kick(goal2_x-x, goal2_y-y,0,100)
         end
 		if not (ballZ == 0 and ballY == 0 and ballX == 0) then
-            MoveTo(ballX, ballY)
+            MoveTo(ballX, ballY, 100)
         else
 			--print("Run To goal")
             --MoveTo(goal1_x-500, goal1_y)

@@ -55,9 +55,10 @@ void RobotControl::Tick(float DeltaSeconds)
 			break;
 			case moveTo:
 			{
+				FFloat32* speed = (FFloat32*)(queueParams.Pop());
 				FFloat32* targetY = (FFloat32*)(queueParams.Pop());
 				FFloat32* targetX = (FFloat32*)(queueParams.Pop());
-				robot->MoveTo(targetX->FloatValue, targetY->FloatValue);
+				robot->MoveTo(targetX->FloatValue, targetY->FloatValue, speed->FloatValue);
 				delete targetX;
 				delete targetY;
 			}

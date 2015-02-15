@@ -59,7 +59,7 @@ public:
 	void stopBallNow();
 
 	void Move(float straight, float sideways);
-	void MoveTo(float targetX, float targetY);
+	void MoveTo(float targetX, float targetY, float speed);
 	void Rotate(float value);
 	void Kick(FVector direction, float force);
 	void StopBall(FDateTime timer);
@@ -95,4 +95,11 @@ protected:
 	float staminaRatioMove;
 	float staminaRatioKick;
 
+	FVector oldMoveToTarget;
+	float oldMoveToSpeed;
+	float oldMoveToStamina; // Debug
+	float oldMoveToDistance; //Debug
+
+	float factorSpeed = 5;
+	float factorKick = 500;
 };

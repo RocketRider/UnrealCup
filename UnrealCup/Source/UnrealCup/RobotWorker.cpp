@@ -165,9 +165,9 @@ void RobotWorker::move(float straight, float sideways)
 	robotController->call(RobotControl::Command::move, new FFloat32(straight), new FFloat32(sideways));
 }
 
-void RobotWorker::moveTo(float targetX, float targetY)
+void RobotWorker::moveTo(float targetX, float targetY, float speed)
 {
-	robotController->call(RobotControl::Command::moveTo, new FFloat32(targetX), new FFloat32(targetY));
+	robotController->call(RobotControl::Command::moveTo, new FFloat32(targetX), new FFloat32(targetY), new FFloat32(speed));
 }
 
 void RobotWorker::kick(FVector direction, float force)
