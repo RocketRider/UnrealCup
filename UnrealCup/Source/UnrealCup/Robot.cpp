@@ -10,7 +10,7 @@
 ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
 {
 	// tweak player performance
-	staminaRatioMove = 0.4;
+	staminaRatioMove = 0.006;
 	staminaRatioKick = 0.001;
 }
 
@@ -73,26 +73,21 @@ void ARobot::MoveTo(float targetX, float targetY)
 	// enough stamina -> run full speed
 	if ((stamina - neededStamina) > 0)
 	{
-		// TODO: Set Movement speed to max
-		moveToLoc(targetPosition);
-		
+		moveToLoc(targetPosition, 600);
 		stamina -= neededStamina;
 	}
 
 	// not enough stamina -> move slower
 	else
 	{
-		float movSpeedRatio = stamina / neededStamina;
-		// TODO: Set Movement speed
-
-		moveToLoc(targetPosition);
-		
+		float speed = stamina / staminaRatioMove;
+		moveToLoc(targetPosition, speed);
 		stamina = 0;
 	}
 }
 
 // For usage of event in blueprint
-void ARobot::moveToLoc_Implementation(FVector location)
+void ARobot::moveToLoc_Implementation(FVector location, float speed)
 {
 
 }

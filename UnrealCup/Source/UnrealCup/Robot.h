@@ -53,7 +53,7 @@ class UNREALCUP_API ARobot : public ACharacter
 
 public:
 	UFUNCTION(BlueprintNativeEvent, Category = "Move")
-	void moveToLoc(FVector location);
+	void moveToLoc(FVector location, float speed);
 
 	UFUNCTION(BlueprintNativeEvent, Category = "Ball")
 	void stopBallNow();
