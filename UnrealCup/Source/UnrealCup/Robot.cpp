@@ -96,6 +96,9 @@ void ARobot::MoveTo(float targetX, float targetY, float speed)
 		neededStamina = distance * moveSpeed * staminaRatioMove;
 	}
 
+	//Random speed(+- 10%):
+	moveSpeed = moveSpeed*(((float)rand() / (float)RAND_MAX / 10.0) + 0.90);
+
 	stamina -= neededStamina;
 	moveToLoc(targetPosition, moveSpeed);
 
