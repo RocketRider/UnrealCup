@@ -10,7 +10,84 @@
             
             // Parse the XML-File to get possible blocks
             function parseXml() {
-                // TODO
+                xmlhttp=new XMLHttpRequest();
+                xmlhttp.open("GET","blocks.xml",false);
+                xmlhttp.send();
+                xmlDoc=xmlhttp.responseXML;
+                
+                var blocks = xmlDoc.getElementsByTagName("block");
+                for(var i=0; i < blocks.length; i++)
+                {
+                    var current = blocks[i];
+                    var name = current.getAttribute("name");
+                    var inputs = current.getElementsByTagName("input");
+                    var outputs = current.getElementsByTagName("output");
+                    addBlockFactory(name, inputs, outputs);
+                }
+            }
+            
+            // TODO: Create the BlockFactory for the getBlock-Div
+            function addBlockFactory(name, inputList, outputList)
+            {
+                var returnNode = document.createElement("div");
+                returnNode.className = "blockFactory";
+                returnNode.id = name;
+                returnNode.setAttribute("draggable", "true");
+                returnNode.setAttribute("ondragstart", "drag(event)");
+
+                var header = document.createElement("header");
+                header.innerHTML = name;
+                returnNode.appendChild(header);
+                
+                var table = document.createElement("table");
+                
+                //inputs
+                if(inputList.length > 0)
+                {
+                    for(var i=0; i<inputList.length; i++)
+                    {
+                        var row = table.appendChild(document.createElement("tr"));
+                        
+                        // TODO: Append connector
+                        var td = document.createElement("td");
+                        td.innerHTML = ">";
+                        row.appendChild(td);
+                        var current = inputList[i];
+                        
+                        // TODO: Set type of input
+                        var setting = document.createElement("input");
+                        setting.setAttribute("type", "text");
+                        setting.setAttribute("placeholder", current.childNodes[0].nodeValue);
+                        
+                        td = document.createElement("td");
+                        td.appendChild(setting);
+                        row.appendChild(td);
+                    }
+                }
+                
+                //outputs
+                if(outputList.length > 0)
+                {   
+                    for(var i=0; i<outputList.length; i++)
+                    {
+                        var row = table.appendChild(document.createElement("tr"));
+                        
+                        var current = outputList[i];
+                        
+                        // TODO: Set type of input
+                        var td = document.createElement("td");
+                        td.innerHTML = current.childNodes[0].nodeValue;
+                        row.appendChild(td);
+                        
+                        // TODO: Append connector
+                        td = document.createElement("td");
+                        td.innerHTML = ">";
+                        row.appendChild(td);
+                    }
+                }
+                
+                returnNode.appendChild(table);
+                document.getElementById("additionalBlocks").appendChild(returnNode);
             }
             
             // AllowDrop function
@@ -106,48 +183,36 @@
             }
         </script>
     </head>
-    <body>
+    <body onload="parseXml()">
         <header>
             <h1>UC-Editor</h1>
         </header>
         <section id="mainSection">
             <div id="getBlockDiv">
                 <h2>Add Blocks:</h2>
-                <div class="blockFactory" id="MoveTo" draggable="true" ondragstart="drag(event)">
-                    <header>MoveTo</header>
+                <details>
+                    <summary>Standard Blocks</summary>
+                    <div class="blockFactory" id="for" draggable="true" ondragstart="drag(event)">
+                    <header>for</header>
                     <table>
                         <tr>
                             <td>></td>
-                            <td><input type="text" placeholder="Target X"/></td>
+                            <td><input type="text" placeholder="start"/></td>
                         </tr>
                         <tr>
                             <td>></td>
-                            <td><input type="text" placeholder="Target Y"/></td>
+                            <td><input type="text" placeholder="end"/></td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><input type="text" placeholder="increment"/></td>
                         </tr>
                     </table>
                 </div>
-                <div class="blockFactory" id="Kick" draggable="true" ondragstart="drag(event)">
-                    <header>kick</header>
-                    <table>
-                        <tr>
-                            <td>></td>
-                            <td><input type="text" placeholder="strength"/></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="blockFactory" id="getPlayerLocation" draggable="true" ondragstart="drag(event)">
-                    <header>getPlayerLocation</header>
-                    <table>
-                        <tr>
-                            <td>xPosition</td>
-                            <td>></td>
-                        </tr>
-                        <tr>
-                            <td>yPosition</td>
-                            <td>></td>
-                        </tr>
-                    </table>
-                </div>
+                </details>
+                <details id="additionalBlocks">
+                    <summary>Additional Blocks</summary>
+                </details>
             </div>
             <div id="secondDiv">
                 <div id="editDiv" ondrop="drop(event)" ondragover="allowDrop(event)">

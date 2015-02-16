@@ -6,8 +6,17 @@
     <block name="kick">
         <input type="number">strength</input>
     </block>
+    <block name="getBallLocation">
+        <output type="number">xPosition</output>
+        <output type="number">yPosition</output>
+    </block>
     <block name="getPlayerLocation">
         <output type="number">xPosition</output>
         <output type="number">yPosition</output>
+    </block>
+    <block name="testFunktion">
+        <input type="text">input1</input>
+        <output type="number">output1</output>
+        <input type="number">input2</input>
     </block>
 </blocks>
