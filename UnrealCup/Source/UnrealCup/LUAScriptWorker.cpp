@@ -117,6 +117,52 @@ static int32 LuaGetOwnLocation(lua_State* L)
 	return 3; // number of return values
 }
 
+static int32 LuaGetVisiblePlayers(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		TArray<RobotDataTypes::PlayerLocation>* locations = worker->getVisiblePlayersAbsolute();
+
+		lua_newtable(L);
+		for (int i = 0; i < locations->Num(); i++)
+		{
+			lua_newtable(L);
+			lua_pushnumber(L, (*locations)[i].teamId);
+			lua_rawseti(L, -2, 1);
+			lua_pushnumber(L, (*locations)[i].playerId);
+			lua_rawseti(L, -2, 2);
+			lua_pushnumber(L, (*locations)[i].position->X);
+			lua_rawseti(L, -2, 3);
+			lua_pushnumber(L, (*locations)[i].position->Y);
+			lua_rawseti(L, -2, 4);
+
+			lua_rawseti(L, -2, i + 1);
+		}
+		
+
+	}
+	else
+	{
+		lua_newtable(L);
+
+		lua_newtable(L);
+		lua_pushnumber(L, 0);
+		lua_rawseti(L, -2, 1);
+		lua_pushnumber(L, 0);
+		lua_rawseti(L, -2, 2);
+		lua_pushnumber(L, 0);
+		lua_rawseti(L, -2, 3);
+		lua_pushnumber(L, 0);
+		lua_rawseti(L, -2, 4);
+
+		lua_rawseti(L, -2, 1);
+
+	}
+	return 1;
+}
+
+
 static int32 LuaGetBallPosition(lua_State* L)
 {
 	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
@@ -136,6 +182,9 @@ static int32 LuaGetBallPosition(lua_State* L)
 	}
 	return 3;
 }
+
+
+
 
 static int32 LuaGetGoal1Position(lua_State* L)
 {
@@ -353,6 +402,9 @@ void LUAScriptWorker::registerFunctions()
 	lua_setglobal(luaState, "GetOwnLocation");
 	lua_pushcfunction(luaState, LuaGetBallPosition);
 	lua_setglobal(luaState, "GetBallPosition");
+
+	lua_pushcfunction(luaState, LuaGetVisiblePlayers);
+	lua_setglobal(luaState, "GetVisiblePlayers");
 
 	lua_pushcfunction(luaState, LuaGetGoal1Position);
 	lua_setglobal(luaState, "GetGoal1Position");

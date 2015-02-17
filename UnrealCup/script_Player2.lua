@@ -6,8 +6,14 @@ function run()
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
 	--goal2_y = goal2_y + 500
-	print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
-	print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
+	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
+	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
+	player = GetVisiblePlayers()
+	num = #player
+	print("Robot sees ", num, " other robots.")
+	for i = 1, num, 1 do
+         print("T:",player[i][1]," P:", player[i][2]," X:", player[i][3], " Y:", player[i][4])
+    end
 	while AllowedToRun() do
         x,y,z = GetOwnLocation()
         ballX, ballY, ballZ = GetBallPosition()
