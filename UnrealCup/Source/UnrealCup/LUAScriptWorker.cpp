@@ -138,7 +138,10 @@ static int32 LuaGetVisiblePlayers(lua_State* L)
 			lua_rawseti(L, -2, 4);
 
 			lua_rawseti(L, -2, i + 1);
+
+			delete (*locations)[i].position;
 		}
+		delete locations;
 		
 
 	}
