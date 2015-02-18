@@ -268,7 +268,7 @@ TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
 		if (this == robot) continue;
 		
 		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - robot->getPosition().Y, ownLocation.X - robot->getPosition().X));
-		float deltaAngle = angle - ownRotation.Yaw;
+		float deltaAngle = angle - ownRotation.Yaw + 180;
 		if (deltaAngle < -180) deltaAngle += 360;
 		if (deltaAngle > 180) deltaAngle -= 360;
 		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(RobotDataTypes::PlayerLocation{ robot->getTeamId(), robot->getPlayerId(), new FVector(robot->getPosition()) });

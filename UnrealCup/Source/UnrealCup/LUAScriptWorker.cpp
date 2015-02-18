@@ -123,45 +123,46 @@ static int32 LuaGetVisiblePlayers(lua_State* L)
 	if (worker)
 	{
 		TArray<RobotDataTypes::PlayerLocation>* locations = worker->getVisiblePlayersAbsolute();
-
-		lua_newtable(L);
-		for (int i = 0; i < locations->Num(); i++)
+		if (locations != nullptr)
 		{
 			lua_newtable(L);
-			lua_pushnumber(L, (*locations)[i].teamId);
-			lua_rawseti(L, -2, 1);
-			lua_pushnumber(L, (*locations)[i].playerId);
-			lua_rawseti(L, -2, 2);
-			lua_pushnumber(L, (*locations)[i].position->X);
-			lua_rawseti(L, -2, 3);
-			lua_pushnumber(L, (*locations)[i].position->Y);
-			lua_rawseti(L, -2, 4);
+			for (int i = 0; i < locations->Num(); i++)
+			{
+				lua_newtable(L);
+				lua_pushnumber(L, (*locations)[i].teamId);
+				lua_rawseti(L, -2, 1);
+				lua_pushnumber(L, (*locations)[i].playerId);
+				lua_rawseti(L, -2, 2);
+				lua_pushnumber(L, (*locations)[i].position->X);
+				lua_rawseti(L, -2, 3);
+				lua_pushnumber(L, (*locations)[i].position->Y);
+				lua_rawseti(L, -2, 4);
 
-			lua_rawseti(L, -2, i + 1);
+				lua_rawseti(L, -2, i + 1);
 
-			delete (*locations)[i].position;
+				delete (*locations)[i].position;
+			}
+			delete locations;
+			return 1;
 		}
-		delete locations;
+
 		
-
 	}
-	else
-	{
-		lua_newtable(L);
 
-		lua_newtable(L);
-		lua_pushnumber(L, 0);
-		lua_rawseti(L, -2, 1);
-		lua_pushnumber(L, 0);
-		lua_rawseti(L, -2, 2);
-		lua_pushnumber(L, 0);
-		lua_rawseti(L, -2, 3);
-		lua_pushnumber(L, 0);
-		lua_rawseti(L, -2, 4);
+	//No data available return Null array
+	lua_newtable(L);
 
-		lua_rawseti(L, -2, 1);
+	lua_newtable(L);
+	lua_pushnumber(L, 0);
+	lua_rawseti(L, -2, 1);
+	lua_pushnumber(L, 0);
+	lua_rawseti(L, -2, 2);
+	lua_pushnumber(L, 0);
+	lua_rawseti(L, -2, 3);
+	lua_pushnumber(L, 0);
+	lua_rawseti(L, -2, 4);
 
-	}
+	lua_rawseti(L, -2, 1);
 	return 1;
 }
 

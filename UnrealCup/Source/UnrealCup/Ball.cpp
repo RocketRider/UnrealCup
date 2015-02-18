@@ -21,7 +21,7 @@ void ABall::addForce(FVector direction, float force)
 	addImpulseBlueprint(direction, force);
 	
 
-	UE_LOG(LogTemp, Warning, TEXT("kick: %f,%f,%f   %f"), direction.X, direction.Y, direction.Z, force);
+	//UE_LOG(LogTemp, Warning, TEXT("kick: %f,%f,%f   %f"), direction.X, direction.Y, direction.Z, force);
 	
 
 }
