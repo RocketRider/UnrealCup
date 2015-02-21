@@ -19,6 +19,12 @@ function run()
 		stamina = GetStamina()
         ballX, ballY, ballZ = GetBallPosition()
         
+		text = Listen()
+		if (text ~= "") then
+			--print(text)
+		end	
+		
+		
         if(math.abs(x-ballX)<150 and math.abs(y-ballY)<150) then
 			--print("Kick")
 			ownAbs = math.pow(goal2_x-x, 2)+math.pow(goal2_y-y, 2) - 300

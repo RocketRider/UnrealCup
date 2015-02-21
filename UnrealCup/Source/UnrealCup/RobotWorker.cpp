@@ -193,6 +193,23 @@ TArray<RobotDataTypes::PlayerLocation>* RobotWorker::getVisiblePlayersAbsolute()
 }
 
 
+FString RobotWorker::getSpoken()
+{
 
+
+	void* result = robotController->call(RobotControl::Command::getSpoken);
+	if (result != NULL)
+	{
+		FString text = FString(*(FString*)result);
+		delete result;
+		return text;
+	}
+	return FString("");
+}
+void RobotWorker::speak(FString text)
+{
+	robotController->call(RobotControl::Command::speak, new FString(text));
+
+}
 
 

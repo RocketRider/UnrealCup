@@ -83,7 +83,9 @@ void RobotControl::Tick(float DeltaSeconds)
 			case stopBall:
 			{
 				FDateTime* stopTime = (FDateTime*)(queueParams.Pop());
-				robot->StopBall(*stopTime);
+				FDateTime time = FDateTime(*stopTime);
+				delete stopTime;
+				robot->StopBall(time);
 			}
 			break;
 			case getStamina:
@@ -121,6 +123,20 @@ void RobotControl::Tick(float DeltaSeconds)
 				commandResult = robot->getVisiblePlayers();
 			}
 			break;
+			case speak:
+			{
+				FString* text = (FString*)(queueParams.Pop());
+				FString speak = FString(*text);
+				delete text;
+				robot->speak(speak);
+			}
+			break;
+			case getSpoken:
+			{
+				commandResult = new FString(robot->getSpoken());
+			}
+			break;
+
 			}
 
 		}
@@ -159,7 +175,7 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 
 		//All functions with a return value have to wait for the result
 		if (function == Command::getPosition || function == Command::getRotation || function == Command::getStamina || function == Command::getBallPosition || 
-			function == Command::getVisiblePlayers || function == Command::getGoal1Position || function == Command::getGoal2Position)
+			function == Command::getVisiblePlayers || function == Command::getGoal1Position || function == Command::getGoal2Position || function == Command::getSpoken)
 		{
 			waitForResult = true;
 		}

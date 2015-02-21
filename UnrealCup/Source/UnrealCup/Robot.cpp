@@ -303,3 +303,39 @@ void ARobot::setGoals(AActor* p_goal1, AActor* p_goal2)
 	goal1 = p_goal1;
 	goal2 = p_goal2;
 }
+
+
+
+void ARobot::speak(FString text)
+{
+
+	//Speak to all Robots:
+	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+		if (this == robot) continue;
+
+		robot->listen(text);
+	}
+}
+void ARobot::listen(FString text)
+{
+	//If full, remove last item... Not sure if it is really the last added one...
+	if (listenArray.Num() >= maxListenSize)
+	{
+		//TODO: Test which one is the correct one:
+		//listenArray.RemoveAt(listenArray.Num - 1, 1);
+		listenArray.RemoveAt(0, 1);
+	}
+
+	listenArray.Push(text);
+}
+FString ARobot::getSpoken()
+{
+	if (listenArray.Num() > 0)
+	{
+		return listenArray.Pop();
+	}
+
+	return FString("");
+}

@@ -280,8 +280,43 @@ static int32 LuaAllowedToRun(lua_State* L)
 
 
 
+static int32 LuaSpeak(lua_State* L)
+{
+	int ArgCount = lua_gettop(L);
+	FString Message;
+
+	for (int ArgIndex = 1; ArgIndex <= ArgCount; ++ArgIndex)
+	{
+		if (lua_isstring(L, ArgIndex))
+		{
+			Message += ANSI_TO_TCHAR(lua_tostring(L, ArgIndex));
+		}
+	}
+	//UE_LOG(LogTemp, Warning, TEXT("Speak: %s"), *Message);
+	
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		worker->speak(Message);
+	}
+
+	return 0;
+}
 
 
+static int32 LuaListen(lua_State* L)
+{
+	FString text = FString("");
+
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		text = worker->getSpoken();
+	}
+	lua_pushfstring(L, TCHAR_TO_ANSI(*text));
+
+	return 1;
+}
 
 
 
@@ -417,6 +452,15 @@ void LUAScriptWorker::registerFunctions()
 
 	lua_pushcfunction(luaState, LuaGetStamina);
 	lua_setglobal(luaState, "GetStamina");
+
+	lua_pushcfunction(luaState, LuaGetStamina);
+	lua_setglobal(luaState, "GetStamina");
+
+	lua_pushcfunction(luaState, LuaSpeak);
+	lua_setglobal(luaState, "Speak");
+
+	lua_pushcfunction(luaState, LuaListen);
+	lua_setglobal(luaState, "Listen");
 
 	lua_pushcfunction(luaState, LuaAllowedToRun);
 	lua_setglobal(luaState, "AllowedToRun");

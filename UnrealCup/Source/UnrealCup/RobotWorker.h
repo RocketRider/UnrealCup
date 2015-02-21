@@ -55,6 +55,9 @@ public:
 	void stopBall();
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayersAbsolute();
 
+	void speak(FString text);
+	FString getSpoken();
+
 	bool threadIsAllowedToRun();
 	FDateTime getLastTick();
 	void updateLastTick();
