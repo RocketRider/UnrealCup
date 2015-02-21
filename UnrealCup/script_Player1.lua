@@ -7,6 +7,7 @@ function run()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
 	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
 	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
+	Speak("Hallo Team 2")
 	while AllowedToRun() do
         x,y,z = GetOwnLocation()
         ballX, ballY, ballZ = GetBallPosition()

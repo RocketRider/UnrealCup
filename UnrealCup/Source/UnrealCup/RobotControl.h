@@ -23,7 +23,9 @@ public: enum Command
 		getVisiblePlayers,
 		getBallPosition,
 		getGoal1Position,
-		getGoal2Position
+		getGoal2Position,
+		speak,
+		getSpoken
 	};
 
 

@@ -77,6 +77,10 @@ public:
 	void setBall(ABall* p_ball);
 	void setGoals(AActor* p_goal1, AActor* p_goal2);
 
+	void speak(FString text);
+	void listen(FString text);
+	FString getSpoken();
+
 protected:
 	
 	//Tick
@@ -102,4 +106,8 @@ protected:
 
 	float factorSpeed = 5;
 	float factorKick = 500;
+
+
+	TArray<FString> listenArray;
+	int maxListenSize = 256;
 };
