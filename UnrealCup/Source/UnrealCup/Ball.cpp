@@ -18,6 +18,15 @@ void ABall::addForce(FVector direction, float force)
 
 	//NEVER CALL THIS FUNCTION WITH INVALID NUMBERS LIKE 1.INF. It will crash the collision system!!!
 	direction.Normalize();
+	direction.X = direction.X + ((float)rand() / RAND_MAX / 10.0);
+	direction.X = direction.X - ((float)rand() / RAND_MAX / 10.0);
+
+	direction.Y = direction.Y + ((float)rand() / RAND_MAX / 10.0);
+	direction.Y = direction.Y - ((float)rand() / RAND_MAX / 10.0);
+
+	direction.Z = direction.Z + ((float)rand() / RAND_MAX / 10.0);
+	direction.Z = direction.Z - ((float)rand() / RAND_MAX / 10.0);
+
 	addImpulseBlueprint(direction, force);
 	
 

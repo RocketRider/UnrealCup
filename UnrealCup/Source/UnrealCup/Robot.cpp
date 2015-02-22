@@ -11,7 +11,7 @@ ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCI
 {
 	// tweak player performance
 	staminaRatioMove = 1 / (5000 * factorSpeed); // 0.00004; // with this value the player can move half the field with full speed
-	staminaRatioKick = 1 / factorKick; // 0.001; // with this value the player can kick one time with full force
+	staminaRatioKick = 1 / factorKick / 10; // 0.001; // with this value the player can kick ten times with full force
 }
 
 void ARobot::BeginPlay()
