@@ -216,6 +216,7 @@
 
                 var header = document.createElement("header");
                 header.innerHTML = name;
+                header.id = returnNode.id + "_header";
                 returnNode.appendChild(header);
                 
                 var table = document.createElement("table");
@@ -225,20 +226,24 @@
                 {
                     for(var i=0; i<inputList.length; i++)
                     {
-                        var row = table.appendChild(document.createElement("tr"));
+                        var row = document.createElement("tr");
+                        table.appendChild(row);
+                        row.className = "input";
+                        
+                        var current = inputList[i];
                         
                         // TODO: Append connector
                         var td = document.createElement("td");
-                        td.innerHTML = ">";
+                        var connectorDiv = document.createElement("div");
+                        connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
+                        td.appendChild(connectorDiv);
                         row.appendChild(td);
-                        var current = inputList[i];
                         
                         // TODO: Set type of input
                         var setting = document.createElement("input");
                         setting.setAttribute("type", "text");
                         setting.id = returnNode.id + "_" + current.childNodes[0].nodeValue;
                         setting.setAttribute("placeholder", current.childNodes[0].nodeValue);
-                        setting.className = "input";
                         
                         td = document.createElement("td");
                         td.appendChild(setting);
@@ -251,7 +256,9 @@
                 {   
                     for(var i=0; i<outputList.length; i++)
                     {
-                        var row = table.appendChild(document.createElement("tr"));
+                        var row = document.createElement("tr");
+                        row.className = "output";
+                        table.appendChild(row);
                         
                         var current = outputList[i];
                         
@@ -262,7 +269,9 @@
                         
                         // TODO: Append connector
                         td = document.createElement("td");
-                        td.innerHTML = ">";
+                        var connectorDiv = document.createElement("div");
+                        connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
+                        td.appendChild(connectorDiv);
                         row.appendChild(td);
                     }
                 }
@@ -343,32 +352,38 @@
                 {
                     var copy = child.cloneNode(true);
                     copy.id = returnNode.id + "_" + current.id;
-                    
-                    if(copy.className == "input")
-                    {
-                        var sourceUUID = copy.id + "RightMiddle";
-                        jsPlumb.addEndpoint(returnNode, anEndpointSource = {
-                                                                endpoint: "Rectangle",
-                                                                isSource: true,
-                                                                isTarget: false,
-                                                                maxConnections: 1,
-
-                                                                anchor: [1, 0, 1, 0]
-                                                            });
-                    }
-                    else
-                    {
-                        var targetUUID = copy.id + "LeftMiddle";
-                        jsPlumb.addEndpoint(returnNode, anEndpointSource = {
-                                                                endpoint: "Rectangle",
-                                                                isSource: true,
-                                                                isTarget: false,
-                                                                maxConnections: 1,
-
-                                                                anchor: [1, 0, 1, 0]
-                                                            });		
-                    }
                     returnNode.appendChild(copy);
+                    
+                    if(copy.nodeName == "TABLE")
+                    {
+                        for(var tableChild = copy.firstChild; child; child = child.nextSibling)
+                        {
+                            if(tableChild.className == "input")
+                            {
+                                var sourceUUID = copy.id + "RightMiddle";
+                                jsPlumb.addEndpoint(tableChild, anEndpointSource = {
+                                                                        endpoint: "Rectangle",
+                                                                        isSource: true,
+                                                                        isTarget: false,
+                                                                        maxConnections: 1,
+
+                                                                        anchor: [1, 0, 1, 0]
+                                                                    });
+                            }
+                            else
+                            {
+                                var targetUUID = copy.id + "LeftMiddle";
+                                jsPlumb.addEndpoint(tableChild, anEndpointSource = {
+                                                                        endpoint: "Dot",
+                                                                        isSource: false,
+                                                                        isTarget: true,
+                                                                        maxConnections: 1,
+
+                                                                        anchor: [1, 0, 1, 0]
+                                                                    });		
+                            }
+                        }
+                    }
                 }
                 
                 
