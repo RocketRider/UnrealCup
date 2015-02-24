@@ -3,6 +3,16 @@
     height: 35;
     background-color: rgb(99,99,250);
 }
+.jsplumb_enpoint_anchor_ {
+    height: :20;
+    width: :20;
+    position: absolute;
+}
+.connectorDiv {
+    height: 20;
+    width: 20;
+    position: absolute;
+}
 .blockFactory {
     height: auto;
     width: 150px;
