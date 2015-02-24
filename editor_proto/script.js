@@ -82,35 +82,12 @@
 
             // suspend drawing and initialise.
             instance.doWhileSuspended(function() {
-
-                //_addEndpoints("for", ["TopCenter", "BottomCenter"], ["LeftMiddle", "RightMiddle"]);			
-                //_addEndpoints("Window2", ["LeftMiddle", "BottomCenter"], ["TopCenter", "RightMiddle"]);
-                //_addEndpoints("Window3", ["RightMiddle", "BottomCenter"], ["LeftMiddle", "TopCenter"]);
-                //_addEndpoints("Window1", ["LeftMiddle", "RightMiddle"], ["TopCenter", "BottomCenter"]);
-
                 // listen for new connections; initialise them the same way we initialise the connections at startup.
                 instance.bind("connection", function(connInfo, originalEvent) { 
                     init(connInfo.connection);
                 });			
 
-                // make all the window divs draggable						
-                //instance.draggable(jsPlumb.getSelector(".flowchart-demo .window"), { grid: [20, 20] });		
-                // THIS DEMO ONLY USES getSelector FOR CONVENIENCE. Use your library's appropriate selector 
-                // method, or document.querySelectorAll:
-                //jsPlumb.draggable(document.querySelectorAll(".window"), { grid: [20, 20] });
-
-                // connect a few up
-                //instance.connect({uuids:["Window2BottomCenter", "Window3TopCenter"], editable:true});
-                //instance.connect({uuids:["Window2LeftMiddle", "Window4LeftMiddle"], editable:true});
-                //instance.connect({uuids:["Window4TopCenter", "Window4RightMiddle"], editable:true});
-                //instance.connect({uuids:["Window3RightMiddle", "Window2RightMiddle"], editable:true});
-                //instance.connect({uuids:["Window4BottomCenter", "Window1TopCenter"], editable:true});
-                //instance.connect({uuids:["Window3BottomCenter", "Window1BottomCenter"], editable:true});
-                //
-
-                //
                 // listen for clicks on connections, and offer to delete connections on click.
-                //
                 instance.bind("click", function(conn, originalEvent) {
                     if (confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?"))
                         jsPlumb.detach(conn); 
@@ -144,9 +121,11 @@
                 xmlhttp.send();
                 xmlDoc=xmlhttp.responseXML;
                 
+                // Get Blocks from XML
                 var blocks = xmlDoc.getElementsByTagName("block");
                 for(var i=0; i < blocks.length; i++)
                 {
+                    // collect information and create blockfactory
                     var current = blocks[i];
                     var name = current.getAttribute("name");
                     var inputs = current.getElementsByTagName("input");
@@ -155,20 +134,23 @@
                 }
             }
             
-            // TODO: Create the BlockFactory for the getBlock-Div
+            // Create the BlockFactory
             function addBlockFactory(name, inputList, outputList)
             {
+                // create div..
                 var returnNode = document.createElement("div");
                 returnNode.className = "blockFactory";
                 returnNode.id = name;
                 returnNode.setAttribute("draggable", "true");
                 returnNode.setAttribute("ondragstart", "drag(event)");
 
+                // create header..
                 var header = document.createElement("header");
                 header.innerHTML = name;
                 header.id = returnNode.id + "_header";
                 returnNode.appendChild(header);
                 
+                // create table for input / output
                 var table = document.createElement("table");
                 table.id = returnNode.id + "_table";
                 
@@ -177,13 +159,15 @@
                 {
                     for(var i=0; i<inputList.length; i++)
                     {
+                        // get current input
+                        var current = inputList[i];
+                        
+                        // create new row for each input
                         var row = document.createElement("tr");
                         table.appendChild(row);
                         row.className = "input";
                         
-                        var current = inputList[i];
-                        
-                        // TODO: Append connector
+                        // create td containing the connectorDiv
                         var td = document.createElement("td");
                         var connectorDiv = document.createElement("div");
                         connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
@@ -191,12 +175,14 @@
                         td.appendChild(connectorDiv);
                         row.appendChild(td);
                         
-                        // TODO: Set type of input
+                        // create input field
                         var setting = document.createElement("input");
+                        // TODO: Set type of input
                         setting.setAttribute("type", "text");
                         setting.id = returnNode.id + "_" + current.childNodes[0].nodeValue;
                         setting.setAttribute("placeholder", current.childNodes[0].nodeValue);
                         
+                        // create td for setting and append
                         td = document.createElement("td");
                         td.appendChild(setting);
                         row.appendChild(td);
@@ -208,18 +194,20 @@
                 {   
                     for(var i=0; i<outputList.length; i++)
                     {
+                        // get current output
+                        var current = outputList[i];
+                        
+                        // create new row for each output
                         var row = document.createElement("tr");
                         row.className = "output";
                         table.appendChild(row);
                         
-                        var current = outputList[i];
-                        
-                        // TODO: Set type of input
+                        // set name of output
                         var td = document.createElement("td");
                         td.innerHTML = current.childNodes[0].nodeValue;
                         row.appendChild(td);
                         
-                        // TODO: Append connector
+                        // add connector div
                         td = document.createElement("td");
                         var connectorDiv = document.createElement("div");
                         connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
@@ -229,6 +217,7 @@
                     }
                 }
                 
+                // append blockFactory
                 returnNode.appendChild(table);
                 document.getElementById("additionalBlocks").appendChild(returnNode);
             }
@@ -263,7 +252,6 @@
                         //ev.target.appendChild(node);
                         //placeDiv(x,y,node);
                     }
-                    else placeDiv(x,y,selected);
                }
             }
             
@@ -276,43 +264,42 @@
                 selected.parentElement.removeChild(selected);
             }
             
-            // TEST
-            function dropCon(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                var connectorA = document.getElementById(data);
-                var connectorB = ev.target.getBoundingClientRect();
-                
-                jsPlumb.connect(connectorA, connectorB);
-            }
-            
             // create a new Block from a blockFactory
             function createBlock(data, x, y, ev)
             {
+                // create new node of class "block"
                 var returnNode = document.createElement("div");
                 returnNode.className = "block";
                 returnNode.id = data + "_" + parseInt(counter); /* We cannot use the same ID */
-                //returnNode.setAttribute("draggable", "true");
-                //returnNode.setAttribute("ondragstart", "drag(event)");
-                
-                jsPlumb.draggable(returnNode);
-                
                 ev.target.appendChild(returnNode);
                 placeDiv(x,y,returnNode);
+                
+                // make draggable
+                jsPlumb.draggable(returnNode);
 
+                // get the "parent" blockFactory
                 var current = document.getElementById(data);
+                
+                // get the contents of the blockfactory
                 for(var child = current.firstChild; child; child = child.nextSibling)
                 {
+                    // copy each content
                     var copy = child.cloneNode(true);
                     copy.id = returnNode.id + "_" + child.id;
                     returnNode.appendChild(copy);
                     
+                    // if the current child is the table...
                     if(copy.nodeName == "TABLE")
                     {
+                        // ... loop through the rows ...
                         for(var tableChild = copy.firstChild; tableChild; tableChild = tableChild.nextSibling)
                         {
+                            // and select the connector div
                             var connectors = tableChild.getElementsByClassName("connectorDiv");
                             connectors[0].id = connectors[0].id + "_" + returnNode.id;
+                            
+                            // add jsplumb endpoint
+                            // target endpoint
                             if(tableChild.className == "input")
                             {
                                 var sourceUUID = copy.id + "Center";
@@ -326,6 +313,7 @@
                                                                         anchor: "Center"
                                                                     });
                             }
+                            // source endpoint
                             else
                             {
                                 var targetUUID = copy.id + "Center";
@@ -341,8 +329,6 @@
                         }
                     }
                 }
-                
-                
                 return returnNode;
             }
             
