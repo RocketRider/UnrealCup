@@ -257,10 +257,8 @@
             
             // drop function of delete div
             // delete the dropped element
-            function deleteMe(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                var selected = document.getElementById(data);
+            function deleteMe(id) {
+                var selected = document.getElementById(id);
                 selected.parentElement.removeChild(selected);
             }
             
@@ -287,6 +285,14 @@
                     var copy = child.cloneNode(true);
                     copy.id = returnNode.id + "_" + child.id;
                     returnNode.appendChild(copy);
+                    var close = document.createElement("a");
+                    close.setAttribute("href", "#");
+                    close.onclick = function() { returnNode.parentElement.removeChild(returnNode); };
+                    close.className = "closeButton";
+                    close.innerHTML = "X";
+                    close.id = returnNode.id + "_close";
+                    returnNode.appendChild(close);
+                    
                     
                     // if the current child is the table...
                     if(copy.nodeName == "TABLE")
