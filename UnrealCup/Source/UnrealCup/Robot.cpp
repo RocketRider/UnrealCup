@@ -223,19 +223,44 @@ FVector ARobot::getPosition()
 	return GetActorLocation();
 }
 
+bool ARobot::isObjectVisible(FVector objectPosition)
+{
+	FVector ownLocation = GetActorLocation();
+	FRotator ownRotation = GetActorRotation();
+	float distance = sqrt(pow(ownLocation.X - objectPosition.X, 2) + pow(ownLocation.Y - objectPosition.X, 2));
+
+	if (distance < 500) //See everyting in a distance of 5 meter
+	{
+		return true;
+	}
+
+	//See everypting in the field of view
+	float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - objectPosition.Y, ownLocation.X - objectPosition.X));
+	float deltaAngle = angle - ownRotation.Yaw + 180;
+	if (deltaAngle < -180) deltaAngle += 360;
+	{
+		if (deltaAngle > 180) deltaAngle -= 360;
+		{
+			if (abs(deltaAngle) <= HalfFieldOfView)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+
 FVector ARobot::getBallPosition()
 {
 	FVector returnvalue = FVector(0, 0, 0);
 	if (ball != nullptr)
 	{
-		FVector ownLocation = GetActorLocation();
-		FRotator ownRotation = GetActorRotation();
-		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - ball->getLocation().Y, ownLocation.X - ball->getLocation().X));
-		float deltaAngle = angle - ownRotation.Yaw + 180;
-		if (deltaAngle < -180) deltaAngle += 360;
-		if (deltaAngle > 180) deltaAngle -= 360;
-		if (abs(deltaAngle) <= HalfFieldOfView)
+		if (isObjectVisible(ball->getLocation()))
+		{
 			returnvalue = ball->getLocation();
+		}
 	}
 	return returnvalue;
 }
@@ -267,11 +292,10 @@ TArray<RobotDataTypes::PlayerLocation>* ARobot::getVisiblePlayers()
 		ARobot* robot = Cast<ARobot>(*ActorItr);
 		if (this == robot) continue;
 		
-		float angle = FMath::RadiansToDegrees(atan2(ownLocation.Y - robot->getPosition().Y, ownLocation.X - robot->getPosition().X));
-		float deltaAngle = angle - ownRotation.Yaw + 180;
-		if (deltaAngle < -180) deltaAngle += 360;
-		if (deltaAngle > 180) deltaAngle -= 360;
-		if (abs(deltaAngle <= HalfFieldOfView)) visiblePlayerLocations->Add(RobotDataTypes::PlayerLocation{ robot->getTeamId(), robot->getPlayerId(), new FVector(robot->getPosition()) });
+		if (isObjectVisible(robot->getPosition()))
+		{
+			visiblePlayerLocations->Add(RobotDataTypes::PlayerLocation{ robot->getTeamId(), robot->getPlayerId(), new FVector(robot->getPosition()) });
+		}
 	}
 
 	return visiblePlayerLocations;

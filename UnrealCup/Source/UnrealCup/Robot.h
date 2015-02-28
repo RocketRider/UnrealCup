@@ -90,6 +90,8 @@ protected:
 	float rotation;
 	void RotateTick(float DeltaSeconds);
 	
+	bool isObjectVisible(FVector objectPosition);
+
 	ABall* ball;
 	AActor* goal1;
 	AActor* goal2;
