@@ -1,108 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\UnrealCup.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{E7EC84F4-C5E4-4331-A25E-EBC9194E7B00}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\UnrealCup.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\UnrealCupEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{9134704F-870B-43DC-9366-4E0870E35480}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Source\UnrealCup">
-      <UniqueIdentifier>{918643C4-8E97-4873-913D-7D8EC47E3C14}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\UnrealCup\Ball.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\Ball.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\LUAScriptWorker.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\LUAScriptWorker.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\Robot.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\RobotControl.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\RobotControl.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\RobotDataTypes.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\RobotDataTypes.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\RobotScriptWorker.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\RobotScriptWorker.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\RobotWorker.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\RobotWorker.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\SoccerLevelScript.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\SoccerLevelScript.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\TeamXMLParser.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\TeamXMLParser.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <None Include="..\..\Source\UnrealCup\UnrealCup.Build.cs">
-      <Filter>Source\UnrealCup</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\UnrealCup\UnrealCup.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\UnrealCup.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\UnrealCup\UnrealCupGameMode.cpp">
-      <Filter>Source\UnrealCup</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\UnrealCup\UnrealCupGameMode.h">
-      <Filter>Source\UnrealCup</Filter>
-    </ClInclude>
-    <Filter Include="Source\UnrealCup\Resources">
-      <UniqueIdentifier>{2778E188-E7AE-42CE-8CA7-8D560A9B473A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\UnrealCup\Resources\Windows">
-      <UniqueIdentifier>{62D04AFA-F6DA-4D7F-BA36-B0DA577C53D0}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
-      <Filter>Source\UnrealCup\Resources\Windows</Filter>
-    </None>
-    <ResourceCompile Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.rc">
-      <Filter>Source\UnrealCup\Resources\Windows</Filter>
-    </ResourceCompile>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\UnrealCup.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{341A866D-8490-4A95-B4A5-46ECDF06DED0}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\UnrealCupEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{DF20AB35-B864-423D-9C64-E3B42FA02C12}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\UnrealCup">
+			<UniqueIdentifier>{83284C06-F182-4CD3-AFAB-04311137DC3F}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\UnrealCup\Ball.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\Ball.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\LUAScriptWorker.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\LUAScriptWorker.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\Robot.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\Robot.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\RobotControl.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\RobotControl.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\RobotDataTypes.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\RobotDataTypes.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\RobotScriptWorker.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\RobotScriptWorker.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\RobotWorker.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\RobotWorker.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\SoccerLevelScript.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\SoccerLevelScript.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\TeamXMLParser.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\TeamXMLParser.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\UnrealCup\UnrealCup.Build.cs">
+			<Filter>Source\UnrealCup</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCup.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCup.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UnrealCup\UnrealCupGameMode.cpp">
+			<Filter>Source\UnrealCup</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UnrealCup\UnrealCupGameMode.h">
+			<Filter>Source\UnrealCup</Filter>
+		</ClInclude >
+		<Filter Include="Source\UnrealCup\Resources">
+			<UniqueIdentifier>{43439DD5-608C-477C-8BB4-C0A5E423CAEB}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\UnrealCup\Resources\Windows">
+			<UniqueIdentifier>{6A4BD298-36A8-4CC2-8BD4-2AA81E53F7C1}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.ico">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</None >
+		<ResourceCompile Include="..\..\Source\UnrealCup\Resources\Windows\UnrealCup.rc">
+			<Filter>Source\UnrealCup\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
 </Project>
