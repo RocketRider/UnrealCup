@@ -3,6 +3,9 @@
     height: 35;
     background-color: rgb(99,99,250);
 }
+#mainHeader {
+    color: rgb(230,30,0);
+}
 .closeButton {
 	background: #606061;
 	color: #FFFFFF;
