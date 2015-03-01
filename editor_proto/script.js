@@ -169,11 +169,7 @@
                         
                         // create td containing the connectorDiv
                         var td = document.createElement("td");
-                        var connectorDiv = document.createElement("div");
-                        connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
-                        connectorDiv.className = "connectorDiv";
-                        td.appendChild(connectorDiv);
-                        row.appendChild(td);
+                        td.id = returnNode.id + current.childNodes[0].nodeValue;
                         
                         // create input field
                         var setting = document.createElement("input");
@@ -183,8 +179,8 @@
                         setting.setAttribute("placeholder", current.childNodes[0].nodeValue);
                         
                         // create td for setting and append
-                        td = document.createElement("td");
                         td.appendChild(setting);
+                        
                         row.appendChild(td);
                     }
                 }
@@ -204,15 +200,10 @@
                         
                         // set name of output
                         var td = document.createElement("td");
+                        td.id = 
                         td.innerHTML = current.childNodes[0].nodeValue;
-                        row.appendChild(td);
+                        returnNode.id + "_" + current.childNodes[0].nodeValue;
                         
-                        // add connector div
-                        td = document.createElement("td");
-                        var connectorDiv = document.createElement("div");
-                        connectorDiv.id = returnNode.id + "_" + current.childNodes[0].nodeValue + "_connector";
-                        connectorDiv.className = "connectorDiv";
-                        td.appendChild(connectorDiv);
                         row.appendChild(td);
                     }
                 }
@@ -299,18 +290,13 @@
                     {
                         // ... loop through the rows ...
                         for(var tableChild = copy.firstChild; tableChild; tableChild = tableChild.nextSibling)
-                        {
-                            // and select the connector div
-                            var connectors = tableChild.getElementsByClassName("connectorDiv");
-                            connectors[0].id = connectors[0].id + "_" + returnNode.id;
-                            
+                        {   
                             // add jsplumb endpoint
                             // target endpoint
                             if(tableChild.className == "input")
                             {
-                                var sourceUUID = copy.id + "Center";
-                                
-                                jsPlumb.addEndpoint(connectors[0], anEndpointSource = {
+                                var sourceUUID = copy.id + "connector";
+                                jsPlumb.addEndpoint(tableChild.firstChild, anEndpointSource = {
                                                                         endpoint: "Rectangle",
                                                                         isSource: false,
                                                                         isTarget: true,
@@ -320,10 +306,10 @@
                                                                     });
                             }
                             // source endpoint
-                            else
+                            else if(tableChild.className == "output")
                             {
-                                var targetUUID = copy.id + "Center";
-                                jsPlumb.addEndpoint(connectors[0], anEndpointSource = {
+                                var targetUUID = copy.id + "connector";
+                                jsPlumb.addEndpoint(tableChild.firstChild, anEndpointSource = {
                                                                         endpoint: "Dot",
                                                                         isSource: true,
                                                                         isTarget: false,

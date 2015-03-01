@@ -131,19 +131,3 @@
     border: 1px solid red; 
     padding:5px;
 }
-.conIn {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(70,70,70);
-    margin-bottom: 2px;
-    margin-left: 2px;
-    float: left;
-}
-.conOut {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(100,100,100);
-    margin-bottom: 2px;
-    margin-right: 2px;
-    cursor: crosshair;
-}
