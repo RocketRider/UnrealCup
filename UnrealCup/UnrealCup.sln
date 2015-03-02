@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{9347F8C8-D839-43DA-87E4-7B49BA768CF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{FD122562-E769-4468-8812-A4592DB9AEA9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnrealCup", "Intermediate\ProjectFiles\UnrealCup.vcxproj", "{2B76FEC2-DD48-472F-941B-AF5A87A2B981}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{D4A500B6-5139-4315-97DF-9177C43A2037}"
 EndProject
@@ -30,12 +30,17 @@ Global
 		{2B76FEC2-DD48-472F-941B-AF5A87A2B981}.Development|Windows.Build.0 = Development_Game|x64
 		{2B76FEC2-DD48-472F-941B-AF5A87A2B981}.Shipping|Windows.ActiveCfg = Shipping_Game|Win32
 		{2B76FEC2-DD48-472F-941B-AF5A87A2B981}.Shipping|Windows.Build.0 = Shipping_Game|Win32
+		{D4A500B6-5139-4315-97DF-9177C43A2037}.DebugGame Editor|Windows.ActiveCfg = BuiltWithUnrealBuildTool|Win32
+		{D4A500B6-5139-4315-97DF-9177C43A2037}.DebugGame|Windows.ActiveCfg = BuiltWithUnrealBuildTool|Win32
+		{D4A500B6-5139-4315-97DF-9177C43A2037}.Development Editor|Windows.ActiveCfg = BuiltWithUnrealBuildTool|Win32
+		{D4A500B6-5139-4315-97DF-9177C43A2037}.Development|Windows.ActiveCfg = BuiltWithUnrealBuildTool|Win32
+		{D4A500B6-5139-4315-97DF-9177C43A2037}.Shipping|Windows.ActiveCfg = BuiltWithUnrealBuildTool|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D4A500B6-5139-4315-97DF-9177C43A2037} = {9347F8C8-D839-43DA-87E4-7B49BA768CF5}
 		{2B76FEC2-DD48-472F-941B-AF5A87A2B981} = {FD122562-E769-4468-8812-A4592DB9AEA9}
+		{D4A500B6-5139-4315-97DF-9177C43A2037} = {9347F8C8-D839-43DA-87E4-7B49BA768CF5}
 	EndGlobalSection
 EndGlobal

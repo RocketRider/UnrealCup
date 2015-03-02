@@ -52,12 +52,35 @@
         
     </head>
     <body onload="parseXml()">
-        <header id="mainHeader">
-            <h1>UC-Editor</h1>
+        <header>
+            <nav>
+                <ul id="mainMenu">
+                    <li><h1><a href="#">Unreal Editor</a></h1></li>
+                    <li>
+                        <a href="#o">Options</a>
+                        <div>
+                            <ul>
+                                <li>New Script</li>
+                                <li>Open Script</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#a">About</a>
+                        <div>
+                            <ul>
+                                <li>Reference</li>
+                                <li>How To</li>
+                                <li>Developers</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <section id="mainSection">
             <div id="getBlockDiv">
-                <h2>Add Blocks:</h2>
+                <h2>Add Blocks</h2>
                 <details>
                     <summary>Standard Blocks</summary>
                     <div class="blockFactory" id="for" draggable="true" ondragstart="drag(event)">
@@ -81,16 +104,9 @@
                 <details id="additionalBlocks">
                     <summary>Additional Blocks</summary>
                 </details>
+                <input id="submitButton" type="button" value="SAVE">
             </div>
-            <div id="editDiv" ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- ondrop="drop(event)" ondragover="allowDrop(event)" -->
-                <h2>edit here:</h2>
-            </div>
+            <div id="editDiv" ondrop="drop(event)" ondragover="allowDrop(event)"/>
         </section>
-        <section id="submitSection">
-            <input type="button" value="Done!">
-        </section>
-        <footer>
-            UnrealCup 2015
-        </footer>
     </body>
 </html>
