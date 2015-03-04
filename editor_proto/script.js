@@ -89,8 +89,7 @@
 
                 // listen for clicks on connections, and offer to delete connections on click.
                 instance.bind("click", function(conn, originalEvent) {
-                    if (confirm("Delete connection from " + conn.sourceId + " to " + conn.targetId + "?"))
-                        jsPlumb.detach(conn); 
+                    jsPlumb.detach(conn); 
                 });	
 
                 instance.bind("connectionDrag", function(connection) {
@@ -249,8 +248,9 @@
             // drop function of delete div
             // delete the dropped element
             function deleteMe(id) {
-                var selected = document.getElementById(id);
-                selected.parentElement.removeChild(selected);
+                instance.remove(id);
+                //var selected = document.getElementById(id);
+                //selected.parentElement.removeChild(selected);
             }
             
             // create a new Block from a blockFactory
@@ -262,9 +262,6 @@
                 returnNode.id = data + "_" + parseInt(counter); /* We cannot use the same ID */
                 ev.target.appendChild(returnNode);
                 placeDiv(x,y,returnNode);
-                
-                // make draggable
-                jsPlumb.draggable(returnNode);
 
                 // get the "parent" blockFactory
                 var current = document.getElementById(data);
@@ -278,7 +275,7 @@
                     returnNode.appendChild(copy);
                     var close = document.createElement("a");
                     close.setAttribute("href", "#");
-                    close.onclick = function() { returnNode.parentElement.removeChild(returnNode); };
+                    close.onclick = function() { instance.remove(returnNode.id); };
                     close.className = "closeButton";
                     close.innerHTML = "X";
                     close.id = returnNode.id + "_close";
@@ -295,32 +292,38 @@
                             // target endpoint
                             if(tableChild.className == "input")
                             {
+                                tableChild.firstChild.id = returnNode.id + "-" + tableChild.firstChild.id;
                                 var sourceUUID = copy.id + "connector";
-                                jsPlumb.addEndpoint(tableChild.firstChild, anEndpointSource = {
-                                                                        endpoint: "Rectangle",
-                                                                        isSource: false,
-                                                                        isTarget: true,
-                                                                        maxConnections: 1,
-
-                                                                        anchor: "Center"
-                                                                    });
+                                var targetEndpoint = {
+                                    endpoint: "Rectangle",
+                                    isSource: false,
+                                    isTarget: true,
+                                    maxConnections: 1,
+                                    anchor: "Left",
+                                    endpointStyle:{ fillStyle:"white", outlineColor:"black", outlineWidth:2 }
+                                }
+                                instance.addEndpoint(tableChild.firstChild, targetEndpoint);
                             }
                             // source endpoint
                             else if(tableChild.className == "output")
                             {
+                                tableChild.firstChild.id = returnNode.id + "-" + tableChild.firstChild.id;
                                 var targetUUID = copy.id + "connector";
-                                jsPlumb.addEndpoint(tableChild.firstChild, anEndpointSource = {
-                                                                        endpoint: "Dot",
-                                                                        isSource: true,
-                                                                        isTarget: false,
-                                                                        maxConnections: 1,
-
-                                                                        anchor: "Center"
-                                                                    });		
+                                var sourceEndpoint = {
+                                    endpoint: "Dot",
+                                    isSource: true,
+                                    isTarget: false,
+                                    maxConnections: 1,
+                                    anchor: "Right",
+                                    endpointStyle:{ fillStyle:"white", outlineColor:"black", outlineWidth:2 }
+                                }
+                                instance.addEndpoint(tableChild.firstChild, sourceEndpoint);		
                             }
                         }
                     }
                 }
+                // make draggable
+                instance.draggable(returnNode);
                 return returnNode;
             }
             

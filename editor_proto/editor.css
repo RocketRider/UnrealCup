@@ -159,7 +159,15 @@ nav > ul > li > div ul > li:hover > a {
     border-top-right-radius: 10px;
     text-align: center;
 }
+.block table {
+    width: 150px;
+}
+.block tr {
+    width: 145px;
+    align-content: center;
+}
 .block input {
+    left: 20px;
     margin-top: 2px;
     margin-right: 5px;
     margin-left: 5px;
