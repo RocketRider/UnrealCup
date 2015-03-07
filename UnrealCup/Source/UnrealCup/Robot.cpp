@@ -24,6 +24,9 @@ void ARobot::BeginPlay()
 	oldMoveToSpeed = 0;
 	oldMoveToStamina = 0;
 	oldMoveToDistance = 0;
+
+	//TODO: Set start Postion out of the XML file:
+	startLocation = GetActorLocation();
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)

@@ -48,6 +48,9 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	bool tryStopBall;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	FVector startLocation;
+
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
