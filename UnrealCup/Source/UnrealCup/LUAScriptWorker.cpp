@@ -25,6 +25,17 @@ static int32 LuaMoveForward(lua_State* L)
 	return 0;  /* number of results */
 }
 
+static int32 LuaHasBall(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushboolean(L, worker->hasBall());
+		return 1;
+	}
+	return 0;
+}
+
 static int32 LuaMoveTo(lua_State* L)
 {
 	double x = lua_tonumber(L, 1);
@@ -427,6 +438,8 @@ void LUAScriptWorker::overridePrint()
 void LUAScriptWorker::registerFunctions()
 {
 	//MoveForward(double Speed)
+	lua_pushcfunction(luaState, LuaHasBall);
+	lua_setglobal(luaState, "hasBall");
 	lua_pushcfunction(luaState, LuaMoveForward);
 	lua_setglobal(luaState, "MoveForward");
 	lua_pushcfunction(luaState, LuaMoveTo);

@@ -42,6 +42,7 @@ public:
 	RobotWorker(RobotControl* robotController);
 	~RobotWorker();
 
+	bool hasBall();
 	FVector getPosition();
 	FVector getBallPosition();
 	FVector getGoal1Position();

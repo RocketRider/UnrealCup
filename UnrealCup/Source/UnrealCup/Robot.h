@@ -67,6 +67,7 @@ public:
 	void Kick(FVector direction, float force);
 	void StopBall(FDateTime timer);
 	
+	bool hasBall();
 	float getStamina();
 	FRotator getRotation();
 	FVector getPosition();

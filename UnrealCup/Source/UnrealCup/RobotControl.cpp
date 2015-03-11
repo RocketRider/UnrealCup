@@ -44,6 +44,10 @@ void RobotControl::Tick(float DeltaSeconds)
 			Command function = queueCommands.Pop();
 			switch (function)
 			{
+			case hasBall:
+			{
+				commandResult = new bool(robot->hasBall());
+			}
 			case move:
 			{
 				FFloat32* sideways = (FFloat32*)(queueParams.Pop());

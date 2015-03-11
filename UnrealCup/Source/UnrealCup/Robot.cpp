@@ -117,6 +117,11 @@ void ARobot::moveToLoc_Implementation(FVector location, float speed)
 
 }
 
+bool ARobot::hasBall()
+{
+	return ballInRange;
+}
+
 void ARobot::Rotate(float angle)
 {
 
