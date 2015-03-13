@@ -12,10 +12,11 @@ function run()
         ballX, ballY, ballZ = GetBallPosition()
 		stamina = GetStamina()
         player = GetVisiblePlayers()
+		ownAbs = math.sqrt(math.pow(goal1_x-x, 2)+math.pow(goal1_y-y, 2) - 300)
+		
 		
         if(math.abs(ballX-x)<150 and math.abs(ballY-y)<150) then
 			--print("Kick")
-			ownAbs = math.sqrt(math.pow(goal1_x-x, 2)+math.pow(goal1_y-y, 2) - 300)
 			pass = false
 			pass_x = 0
 			pass_y = 0
@@ -71,8 +72,7 @@ function run()
                     
                     if (player[i][1] == 1) then
                         enemyOwned = false
-                    end
-                    if (player[i][1] == 2) then
+                    else
                         enemyOwned = true
                     end
                 end
@@ -95,17 +95,16 @@ function run()
 			end
             
             -- not the closest player: adapt tactic depending on ball owner
-            if not (run) then
+            if (not run) then
                 if (enemyOwned) then
                     -- move back (defend)
                     MoveTo(x-100, y-100, 20)
-                end
-                if not (enemyOwned) then
+                else
                     -- move foward (attack)
                     MoveTo(x+100, y+100, 50)
                 end
             end
-        end
+        
         else
 			--print("Run To goal")
             --MoveTo(goal2_x+500,goal2_y)
