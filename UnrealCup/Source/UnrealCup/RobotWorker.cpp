@@ -144,7 +144,13 @@ FRotator RobotWorker::getRotation()
 }
 bool RobotWorker::hasBall()
 {
-	//return robotController->call(RobotControl::Command::hasBall);
+	void* result = robotController->call(RobotControl::Command::hasBall);
+	if (result != NULL)
+	{
+		bool hasBall = ((RobotDataTypes::PlayerHasBall*)result)->hasBall;
+		delete result;
+		return hasBall;
+	}
 	return false;
 }
 float RobotWorker::getStamina()

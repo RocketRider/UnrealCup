@@ -46,8 +46,11 @@ void RobotControl::Tick(float DeltaSeconds)
 			{
 			case hasBall:
 			{
-				commandResult = new bool(robot->hasBall());
+				RobotDataTypes::PlayerHasBall* result = new RobotDataTypes::PlayerHasBall();
+				result->hasBall = robot->hasBall();
+				commandResult = result;
 			}
+			break;
 			case move:
 			{
 				FFloat32* sideways = (FFloat32*)(queueParams.Pop());
@@ -179,7 +182,8 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 
 		//All functions with a return value have to wait for the result
 		if (function == Command::getPosition || function == Command::getRotation || function == Command::getStamina || function == Command::getBallPosition || 
-			function == Command::getVisiblePlayers || function == Command::getGoal1Position || function == Command::getGoal2Position || function == Command::getSpoken)
+			function == Command::getVisiblePlayers || function == Command::getGoal1Position || function == Command::getGoal2Position || function == Command::getSpoken ||
+			function == Command::hasBall)
 		{
 			waitForResult = true;
 		}

@@ -18,15 +18,15 @@ function run()
         x,y,z = GetOwnLocation()
 		stamina = GetStamina()
         ballX, ballY, ballZ = GetBallPosition()
-        
+        playerHasBall = hasBall()
 		text = Listen()
 		if (text ~= "") then
 			--print(text)
 		end	
 		
 		
-        if(math.abs(x-ballX)<150 and math.abs(y-ballY)<150) then
-			--print("Kick")
+        if (playerHasBall) then
+			print("Player has Ball")
 			ownAbs = math.pow(goal2_x-x, 2)+math.pow(goal2_y-y, 2) - 300
 			pass = false
 			pass_x = 0

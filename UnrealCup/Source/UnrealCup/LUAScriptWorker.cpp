@@ -31,9 +31,12 @@ static int32 LuaHasBall(lua_State* L)
 	if (worker)
 	{
 		lua_pushboolean(L, worker->hasBall());
-		return 1;
 	}
-	return 0;
+	else
+	{
+		lua_pushboolean(L, false);
+	}
+	return 1;
 }
 
 static int32 LuaMoveTo(lua_State* L)
