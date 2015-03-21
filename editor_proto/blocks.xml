@@ -3,8 +3,20 @@
         <input type="number">xPosition</input>
         <input type="number">yPosition</input>
     </block>
+	<block name="Stamina">
+        <output type="number">Stamina</output>
+    </block>
+	<block name="has Ball">
+        <output type="number">has Ball</output>
+    </block>
     <block name="kick">
         <input type="number">strength</input>
+		<input type="number">direction</input>
+    </block>
+	<block name="if A == B">
+        <input type="number">A</input>
+		<input type="number">B</input>
+		<output type="number">Result</output>
     </block>
     <block name="getBallLocation">
         <output type="number">xPosition</output>
@@ -14,9 +26,7 @@
         <output type="number">xPosition</output>
         <output type="number">yPosition</output>
     </block>
-    <block name="testFunktion">
-        <input type="text">input1</input>
-        <output type="number">output1</output>
-        <input type="number">input2</input>
+    <block name="Springen">
+        <input type="text">höhe</input>
     </block>
 </blocks>
