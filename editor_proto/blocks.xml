@@ -1,4 +1,27 @@
 <blocks>
+    <stdBlock name="for">
+        <input type="number">start</input>
+        <input type="number">end</input>
+        <input type="number">increment</input>
+        <output type="flow">do</output>
+    </stdBlock>
+    <stdBlock name="if">
+        <input type="text">expression</input>
+        <output type="flow">then</output>
+        <output type="flow">else</output>
+    </stdBlock>
+    <stdBlock name="while">
+        <input type="text">expression</input>
+        <output type="flow">do</output>
+    </stdBlock>
+    <stdBlock name="setVariable">
+        <input type="text">name</input>
+        <input type="any">value</input>
+    </stdBlock>
+    <stdBlock name="getVariable">
+        <input type="text">name</input>
+        <output type="any">value</output>
+    </stdBlock>
     <block name="moveTo">
         <input type="number">xPosition</input>
         <input type="number">yPosition</input>
@@ -11,12 +34,8 @@
     </block>
     <block name="kick">
         <input type="number">strength</input>
-		<input type="number">direction</input>
-    </block>
-	<block name="if A == B">
-        <input type="number">A</input>
-		<input type="number">B</input>
-		<output type="number">Result</output>
+		<input type="number">xDirection</input>
+        <input type="number">yDirection</input>
     </block>
     <block name="getBallLocation">
         <output type="number">xPosition</output>
@@ -25,8 +44,5 @@
     <block name="getPlayerLocation">
         <output type="number">xPosition</output>
         <output type="number">yPosition</output>
-    </block>
-    <block name="Springen">
-        <input type="text">höhe</input>
     </block>
 </blocks>

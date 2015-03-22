@@ -129,12 +129,22 @@
                     var name = current.getAttribute("name");
                     var inputs = current.getElementsByTagName("input");
                     var outputs = current.getElementsByTagName("output");
-                    addBlockFactory(name, inputs, outputs);
+                    addBlockFactory(name, inputs, outputs, false);
+                }
+                var blocks = xmlDoc.getElementsByTagName("stdBlock");
+                for(var i=0; i < blocks.length; i++)
+                {
+                    // collect information and create blockfactory
+                    var current = blocks[i];
+                    var name = current.getAttribute("name");
+                    var inputs = current.getElementsByTagName("input");
+                    var outputs = current.getElementsByTagName("output");
+                    addBlockFactory(name, inputs, outputs, true);
                 }
             }
             
             // Create the BlockFactory
-            function addBlockFactory(name, inputList, outputList)
+            function addBlockFactory(name, inputList, outputList, std)
             {
                 // create div..
                 var returnNode = document.createElement("div");
@@ -209,7 +219,15 @@
                 
                 // append blockFactory
                 returnNode.appendChild(table);
-                document.getElementById("additionalBlocks").appendChild(returnNode);
+                if(std)
+                {
+                    document.getElementById("standardBlocks").appendChild(returnNode);
+                }
+                else
+                {
+                    document.getElementById("additionalBlocks").appendChild(returnNode);
+                }
+                
             }
             
             // AllowDrop function
@@ -280,6 +298,31 @@
                     close.innerHTML = "X";
                     close.id = returnNode.id + "_close";
                     returnNode.appendChild(close);
+                    
+                    if(copy.nodeName == "HEADER")
+                    {
+                            var sourceUUID = copy.id + "connector";
+                            var targetEndpoint = {
+                                endpoint: "Rectangle",
+                                isSource: false,
+                                isTarget: true,
+                                maxConnections: 1,
+                                anchor: "Left",
+                                endpointStyle:{ fillStyle:"red", outlineColor:"black", outlineWidth:2 }
+                            }
+                            instance.addEndpoint(copy, targetEndpoint);
+                        
+                            var targetUUID = copy.id + "connector";
+                            var sourceEndpoint = {
+                                endpoint: "Dot",
+                                isSource: true,
+                                isTarget: false,
+                                maxConnections: 1,
+                                anchor: "Right",
+                                endpointStyle:{ fillStyle:"red", outlineColor:"black", outlineWidth:2 }
+                            }
+                            instance.addEndpoint(copy, sourceEndpoint);
+                    }
                     
                     
                     // if the current child is the table...
