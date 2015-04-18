@@ -59,7 +59,11 @@ function run()
 					Kick(pass_x, pass_y,0,100)
 				end
 			else
-				Kick(goal1_x-x, goal1_y-y,0,10)
+				if (ownAbs < 5000000) then
+					Kick(goal1_x-x, goal1_y-y,1200,100)
+				else
+					Kick(goal1_x-x, goal1_y-y,0,10)
+				end
 			end
            
         end
