@@ -13,4 +13,8 @@ public:
 	FString GetNameTeam1XML();
 	UFUNCTION(BlueprintCallable, Category = "Xml")
 	FString GetNameTeam2XML();
+
+	FString getPlayerName(int team, int player);
+	FVector getPlayerStartLocation(int team, int player);
+	FString getScriptLocation(int team, int player);
 };
