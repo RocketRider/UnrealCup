@@ -7,7 +7,7 @@
 
 
 
-ARobot::ARobot(const class FPostConstructInitializeProperties& PCIP) : Super(PCIP)
+ARobot::ARobot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	// tweak player performance
 	staminaRatioMove = 1 / (5000 * factorSpeed); // 0.00004; // with this value the player can move half the field with full speed

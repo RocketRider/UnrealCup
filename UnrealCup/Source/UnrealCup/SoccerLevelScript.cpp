@@ -61,6 +61,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 
 
 	//Fast Tick
+	//TODO: Update this function:
 	GetWorldTimerManager().SetTimer(this, &ASoccerLevelScript::FastTick, 0.0001f, true);
 
 }

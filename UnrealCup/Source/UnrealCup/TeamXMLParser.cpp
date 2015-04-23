@@ -90,6 +90,9 @@ FVector TeamXMLParser::getPlayerStartLocation(int team, int player)
 	else return FVector(100, 100, 0); // TODO Fehlerbehandlung
 
 	//int x = std::stoi(node->GetChildrenNodes()[player - 1]->GetAttribute("X"));
+
+
+	return FVector();//TODO: JUST ADDED TO COMPILE!!!!!!!!!!
 }
 
 FString TeamXMLParser::getScriptLocation(int team, int player)

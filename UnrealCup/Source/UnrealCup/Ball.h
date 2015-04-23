@@ -18,6 +18,8 @@ public:
 	UFUNCTION(BlueprintNativeEvent, Category = "Kick")
 	void addImpulseBlueprint(FVector direction, float force);
 
+	virtual void addImpulseBlueprint_Implementation(FVector direction, float force);
+
 	FVector getLocation();
 	void addForce(FVector direction, float force);
 };
