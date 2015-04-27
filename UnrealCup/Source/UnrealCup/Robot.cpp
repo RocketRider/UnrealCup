@@ -3,6 +3,7 @@
 #include "UnrealCup.h"
 #include "Robot.h"
 #include "Ball.h"
+#include "TeamXMLParser.h"
 
 
 
@@ -25,8 +26,15 @@ void ARobot::BeginPlay()
 	oldMoveToStamina = 0;
 	oldMoveToDistance = 0;
 
+	TeamXMLParser* parser = new TeamXMLParser();
+	int teamID = team;
+	int playerNumber;
+	if (teamID == 0) playerNumber = playerId;
+	else playerNumber = playerId - 11;
+
 	//TODO: Set start Postion out of the XML file:
-	startLocation = GetActorLocation();
+	startLocation = parser->getPlayerStartLocation(teamID, playerNumber);
+	luaFile = parser->getScriptLocation(teamID, playerNumber);
 }
 
 void ARobot::EndPlay(const EEndPlayReason::Type EndPlayReason)
