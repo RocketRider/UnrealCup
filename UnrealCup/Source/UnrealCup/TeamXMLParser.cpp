@@ -79,22 +79,22 @@ FString TeamXMLParser::GetNameTeam2XML()
 FString TeamXMLParser::getPlayerName(int team, int player)
 {
 	FXmlNode* node;
-	if (team == 0) node = Team1Xml->GetRootNode();
-	else if (team == 1) node = Team2Xml->GetRootNode();
+	if (team == 1) node = Team1Xml->GetRootNode();
+	else if (team == 2) node = Team2Xml->GetRootNode();
 	else return "Name"; // TODO Fehlerbehandlung
 
-	return node->GetChildrenNodes()[player]->GetAttribute("Name");
+	return node->GetChildrenNodes()[player-1]->GetAttribute("Name");
 }
 
 FVector TeamXMLParser::getPlayerStartLocation(int team, int player)
 {
 	FXmlNode* node;
-	if (team == 0) node = Team1Xml->GetRootNode();
-	else if (team == 1) node = Team2Xml->GetRootNode();
+	if (team == 1) node = Team1Xml->GetRootNode();
+	else if (team == 2) node = Team2Xml->GetRootNode();
 	else return FVector(100, 100, 0); // TODO Fehlerbehandlung
 
-	FString strX = node->GetChildrenNodes()[player]->GetAttribute("X");
-	FString strY = node->GetChildrenNodes()[player]->GetAttribute("Y");
+	FString strX = node->GetChildrenNodes()[player-1]->GetAttribute("X");
+	FString strY = node->GetChildrenNodes()[player-1]->GetAttribute("Y");
 
 	int x = FCString::Atoi(*strX);
 	int y = FCString::Atoi(*strY);
@@ -105,10 +105,10 @@ FVector TeamXMLParser::getPlayerStartLocation(int team, int player)
 FString TeamXMLParser::getScriptLocation(int team, int player)
 {
 	FXmlNode* node;
-	if (team == 0) node = Team1Xml->GetRootNode();
-	else if (team == 1) node = Team2Xml->GetRootNode();
+	if (team == 1) node = Team1Xml->GetRootNode();
+	else if (team == 2) node = Team2Xml->GetRootNode();
 	else return "script.lua"; // TODO Fehlerbehandlung
 
-	return node->GetChildrenNodes()[player]->GetAttribute("ScriptLocation");
+	return node->GetChildrenNodes()[player-1]->GetAttribute("ScriptLocation");
 }
 

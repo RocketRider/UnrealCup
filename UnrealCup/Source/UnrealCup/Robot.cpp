@@ -29,7 +29,7 @@ void ARobot::BeginPlay()
 	TeamXMLParser* parser = new TeamXMLParser();
 	int teamID = team;
 	int playerNumber;
-	if (teamID == 0) playerNumber = playerId;
+	if (teamID == 1) playerNumber = playerId;
 	else playerNumber = playerId - 11;
 
 	//TODO: Set start Postion out of the XML file:
