@@ -32,7 +32,7 @@ void ARobot::BeginPlay()
 	if (teamID == 1) playerNumber = playerId;
 	else playerNumber = playerId - 11;
 
-	//TODO: Set start Postion out of the XML file:
+	//Set start Postion out of the XML file:
 	startLocation = parser->getPlayerStartLocation(teamID, playerNumber);
 	luaFile = parser->getScriptLocation(teamID, playerNumber);
 }
@@ -188,23 +188,29 @@ void ARobot::Kick(FVector direction, float force)
 // Stop the Ball
 void ARobot::StopBall(FDateTime timer)
 {
-	//return;
-
-	// ball is already in range: try to stop it right away
-	// and dont try to stop it again when it enters the range again
-	if (ballInRange)
+	if (stamina >= 10)
 	{
-		tryStopBall = false;
-		stopBallNow();
+		// ball is already in range: try to stop it right away
+		// and dont try to stop it again when it enters the range again
+		if (ballInRange)
+		{
+			tryStopBall = false;
+			stopBallNow();
+			stamina -= 10;
+		}
+		// set a timer and try to stop the ball when it enters the range
+		// the allowed time between stop-Command and actually stopping can
+		// be set in the blueprint
+		else
+		{
+			if (tryStopBall == false)
+			{
+				tryStopBall = true;
+				stopCommandTime = timer;
+				stamina -= 10;
+			}
+		}
 	}
-	// set a timer and try to stop the ball when it enters the range
-	// the allowed time between stop-Command and actually stopping can
-	// be set in the blueprint
-	else
-	{
-		tryStopBall = true;
-		stopCommandTime = timer;
-	}	
 }
 
 // stop ball now (event for blueprint)

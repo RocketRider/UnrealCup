@@ -15,6 +15,7 @@ function run()
         player = GetVisiblePlayers()
 		
         if(math.abs(ballX-x)<150 and math.abs(ballY-y)<150) then
+			StopBall()
 			--print("Kick")
 			ownAbs = math.pow(goal1_x-x, 2)+math.pow(goal1_y-y, 2) - 300
 			pass = false

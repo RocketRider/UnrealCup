@@ -18,7 +18,7 @@ TeamXMLParser::TeamXMLParser()
 {
 	FString Team1Path;
 	FString Team2Path;
-	FString filesLocation = "C:\\Users\\Venox\\Documents\\StudentResearchProject\\UnrealCup\\"; // TODO
+	FString filesLocation = FPaths::GameDir();
 	FString TeamPath = filesLocation + "Teams.xml";
 	FXmlNode* node;
 
