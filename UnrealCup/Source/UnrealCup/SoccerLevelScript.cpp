@@ -107,7 +107,6 @@ void ASoccerLevelScript::FastTick()
 	//Not perfect but should be good enouth (is the wanted rate, not the actual time between two ticks)
 	float DeltaSeconds = GetWorldTimerManager().GetTimerRate(this, &ASoccerLevelScript::FastTick);
 
-
 	for (RobotControl* controller : controllerList)
 	{
 		controller->Tick(DeltaSeconds);
