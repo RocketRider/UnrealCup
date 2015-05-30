@@ -53,6 +53,16 @@ public class UnrealCup : ModuleRules
  
             PublicAdditionalLibraries.Add(Path.Combine(LibrariesPath, "Lua." + PlatformString + ".lib")); 
         }
+		
+		if ((Target.Platform == UnrealTargetPlatform.Linux))//Supports oly 64bit
+        {
+            isLibrarySupported = true;
+ 
+            //string PlatformString = (Target.Platform == UnrealTargetPlatform.Win64) ? "x64" : "x86";
+            string LibrariesPath = Path.Combine(ThirdPartyPath, "lua", "Libraries", "Linux313_64");
+ 
+            PublicAdditionalLibraries.Add(Path.Combine(LibrariesPath, "liblua52.a")); 
+        }
  
         if (isLibrarySupported)
         {

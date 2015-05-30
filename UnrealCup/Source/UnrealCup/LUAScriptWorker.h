@@ -4,6 +4,7 @@
 #include "../../ThirdParty/lua/Include/lua.h"
 #include "../../ThirdParty/lua/Include/lauxlib.h"
 #include "../../ThirdParty/lua/Include/lualib.h"
+#include "../../ThirdParty/lua/Include/luaconf.h"
 #include "RobotScriptWorker.h"
 
 /**
