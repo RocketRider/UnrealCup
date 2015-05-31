@@ -86,7 +86,7 @@ FVector RobotWorker::getPosition()
 	if (result != NULL)
 	{
 		FVector position = FVector(*(FVector*)result);
-		delete result;
+		delete (FVector*)result;
 		return position;
 	}
 	return FVector(0, 0, 0);
@@ -98,7 +98,7 @@ FVector RobotWorker::getBallPosition()
 	if (result != NULL)
 	{
 		FVector ballPosition = FVector(*(FVector*)result);
-		delete result;
+		delete (FVector*)result;
 		return ballPosition;
 	}
 	return FVector(0, 0, 0);
@@ -111,7 +111,7 @@ FVector RobotWorker::getGoal1Position()
 	if (result != NULL)
 	{
 		FVector goal1Position = FVector(*(FVector*)result);
-		delete result;
+		delete (FVector*)result;
 		return goal1Position;
 	}
 	return FVector(0, 0, 0);
@@ -124,7 +124,7 @@ FVector RobotWorker::getGoal2Position()
 	if (result != NULL)
 	{
 		FVector goal2Position = FVector(*(FVector*)result);
-		delete result;
+		delete (FVector*)result;
 		return goal2Position;
 	}
 	return FVector(0, 0, 0);
@@ -137,7 +137,7 @@ FRotator RobotWorker::getRotation()
 	if (result != NULL)
 	{
 		FRotator rotation = FRotator(*(FRotator*)result);
-		delete result;
+		delete (FRotator*)result;
 		return rotation;
 	}
 	return FRotator(0, 0, 0);
@@ -148,7 +148,7 @@ bool RobotWorker::hasBall()
 	if (result != NULL)
 	{
 		bool hasBall = ((RobotDataTypes::PlayerHasBall*)result)->hasBall;
-		delete result;
+		delete (RobotDataTypes::PlayerHasBall*)result;
 		return hasBall;
 	}
 	return false;
@@ -161,7 +161,7 @@ float RobotWorker::getStamina()
 	if (result != NULL)
 	{
 		float stamina = ((FFloat32*)result)->FloatValue;
-		delete result;
+		delete (FFloat32*)result;
 		return stamina;
 	}
 	return 100;
@@ -212,7 +212,7 @@ FString RobotWorker::getSpoken()
 	if (result != NULL)
 	{
 		FString text = FString(*(FString*)result);
-		delete result;
+		delete (FString*)result;
 		return text;
 	}
 	return FString("");

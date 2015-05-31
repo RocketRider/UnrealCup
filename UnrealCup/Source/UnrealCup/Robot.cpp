@@ -144,9 +144,9 @@ void ARobot::RotateTick(float DeltaSeconds)
 	{
 		FRotator Rotation = GetActorRotation();
 		double deltaRotation = rotation - Rotation.Yaw;
-		if (abs(deltaRotation)>180) deltaRotation = Rotation.Yaw - rotation;
+		if (FMath::Abs(deltaRotation)>180) deltaRotation = Rotation.Yaw - rotation;
 
-		if (abs(deltaRotation)>0.0001)
+		if (FMath::Abs(deltaRotation)>0.0001)
 		{
 			float maxRotate = DeltaSeconds*400;
 
@@ -263,7 +263,7 @@ bool ARobot::isObjectVisible(FVector objectPosition)
 	{
 		if (deltaAngle > 180) deltaAngle -= 360;
 		{
-			if (abs(deltaAngle) <= HalfFieldOfView)
+			if (FMath::Abs(deltaAngle) <= HalfFieldOfView)
 			{
 				return true;
 			}
