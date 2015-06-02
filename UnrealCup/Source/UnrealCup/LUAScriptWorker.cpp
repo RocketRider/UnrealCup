@@ -5,7 +5,8 @@
 
 //Static varaibles:
 TMap<lua_State*, LUAScriptWorker*> LUAScriptWorker::LuaObjectMapping;
-FPlatformProcess::FSemaphore* LUAScriptWorker::globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
+//FPlatformProcess::FSemaphore* LUAScriptWorker::globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
+FCriticalSection*  LUAScriptWorker::globalMutex = new FCriticalSection();
 
 
 

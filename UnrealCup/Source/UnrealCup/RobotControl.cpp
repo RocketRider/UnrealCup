@@ -11,8 +11,9 @@ RobotControl::RobotControl(ARobot* robot)
 	this->robot = robot;
 	this->worker = NULL;
 
-	FString name = FString("robot control mutex"); name.AppendInt(rand());
-	this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
+	//FString name = FString("robot control mutex"); name.AppendInt(rand());
+	//this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
+	this->mutex = new FCriticalSection();
 
 }
 

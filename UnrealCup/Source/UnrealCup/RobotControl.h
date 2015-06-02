@@ -35,7 +35,8 @@ private:
 	TArray<void*> queueParams;
 	ARobot* robot;
 	RobotWorker* worker;
-	FPlatformProcess::FSemaphore* mutex;
+	//FPlatformProcess::FSemaphore* mutex;
+	FCriticalSection* mutex;
 	void* commandResult;
 
 

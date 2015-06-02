@@ -27,7 +27,9 @@ protected:
 	FRunnableThread* thread;
 
 	//TODO: Multiplatform 
-	FPlatformProcess::FSemaphore* mutex;
+	//FPlatformProcess::FSemaphore* mutex;
+	FCriticalSection* mutex;
+
 	void setAllowedToRun(bool allowed);
 	void WaitForCompletion();
 

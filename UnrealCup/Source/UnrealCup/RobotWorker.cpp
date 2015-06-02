@@ -14,8 +14,10 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 	//mutex = FGenericPlatformProcess::NewInterprocessSynchObject("mutex", true, 1);
 
 	//WINDOWS ONLY!!!! should be FGenericPlatformProcess
-	FString name = FString("RobotWorker mutex"); name.AppendInt(rand());
-	this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
+	//FString name = FString("RobotWorker mutex"); name.AppendInt(rand());
+	//this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
+
+	this->mutex = new FCriticalSection();
 
 	//Needs to be called in last subclass!
 	//this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
