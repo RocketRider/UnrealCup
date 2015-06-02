@@ -28,7 +28,7 @@ protected:
 
 	//TODO: Multiplatform 
 	//FPlatformProcess::FSemaphore* mutex;
-	FCriticalSection* mutex;
+	FCriticalSection mutex;
 
 	void setAllowedToRun(bool allowed);
 	void WaitForCompletion();

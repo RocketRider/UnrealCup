@@ -6,7 +6,7 @@
 //Static varaibles:
 TMap<lua_State*, LUAScriptWorker*> LUAScriptWorker::LuaObjectMapping;
 //FPlatformProcess::FSemaphore* LUAScriptWorker::globalMutex = FPlatformProcess::NewInterprocessSynchObject("Global Lua Mutex", true);
-FCriticalSection*  LUAScriptWorker::globalMutex = new FCriticalSection();
+FCriticalSection LUAScriptWorker::globalMutex = FCriticalSection();
 
 
 
@@ -368,9 +368,9 @@ LUAScriptWorker::~LUAScriptWorker()
 
 LUAScriptWorker* LUAScriptWorker::getLuaWorker(lua_State* L)
 {
-	globalMutex->Lock();
+	globalMutex.Lock();
 	LUAScriptWorker* worker = LuaObjectMapping.FindRef(L);
-	globalMutex->Unlock();
+	globalMutex.Unlock();
 
 	return worker;
 }
@@ -395,9 +395,9 @@ void LUAScriptWorker::loadLuaScript(const char* file)
 		}
 		else
 		{
-			globalMutex->Lock();
+			globalMutex.Lock();
 			LuaObjectMapping.Add(luaState, this);
-			globalMutex->Unlock();
+			globalMutex.Unlock();
 			int res = lua_pcall(luaState, 0, LUA_MULTRET, 0);
 		}
 	}
@@ -414,9 +414,9 @@ void LUAScriptWorker::freeLuaScript()
 		if (luaState)
 		{
 			lua_close(luaState);
-			globalMutex->Lock();
+			globalMutex.Lock();
 			LuaObjectMapping.Remove(luaState);
-			globalMutex->Unlock();
+			globalMutex.Unlock();
 			luaState = NULL;
 		}
 	}

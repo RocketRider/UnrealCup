@@ -6,7 +6,7 @@
 
 RobotWorker::RobotWorker(RobotControl* robotController)
 {
-	this->mutex = NULL;
+	//this->mutex = NULL;
 	this->thread = NULL;
 	this->robotController = robotController;
 	this->allowedToRun = false;
@@ -17,7 +17,7 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 	//FString name = FString("RobotWorker mutex"); name.AppendInt(rand());
 	//this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
 
-	this->mutex = new FCriticalSection();
+	this->mutex = FCriticalSection();
 
 	//Needs to be called in last subclass!
 	//this->thread = FRunnableThread::Create(this, TEXT("Worker"), 0, TPri_BelowNormal); //windows default = 8mb for thread, could specify more
@@ -26,7 +26,7 @@ RobotWorker::RobotWorker(RobotControl* robotController)
 
 RobotWorker::~RobotWorker()
 {
-	FPlatformProcess::DeleteInterprocessSynchObject(mutex);
+	//FPlatformProcess::DeleteInterprocessSynchObject(mutex);
 }
 
 bool RobotWorker::threadIsAllowedToRun()

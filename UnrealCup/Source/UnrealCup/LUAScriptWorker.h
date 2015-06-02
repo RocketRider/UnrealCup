@@ -20,7 +20,7 @@ private:
 protected:
 	lua_State *luaState;
 	//static FPlatformProcess::FSemaphore* globalMutex;
-	static FCriticalSection* globalMutex;
+	static FCriticalSection globalMutex;
 
 	
 

@@ -36,7 +36,7 @@ private:
 	ARobot* robot;
 	RobotWorker* worker;
 	//FPlatformProcess::FSemaphore* mutex;
-	FCriticalSection* mutex;
+	FCriticalSection mutex;
 	void* commandResult;
 
 

@@ -13,13 +13,13 @@ RobotControl::RobotControl(ARobot* robot)
 
 	//FString name = FString("robot control mutex"); name.AppendInt(rand());
 	//this->mutex = FPlatformProcess::NewInterprocessSynchObject(name, true);
-	this->mutex = new FCriticalSection();
+	this->mutex = FCriticalSection();
 
 }
 
 RobotControl::~RobotControl()
 {
-	FPlatformProcess::DeleteInterprocessSynchObject(mutex);
+	//FPlatformProcess::DeleteInterprocessSynchObject(mutex);
 }
 
 void RobotControl::setWorker(RobotWorker* worker)
@@ -39,7 +39,7 @@ void RobotControl::Tick(float DeltaSeconds)
 {
 	if (worker)
 	{
-		mutex->Lock();
+		mutex.Lock();
 		while (queueCommands.Num() > 0 && worker->threadIsAllowedToRun())
 		{
 			Command function = queueCommands.Pop();
@@ -148,7 +148,7 @@ void RobotControl::Tick(float DeltaSeconds)
 			}
 
 		}
-		mutex->Unlock();
+		mutex.Unlock();
 	}
 }
 
@@ -164,7 +164,7 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 	{
 
 		bool waitForResult = false;
-		mutex->Lock();
+		mutex.Lock();
 		queueCommands.Push(function);
 		if (param1 != NULL)
 			queueParams.Push(param1);
@@ -178,7 +178,7 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 			queueParams.Push(param5);
 		if (param6 != NULL)
 			queueParams.Push(param6);
-		mutex->Unlock();
+		mutex.Unlock();
 
 
 		//All functions with a return value have to wait for the result
