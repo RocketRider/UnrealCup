@@ -36,6 +36,25 @@ TeamXMLParser::TeamXMLParser()
 	Team2Xml = new FXmlFile(Team2Path);
 }
 
+int32 TeamXMLParser::getTimeToPlay()
+{
+	FXmlNode* node;
+
+	if (TeamsXml->IsValid())
+	{
+		node = TeamsXml->GetRootNode();
+
+		return FCString::Atoi(*(node->FindChildNode("TimeToPlay")->GetAttribute("Minutes")));
+	}
+	else
+	{
+		//TODO Errorausgabe
+		return 25;
+	}
+
+	return 0;
+}
+
 
 FString TeamXMLParser::GetNameTeam1XML()
 {
@@ -65,7 +84,7 @@ FString TeamXMLParser::GetNameTeam2XML()
 	{
 		node = TeamsXml->GetRootNode();
 
-		return node->FindChildNode("Team1")->GetAttribute("Name");
+		return node->FindChildNode("Team2")->GetAttribute("Name");
 	}
 	else
 	{

@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "TeamXMLParser.h"
 #include "Engine/LevelScriptActor.h"
 #include "SoccerLevelScript.generated.h"
 
@@ -14,7 +15,14 @@ UCLASS()
 class UNREALCUP_API ASoccerLevelScript : public ALevelScriptActor
 {
 	GENERATED_BODY()
-	
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "Xml")
+	static FString Team1GetName();
+	UFUNCTION(BlueprintCallable, Category = "Xml")
+	static FString Team2GetName();
+	UFUNCTION(BlueprintCallable, Category = "Xml")
+	static int32 getTTP();
 	
 //OVERRIDES
 protected:

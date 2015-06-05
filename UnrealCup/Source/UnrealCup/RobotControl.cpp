@@ -45,6 +45,10 @@ void RobotControl::Tick(float DeltaSeconds)
 			Command function = queueCommands.Pop();
 			switch (function)
 			{
+			case getTP:
+			{
+				//commandResult = new int32(robot->getTimePlayed());
+			}
 			case hasBall:
 			{
 				RobotDataTypes::PlayerHasBall* result = new RobotDataTypes::PlayerHasBall();

@@ -80,6 +80,11 @@ void RobotWorker::updateLastTick()
 }
 
 
+int32 RobotWorker::getTimePlayed()
+{
+	return 0;
+}
+
 
 FVector RobotWorker::getPosition()
 {

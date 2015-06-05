@@ -7,6 +7,23 @@
 #include "LUAScriptWorker.h"
 #include "Ball.h"
 
+FString ASoccerLevelScript::Team1GetName()
+{
+	TeamXMLParser* p = new TeamXMLParser();
+	return p->GetNameTeam1XML();
+}
+
+FString ASoccerLevelScript::Team2GetName()
+{
+	TeamXMLParser* p = new TeamXMLParser();
+	return p->GetNameTeam2XML();
+}
+
+int32 ASoccerLevelScript::getTTP()
+{
+	TeamXMLParser* p = new TeamXMLParser();
+	return p->getTimeToPlay();
+}
 
 void ASoccerLevelScript::ReceiveBeginPlay()
 {
@@ -54,8 +71,6 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 		controller->setWorker(worker);
 		controllerList.Add(controller);
 	}
-	
-
 
 
 

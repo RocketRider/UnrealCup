@@ -12,6 +12,7 @@ class UNREALCUP_API RobotControl
 {
 public: enum Command
 	{
+		getTP,
 		hasBall,
 		move,
 		moveTo,

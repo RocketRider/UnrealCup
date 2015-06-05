@@ -9,10 +9,9 @@ class UNREALCUP_API TeamXMLParser
 {
 public:
 	TeamXMLParser();
-	UFUNCTION(BlueprintCallable, Category = "Xml")
 	FString GetNameTeam1XML();
-	UFUNCTION(BlueprintCallable, Category = "Xml")
 	FString GetNameTeam2XML();
+	int32 getTimeToPlay();
 
 	FString getPlayerName(int team, int player);
 	FVector getPlayerStartLocation(int team, int player);

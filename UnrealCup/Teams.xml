@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TeamSettings>
-	<Team1 XMLLocation="Team1.xml" Name="Team1"></Team1>
-	<Team2 XMLLocation="Team2.xml" Name="Team2"></Team2>
+	<Team1 XMLLocation="Team1.xml" Name="bla"></Team1>
+	<Team2 XMLLocation="Team2.xml" Name="laber"></Team2>
+    <TimeToPlay Minutes="10"></TimeToPlay>
 </TeamSettings>

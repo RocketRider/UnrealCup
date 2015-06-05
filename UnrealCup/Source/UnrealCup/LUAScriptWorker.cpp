@@ -10,7 +10,20 @@ FCriticalSection LUAScriptWorker::globalMutex = FCriticalSection();
 
 
 
+static int32 LuaGetTimePlayed(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushinteger(L, worker->getTimePlayed());
+	}
+	else
+	{
+		lua_pushinteger(L, 0);
+	}
 
+	return 1;
+}
 
 
 static int32 LuaMoveForward(lua_State* L)
@@ -442,20 +455,30 @@ void LUAScriptWorker::overridePrint()
 void LUAScriptWorker::registerFunctions()
 {
 	//MoveForward(double Speed)
+	lua_pushcfunction(luaState, LuaGetTimePlayed);
+	lua_setglobal(luaState, "TimePlayed");
+
 	lua_pushcfunction(luaState, LuaHasBall);
 	lua_setglobal(luaState, "hasBall");
+
 	lua_pushcfunction(luaState, LuaMoveForward);
 	lua_setglobal(luaState, "MoveForward");
+
 	lua_pushcfunction(luaState, LuaMoveTo);
 	lua_setglobal(luaState, "MoveTo");
+
 	lua_pushcfunction(luaState, LuaRotate);
 	lua_setglobal(luaState, "Rotate");
+
 	lua_pushcfunction(luaState, LuaKick);
 	lua_setglobal(luaState, "Kick");
+
 	lua_pushcfunction(luaState, LuaStopBall);
 	lua_setglobal(luaState, "StopBall");
+
 	lua_pushcfunction(luaState, LuaGetOwnLocation);
 	lua_setglobal(luaState, "GetOwnLocation");
+
 	lua_pushcfunction(luaState, LuaGetBallPosition);
 	lua_setglobal(luaState, "GetBallPosition");
 
@@ -464,11 +487,9 @@ void LUAScriptWorker::registerFunctions()
 
 	lua_pushcfunction(luaState, LuaGetGoal1Position);
 	lua_setglobal(luaState, "GetGoal1Position");
+
 	lua_pushcfunction(luaState, LuaGetGoal2Position);
 	lua_setglobal(luaState, "GetGoal2Position");
-
-	lua_pushcfunction(luaState, LuaGetStamina);
-	lua_setglobal(luaState, "GetStamina");
 
 	lua_pushcfunction(luaState, LuaGetStamina);
 	lua_setglobal(luaState, "GetStamina");
