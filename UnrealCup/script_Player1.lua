@@ -13,6 +13,8 @@ function run()
         ballX, ballY, ballZ = GetBallPosition()
 		stamina = GetStamina()
         player = GetVisiblePlayers()
+        timePlayed = TimePlayed()
+        print("played:" .. timePlayed)
 		
         if(math.abs(ballX-x)<150 and math.abs(ballY-y)<150) then
 			StopBall()

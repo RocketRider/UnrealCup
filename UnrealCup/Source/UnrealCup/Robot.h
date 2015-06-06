@@ -75,6 +75,7 @@ public:
 	FVector getGoal1Position();
 	FVector getGoal2Position();
 	TArray<RobotDataTypes::PlayerLocation>* getVisiblePlayers();
+	int32 getTimePlayed();
 	int32 getTeamId();
 	int32 getPlayerId();
 	void setPlayerId(int32 pId);

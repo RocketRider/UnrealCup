@@ -68,6 +68,14 @@ void ARobot::Move(float straight, float sideways)
 	}
 }
 
+int32 ARobot::getTimePlayed()
+{
+	TeamXMLParser* p = new TeamXMLParser();
+	int32 playTime = p->getTimeToPlay();
+	float passed = (this->GetWorld()->TimeSeconds) / 60;
+	return passed / playTime;
+}
+
 
 
 // Move to a specific location on the map

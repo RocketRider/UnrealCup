@@ -82,7 +82,9 @@ void RobotWorker::updateLastTick()
 
 int32 RobotWorker::getTimePlayed()
 {
-	return 0;
+	void* result = robotController->call(RobotControl::Command::getTP);
+	int32 timePlayed = (int32)result;
+	return timePlayed;
 }
 
 

@@ -47,8 +47,9 @@ void RobotControl::Tick(float DeltaSeconds)
 			{
 			case getTP:
 			{
-				//commandResult = new int32(robot->getTimePlayed());
+				commandResult = new int32(robot->getTimePlayed());
 			}
+			break;
 			case hasBall:
 			{
 				RobotDataTypes::PlayerHasBall* result = new RobotDataTypes::PlayerHasBall();
