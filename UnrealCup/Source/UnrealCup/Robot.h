@@ -66,7 +66,9 @@ public:
 	void Rotate(float value);
 	void Kick(FVector direction, float force);
 	void StopBall(FDateTime timer);
+	void receiveKickoffTeam(int32 team);
 	
+	int isKickoff();
 	bool hasBall();
 	float getStamina();
 	FRotator getRotation();
@@ -94,6 +96,8 @@ protected:
 	void addStamina(float DeltaSeconds);
 	float rotation;
 	void RotateTick(float DeltaSeconds);
+
+	int32 kickoffTeam;
 	
 	bool isObjectVisible(FVector objectPosition);
 

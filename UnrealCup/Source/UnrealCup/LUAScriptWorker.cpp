@@ -9,6 +9,20 @@ TMap<lua_State*, LUAScriptWorker*> LUAScriptWorker::LuaObjectMapping;
 FCriticalSection LUAScriptWorker::globalMutex = FCriticalSection();
 
 
+static int32 LuaGetTeamId(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushinteger(L, worker->getTeamId());
+	}
+	else
+	{
+		lua_pushinteger(L, -1);
+	}
+
+	return 1;
+}
 
 static int32 LuaGetTimePlayed(lua_State* L)
 {
@@ -20,6 +34,21 @@ static int32 LuaGetTimePlayed(lua_State* L)
 	else
 	{
 		lua_pushinteger(L, 0);
+	}
+
+	return 1;
+}
+
+static int32 LuaIsKickoff(lua_State* L)
+{
+	LUAScriptWorker* worker = LUAScriptWorker::getLuaWorker(L);
+	if (worker)
+	{
+		lua_pushinteger(L, worker->isKickoff());
+	}
+	else
+	{
+		lua_pushinteger(L, -1);
 	}
 
 	return 1;
@@ -457,6 +486,12 @@ void LUAScriptWorker::registerFunctions()
 	//MoveForward(double Speed)
 	lua_pushcfunction(luaState, LuaGetTimePlayed);
 	lua_setglobal(luaState, "TimePlayed");
+
+	lua_pushcfunction(luaState, LuaGetTeamId);
+	lua_setglobal(luaState, "GetTeamId");
+
+	lua_pushcfunction(luaState, LuaIsKickoff);
+	lua_setglobal(luaState, "IsKickoff");
 
 	lua_pushcfunction(luaState, LuaHasBall);
 	lua_setglobal(luaState, "hasBall");

@@ -23,11 +23,16 @@ public:
 	static FString Team2GetName();
 	UFUNCTION(BlueprintCallable, Category = "Xml")
 	static int32 getTTP();
+	UFUNCTION(BlueprintCallable, Category = "Kickoff")
+	void sendKickoff(int32 team);
+	UFUNCTION(BlueprintCallable, Category = "Kickoff")
+	void checkPlayers();
 	
 //OVERRIDES
 protected:
 
 	TArray<RobotControl*> controllerList;
+	int32 kickoffState;
 
 	virtual void ReceiveBeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;

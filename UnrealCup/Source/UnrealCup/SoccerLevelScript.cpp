@@ -25,11 +25,40 @@ int32 ASoccerLevelScript::getTTP()
 	return p->getTimeToPlay();
 }
 
+void ASoccerLevelScript::sendKickoff(int32 team)
+{
+	if (team < -1 || team > 1) return;
+	kickoffState = team;
+
+	//Iterate through all Robots	
+	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+
+		robot->receiveKickoffTeam(team);
+	}
+}
+
+void ASoccerLevelScript::checkPlayers()
+{
+	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		ARobot* robot = Cast<ARobot>(*ActorItr);
+
+		FVector position = robot->getPosition();
+		int teamNumber = robot->getTeamId();
+		int xPos = position.X;
+		if (teamNumber == 1) xPos = -position.X;
+		if (position.X > 0) robot->GetController()->EndPlay(EEndPlayReason::RemovedFromWorld);
+	}
+}
+
 void ASoccerLevelScript::ReceiveBeginPlay()
 {
 	Super::ReceiveBeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY %s"), *GetName());
 
+	kickoffState = 0; // TODO Setzen?
 	ABall* ball = nullptr;
 	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
@@ -71,6 +100,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 		controller->setWorker(worker);
 		controllerList.Add(controller);
 	}
+	sendKickoff(kickoffState);
 
 
 

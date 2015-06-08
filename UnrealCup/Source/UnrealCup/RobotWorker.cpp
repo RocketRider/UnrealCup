@@ -79,12 +79,41 @@ void RobotWorker::updateLastTick()
 	lastTick = FDateTime::Now();
 }
 
+int32 RobotWorker::isKickoff()
+{
+	void* result = robotController->call(RobotControl::Command::isKickoff);
+	if (result != NULL)
+	{
+		int isKickoff = ((RobotDataTypes::intStruct*)result)->number;
+		delete (RobotDataTypes::intStruct*)result;
+		return isKickoff;
+	}
+	return -1;
+}
+
+int32 RobotWorker::getTeamId()
+{
+	void* result = robotController->call(RobotControl::Command::getTeamId);
+	if (result != NULL)
+	{
+		int teamId = ((RobotDataTypes::intStruct*)result)->number;
+		delete (RobotDataTypes::intStruct*)result;
+		return teamId;
+	}
+	return -1;
+}
+
 
 int32 RobotWorker::getTimePlayed()
 {
 	void* result = robotController->call(RobotControl::Command::getTP);
-	int32 timePlayed = (int32)result;
-	return timePlayed;
+	if (result != NULL)
+	{
+		int timePlayed = ((RobotDataTypes::intStruct*)result)->number;
+		delete (RobotDataTypes::intStruct*)result;
+		return timePlayed;
+	}
+	return 0;
 }
 
 

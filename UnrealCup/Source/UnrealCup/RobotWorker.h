@@ -51,6 +51,8 @@ public:
 	FVector getGoal2Position();
 	FRotator getRotation();
 	float getStamina();
+	int32 getTeamId();
+	int32 isKickoff();
 	int32 getTimePlayed();
 	void rotate(float angle);
 	void move(float straight, float sideways);

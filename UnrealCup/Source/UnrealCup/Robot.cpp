@@ -19,7 +19,6 @@ void ARobot::BeginPlay()
 {
 	Super::BeginPlay();
 	staminaTime = 0;
-	//ballInRange = true;//false;
 	tryStopBall = false;
 	oldMoveToTarget = FVector::ZeroVector;
 	oldMoveToSpeed = 0;
@@ -47,6 +46,16 @@ void ARobot::Tick(float DeltaSeconds)
 {
 	addStamina(DeltaSeconds);
 	RotateTick(DeltaSeconds);
+}
+
+void ARobot::receiveKickoffTeam(int32 team)
+{
+	kickoffTeam = team;
+}
+
+int32 ARobot::isKickoff()
+{
+	return kickoffTeam;
 }
 
 void ARobot::Move(float straight, float sideways)

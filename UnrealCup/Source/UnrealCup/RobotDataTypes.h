@@ -10,6 +10,7 @@ class UNREALCUP_API RobotDataTypes
 public:
 	struct PlayerLocation{ int teamId; int playerId; FVector* position; };
 	struct PlayerHasBall{ bool hasBall; };
+	struct intStruct{ int number; };
 
 	RobotDataTypes();
 	~RobotDataTypes();

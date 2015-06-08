@@ -12,6 +12,8 @@ class UNREALCUP_API RobotControl
 {
 public: enum Command
 	{
+		getTeamId,
+		isKickoff,
 		getTP,
 		hasBall,
 		move,
