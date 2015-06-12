@@ -28,7 +28,6 @@ int32 ASoccerLevelScript::getTTP()
 void ASoccerLevelScript::sendKickoff(int32 team)
 {
 	if (team < -1 || team > 1) return;
-	kickoffState = team;
 
 	//Iterate through all Robots	
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
@@ -36,6 +35,12 @@ void ASoccerLevelScript::sendKickoff(int32 team)
 		ARobot* robot = Cast<ARobot>(*ActorItr);
 
 		robot->receiveKickoffTeam(team);
+	}
+	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		if (team == -1) Cast<ABall>(*ActorItr)->setKickoffState(false);
+		else Cast<ABall>(*ActorItr)->setKickoffState(true);
+		break;
 	}
 }
 

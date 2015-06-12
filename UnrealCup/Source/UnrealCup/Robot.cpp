@@ -48,14 +48,14 @@ void ARobot::Tick(float DeltaSeconds)
 	RotateTick(DeltaSeconds);
 }
 
-void ARobot::receiveKickoffTeam(int32 team)
-{
-	kickoffTeam = team;
-}
-
 int32 ARobot::isKickoff()
 {
-	return kickoffTeam;
+	return kickoffState;
+}
+
+void ARobot::receiveKickoffTeam_Implementation(int32 kickoffTeam)
+{
+
 }
 
 void ARobot::Move(float straight, float sideways)

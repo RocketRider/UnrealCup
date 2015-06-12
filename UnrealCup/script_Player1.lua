@@ -1,43 +1,33 @@
 runup = false
-counter = 1000
 rotation = 0
 function run()
 	
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
     teamId = GetTeamId()
-    startx, starty, startz = GetOwnLocation()
+    --startx, starty, startz = GetOwnLocation()
 	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
 	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
 	Speak("Hallo Team 2")
 	while AllowedToRun() do
-        counter = counter - 1
         x,y,z = GetOwnLocation()
         ballX, ballY, ballZ = GetBallPosition()
 		stamina = GetStamina()
         player = GetVisiblePlayers()
         kickoff = IsKickoff()
-        
-        if(counter == 0) then
-            timePlayed = TimePlayed()
-            print("played:" .. timePlayed)
-            counter = 1000
-        end
+        --timePlayed = TimePlayed()
         
         if(kickoff > -1) then
+            print("it's kickoff time!")
             if(kickoff == teamId) then
-                -- TODO
-            else
+                --TODO
+           else
                 MoveTo(startx, starty, startz)
-                sleepcounter = 1000
                 while(kickoff > -1) do
-                    sleepcounter = sleepcounter - 1
-                    if(sleepcounter == 0) then
-                        kickoff = IsKickoff()
-                        sleepcounter = 1000
-                    end
+                   kickoff = IsKickoff()
                 end
             end
+        end
 		
         if(math.abs(ballX-x)<150 and math.abs(ballY-y)<150) then
 			StopBall()

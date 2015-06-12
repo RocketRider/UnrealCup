@@ -40,4 +40,9 @@ void ABall::addImpulseBlueprint_Implementation(FVector direction, float force)
 
 }
 
+void ABall::setKickoffState_Implementation(bool state)
+{
+
+}
+
 

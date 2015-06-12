@@ -32,7 +32,6 @@ public:
 protected:
 
 	TArray<RobotControl*> controllerList;
-	int32 kickoffState;
 
 	virtual void ReceiveBeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;

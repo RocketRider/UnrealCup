@@ -51,6 +51,9 @@ class UNREALCUP_API ARobot : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
 	FVector startLocation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
+	int32 kickoffState;
+
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
@@ -61,12 +64,14 @@ public:
 	UFUNCTION(BlueprintNativeEvent, Category = "Ball")
 	void stopBallNow();
 
+	UFUNCTION(BlueprintNativeEvent, Category = "Kickoff")
+	void receiveKickoffTeam(int32 kickoffTeam);
+
 	void Move(float straight, float sideways);
 	void MoveTo(float targetX, float targetY, float speed);
 	void Rotate(float value);
 	void Kick(FVector direction, float force);
 	void StopBall(FDateTime timer);
-	void receiveKickoffTeam(int32 team);
 	
 	int isKickoff();
 	bool hasBall();

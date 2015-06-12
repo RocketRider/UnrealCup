@@ -17,7 +17,10 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent, Category = "Kick")
 	void addImpulseBlueprint(FVector direction, float force);
+	UFUNCTION(BlueprintNativeEvent, Category = "Kickoff")
+	void setKickoffState(bool state);
 
+	virtual void setKickoffState_Implementation(bool state);
 	virtual void addImpulseBlueprint_Implementation(FVector direction, float force);
 
 	FVector getLocation();
