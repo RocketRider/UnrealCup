@@ -87,7 +87,8 @@ int32 ARobot::getTimePlayed()
 
 
 
-// Move to a specific location on the map
+// Move to a specific location on the map 
+// speed 0...100
 void ARobot::MoveTo(float targetX, float targetY, float speed)
 {
 	// return stamina from last MoveTo
@@ -132,10 +133,12 @@ void ARobot::MoveTo(float targetX, float targetY, float speed)
 	stamina -= neededStamina;
 	moveToLoc(targetPosition, moveSpeed);
 
+	
 	oldMoveToSpeed = moveSpeed;
 	oldMoveToTarget = targetPosition;
 	oldMoveToStamina = neededStamina;
 	oldMoveToDistance = distance;
+	oldMoveRotation = angle;
 }
 
 // For usage of event in blueprint
@@ -151,6 +154,14 @@ bool ARobot::hasBall()
 
 void ARobot::Rotate(float angle)
 {
+	//Don't move and rotate! --> Stop movement
+	if (FMath::Abs(oldMoveRotation - angle) > 15)
+	{
+		FVector pos = getPosition();
+		moveToLoc(pos, 10);
+	}
+
+
 
 	rotation = FGenericPlatformMath::Fmod(angle, 360);
 	if (rotation > 180)rotation = rotation - 360;

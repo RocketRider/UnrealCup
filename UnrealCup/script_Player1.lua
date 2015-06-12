@@ -5,7 +5,7 @@ function run()
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
     teamId = GetTeamId()
-    --startx, starty, startz = GetOwnLocation()
+    startx, starty, startz = GetOwnLocation()
 	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
 	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
 	Speak("Hallo Team 2")
@@ -21,7 +21,7 @@ function run()
             print("it's kickoff time!")
             if(kickoff == teamId) then
                 --TODO
-           else
+            else
                 MoveTo(startx, starty, startz)
                 while(kickoff > -1) do
                    kickoff = IsKickoff()

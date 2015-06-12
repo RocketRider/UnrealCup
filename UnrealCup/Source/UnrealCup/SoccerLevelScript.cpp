@@ -33,14 +33,12 @@ void ASoccerLevelScript::sendKickoff(int32 team)
 	for (TActorIterator<ARobot> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
 		ARobot* robot = Cast<ARobot>(*ActorItr);
-
 		robot->receiveKickoffTeam(team);
 	}
 	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
-		if (team == -1) Cast<ABall>(*ActorItr)->setKickoffState(false);
-		else Cast<ABall>(*ActorItr)->setKickoffState(true);
-		break;
+		Cast<ABall>(*ActorItr)->setKickoffState(team != -1);
+		//break;
 	}
 }
 

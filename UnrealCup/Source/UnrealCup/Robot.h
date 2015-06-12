@@ -119,6 +119,7 @@ protected:
 	float oldMoveToSpeed;
 	float oldMoveToStamina; // Debug
 	float oldMoveToDistance; //Debug
+	float oldMoveRotation; //Debug
 
 	float factorSpeed = 5;
 	float factorKick = 500;

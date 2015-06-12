@@ -39,5 +39,5 @@ protected:
 	
 
 	void FastTick();
-
+	int32 kickoffState;
 };
