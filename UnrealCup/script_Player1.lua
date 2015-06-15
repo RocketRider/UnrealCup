@@ -18,19 +18,18 @@ function run()
         --timePlayed = TimePlayed()
         
         if(kickoff > -1) then
-            if(kickoff == 2) then
+            if(kickoff == 0) then
                 print("kickoff 2 received")
                 MoveTo(startx, starty, startz)
-                while(kickoff == 2) do
+                while(kickoff == 0) do
                     kickoff = IsKickoff()
                 end
             end
             if(kickoff == teamId) then
-                print("kickoff own team")
+                print("kickoff own team: enemy team.. my team: " .. teamId .. "; kickoff-team: " .. kickoff)
                 --cont playing
             else
-                print("kickoff enemy team")
-                print("my team: " .. teamId .. "; kickoff-team: " .. kickoff)
+                print("kickoff: enemy team.. my team: " .. teamId .. "; kickoff-team: " .. kickoff)
                 --wait
                 while(kickoff > -1) do
                     kickoff = IsKickoff()
@@ -85,7 +84,7 @@ function run()
 				end
 			else
 				if (ownAbs < 5000000) then
-					Kick(goal1_x-x, goal1_y-y,1200,100)
+					Kick(goal1_x-x, goal1_y-y,0,100)
 				else
 					Kick(goal1_x-x, goal1_y-y,0,10)
 				end

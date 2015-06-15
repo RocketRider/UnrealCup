@@ -21,13 +21,21 @@ function run()
         --timePlayed = TimePlayed()
         
         if(kickoff > -1) then
-            print("it's kickoff time!")
+            if(kickoff == 0) then
+                --print("kickoff 2 received")
+                MoveTo(startx, starty, 100)
+                while(kickoff == 0) do
+                    kickoff = IsKickoff()
+                end
+            end
             if(kickoff == teamId) then
-                --TODO
+                --print("kickoff: own team: my team: " .. teamId .. "; kickoff-team: " .. kickoff)
+                --cont playing
             else
-                MoveTo(startx, starty, startz)
+                --print("kickoff: enemy team: my team: " .. teamId .. "; kickoff-team: " .. kickoff)
+                --wait
                 while(kickoff > -1) do
-                   kickoff = IsKickoff()
+                    kickoff = IsKickoff()
                 end
             end
         end

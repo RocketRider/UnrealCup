@@ -60,7 +60,7 @@ void ASoccerLevelScript::ReceiveBeginPlay()
 	Super::ReceiveBeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("BEGIN PLAY %s"), *GetName());
 
-	kickoffState = 0; // TODO Setzen?
+	kickoffState = 1; // TODO Setzen?
 	ABall* ball = nullptr;
 	for (TActorIterator<ABall> ActorItr(GetWorld()); ActorItr; ++ActorItr)
 	{
