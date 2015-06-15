@@ -5,6 +5,8 @@ function run()
 	
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
+    teamId = GetTeamId()
+    startx, starty, startz = GetOwnLocation()
 	--goal2_y = goal2_y + 500
 	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
 	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
@@ -17,16 +19,37 @@ function run()
 	while AllowedToRun() do
         x,y,z = GetOwnLocation()
 		stamina = GetStamina()
+        kickoff = IsKickoff()
         ballX, ballY, ballZ = GetBallPosition()
         playerHasBall = hasBall()
 		text = Listen()
 		if (text ~= "") then
 			--print(text)
-		end	
-		
+		end
+        
+         if(kickoff > -1) then
+            if(kickoff == 2) then
+                print("kickoff 2 received")
+                MoveTo(startx, starty, startz)
+                while(kickoff == 2) do
+                    kickoff = IsKickoff()
+                end
+            end
+            if(kickoff == teamId) then
+                print("kickoff own team")
+                --cont playing
+            else
+                print("kickoff enemy team")
+                print("my team: " .. teamId .. "; kickoff-team: " .. kickoff)
+                --wait
+                while(kickoff > -1) do
+                    kickoff = IsKickoff()
+                end
+            end
+        end
 		
         if (playerHasBall) then
-			print("Player has Ball")
+			--print("Player has Ball")
 			ownAbs = math.pow(goal2_x-x, 2)+math.pow(goal2_y-y, 2) - 300
 			pass = false
 			pass_x = 0
