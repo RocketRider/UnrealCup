@@ -205,7 +205,7 @@ void* RobotControl::call(Command function, void* param1, void* param2, void* par
 		//All functions with a return value have to wait for the result
 		if (function == Command::getPosition || function == Command::getRotation || function == Command::getStamina || function == Command::getBallPosition || 
 			function == Command::getVisiblePlayers || function == Command::getGoal1Position || function == Command::getGoal2Position || function == Command::getSpoken ||
-			function == Command::hasBall || function == Command::isKickoff)
+			function == Command::hasBall || function == Command::isKickoff || function == Command::getTeamId)
 		{
 			waitForResult = true;
 		}
