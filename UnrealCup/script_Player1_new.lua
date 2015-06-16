@@ -1,3 +1,12 @@
+function sleep(n)
+  local t = os.clock()
+    while os.clock() - t <= n do
+    -- nothing
+  end
+end
+
+
+
 runup = false
 rotation = 0
 function run()
@@ -41,6 +50,14 @@ function run()
         end
 		
         if (playerHasBall) then
+		--if(math.abs(ballX-x)<150 and math.abs(ballY-y)<150) then
+			
+			--while (true) do
+			--	sleep(1)
+			--	rotation = rotation + 10
+			--	Rotate(rotation)
+			--end
+			
 			if (gotBall == false) then
 				StopBall()
 				gotBall = true
@@ -89,7 +106,8 @@ function run()
 				end
 			else
 				if (ownAbs < 5000000) then -- try to score a goal
-					Kick(goal1_x-x, goal1_y-y,ownAbs/5000,100)
+					
+					Kick(goal1_x-x + math.random (1000) - math.random (1000), goal1_y-y,ownAbs/5000,100)
 				else
 					Kick(goal1_x-x, goal1_y-y,0,10)
 				end
@@ -114,12 +132,10 @@ function run()
 			if (run < 3) then
 				MoveTo(ballX, ballY, 100 - run*20)
 			else --Move with Ball X
-				if (ballX > x) then
-					if (ballX > 0) then 
-						MoveTo(ballX, starty, 20)
-					end	
+				if (ballX > 0) then
+					MoveTo(ballX+1000, starty, 50)	
 				else
-					MoveTo(ballX, y, 100)
+					MoveTo(ballX-1000, starty, 100)
 				end
 			end
         else -- Search for Ball
