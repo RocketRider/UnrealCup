@@ -33,7 +33,7 @@ static int32 LuaGetTimePlayed(lua_State* L)
 	}
 	else
 	{
-		lua_pushinteger(L, 0);
+		lua_pushinteger(L, -1);
 	}
 
 	return 1;
