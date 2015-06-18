@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Players>
-  <Player ScriptLocation="script_Player1_new.lua" Name="Peter" X="100" Y="700"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="dieter" X="150" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="franz" X="200" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="hans" X="250" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="rudolf" X="300" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="heinz" X="350" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="umberto" X="400" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="konrad" X="450" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="angelo" X="500" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="merte" X="550" Y="100"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="plopp" X="600" Y="100"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="Peter" X="-5000" Y="0"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="dieter" X="-3000" Y="400"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="franz" X="-3000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="hans" X="-3000" Y="-400"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="rudolf" X="-3000" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="heinz" X="-1000" Y="2000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="umberto" X="-1000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="konrad" X="-1000" Y="0"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="angelo" X="-1000" Y="-2000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="merte" X="-300" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player1_new.lua" Name="plopp" X="-300" Y="300"></Player>
 </Players>

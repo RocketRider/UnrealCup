@@ -33,6 +33,9 @@ void ARobot::BeginPlay()
 
 	//Set start Postion out of the XML file:
 	startLocation = parser->getPlayerStartLocation(teamID, playerNumber);
+	FVector loc = GetActorLocation();
+	startLocation.Z = loc.Z;
+	this->SetActorLocation(startLocation);
 	luaFile = parser->getScriptLocation(teamID, playerNumber);
 }
 
