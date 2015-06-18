@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Players>
-  <Player ScriptLocation="script_Player1_new.lua" Name="Peter" X="-5000" Y="0"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="dieter" X="-3000" Y="400"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="franz" X="-3000" Y="1000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="hans" X="-3000" Y="-400"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="rudolf" X="-3000" Y="-1000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="heinz" X="-1000" Y="2000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="umberto" X="-1000" Y="1000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="konrad" X="-1000" Y="0"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="angelo" X="-1000" Y="-2000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="merte" X="-300" Y="-1000"></Player>
-  <Player ScriptLocation="script_Player1_new.lua" Name="plopp" X="-300" Y="300"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="Peter" X="-5000" Y="0"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="dieter" X="-3000" Y="400"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="franz" X="-3000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="hans" X="-3000" Y="-400"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="rudolf" X="-3000" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="heinz" X="-1000" Y="2000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="umberto" X="-1000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="konrad" X="-1000" Y="0"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="angelo" X="-1000" Y="-2000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="merte" X="-300" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player1.lua" Name="plopp" X="-300" Y="300"></Player>
 </Players>

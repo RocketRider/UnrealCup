@@ -7,15 +7,7 @@ function run()
 	goal2_x,goal2_y,goal2_z = GetGoal2Position()
     teamId = GetTeamId()
     startx, starty, startz = GetOwnLocation()
-	--goal2_y = goal2_y + 500
-	--print("Goal1 ".. goal1_x .. ", " .. goal1_y .. ", " .. goal1_z)
-	--print("Goal2 ".. goal2_x .. ", " .. goal2_y .. ", " .. goal2_z)
-	--player = GetVisiblePlayers()
-	--num = #player
-	--print("Robot sees ", num, " other robots.")
-	--for i = 1, num, 1 do
-    --     print("T:",player[i][1]," P:", player[i][2]," X:", player[i][3], " Y:", player[i][4])
-    --end
+
 	while AllowedToRun() do
         x,y,z = GetOwnLocation()
 		stamina = GetStamina()
@@ -29,7 +21,6 @@ function run()
         
          if(kickoff > -1) then
             if(kickoff == 0) then
-                --print("kickoff 2 received")
                 MoveTo(startx, starty, 100)
                 while(kickoff == 0) do
                     kickoff = IsKickoff()
@@ -48,7 +39,6 @@ function run()
         end
 		
         if (playerHasBall) then
-			--print("Player has Ball")
 			ownAbs = math.pow(goal2_x-x, 2)+math.pow(goal2_y-y, 2) - 300
 			pass = false
 			pass_x = 0
@@ -115,8 +105,6 @@ function run()
 				MoveTo(ballX, ballY, 100)
 			end
         else
-			--print("Run To goal")
-            --MoveTo(goal1_x-500, goal1_y)
 			rotation = rotation + 10
 			Rotate(rotation)
         end  
