@@ -432,7 +432,28 @@ void LUAScriptWorker::loadLuaScript(const char* file)
 		// Load the file containing the script we are going to run
 		int status = luaL_loadfile(luaState, file);
 		if (status) {
-			UE_LOG(LogTemp, Warning, TEXT("Couldn't load file: %s\n"), lua_tostring(luaState, -1));
+			const char* msg = lua_tostring(luaState, -1);
+			if (msg == NULL)
+			{
+				if (status == LUA_ERRSYNTAX)
+				{
+					msg = "SYNTAX ERROR";
+				}
+				else
+				{
+					msg = "UNKOWN ERROR";
+				}
+
+			}
+			//UE_LOG(LogTemp, Warning, TEXT("Couldn't load '%s': Errorcode: %d, %s\n"), file, status, msg);
+			FString error = FString("Couldn't load KI: ");
+			//error.Append(file);
+			//error.Append("': Errorcode: ");
+			//error.AppendInt(status);
+			//error.Append(", ");
+			error.Append(msg);
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, error);
+
 			freeLuaScript();
 		}
 		else
