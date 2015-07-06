@@ -452,7 +452,17 @@ void LUAScriptWorker::loadLuaScript(const char* file)
 			//error.AppendInt(status);
 			//error.Append(", ");
 			error.Append(msg);
+
+			/*
+			GEngine->bEnableOnScreenDebugMessages = true;
+			GEngine->bEnableOnScreenDebugMessagesDisplay = true;
 			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, error);
+			*/
+			
+			
+			
+			//FGenericPlatformMisc::MessageBoxExt(EAppMsgType::Ok, ANSI_TO_TCHAR(msg), TEXT("Couldn't load KI"));
+			FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(msg));
 
 			freeLuaScript();
 		}
