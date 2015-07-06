@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Players>
-  <Player ScriptLocation="script_Player2.lua" Name="Player1" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player2" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player3" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player4" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player5" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player6" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player7" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player8" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player9" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player10" X="100" Y="100"></Player>
-  <Player ScriptLocation="script_Player2.lua" Name="Player11" X="100" Y="100"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="Hantz" X="5000" Y="0"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="Rudolf" X="3000" Y="400"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="Max" X="3000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="Markus" X="3000" Y="-400"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="Michi" X="3000" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="heinz" X="1000" Y="2000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="umberto" X="1000" Y="1000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="konrad" X="1000" Y="0"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="angelo" X="1000" Y="-2000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="merte" X="300" Y="-1000"></Player>
+  <Player ScriptLocation="script_Player2.lua" Name="plopp" X="300" Y="300"></Player>
 </Players>

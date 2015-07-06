@@ -33,6 +33,9 @@ void ARobot::BeginPlay()
 
 	//Set start Postion out of the XML file:
 	startLocation = parser->getPlayerStartLocation(teamID, playerNumber);
+	FVector loc = GetActorLocation();
+	startLocation.Z = loc.Z;
+	this->SetActorLocation(startLocation);
 	luaFile = parser->getScriptLocation(teamID, playerNumber);
 }
 
@@ -80,9 +83,10 @@ void ARobot::Move(float straight, float sideways)
 int32 ARobot::getTimePlayed()
 {
 	TeamXMLParser* p = new TeamXMLParser();
-	int32 playTime = p->getTimeToPlay();
-	float passed = (this->GetWorld()->TimeSeconds) / 60;
-	return passed / playTime;
+	float playTime = p->getTimeToPlay();
+	float passed = (this->GetWorld()->TimeSeconds);// / 60;
+	passed = passed / 60;
+	return (int32)(passed / playTime * 100);
 }
 
 
@@ -319,6 +323,25 @@ FVector ARobot::getBallPosition()
 
 FVector ARobot::getGoal1Position()
 {
+
+	if (goal1 == NULL)
+	{
+		for (TActorIterator<AActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+		{
+
+			//TODO: Improve finding goals! These name change if the goal is modified!
+			if (ActorItr->GetName().Equals("football_goal_C_0") || ActorItr->GetName().Equals("football_goal_C_2"))
+			{
+				goal1 = Cast<AActor>(*ActorItr);
+			}
+			if (ActorItr->GetName().Equals("football_goal_C_1") || ActorItr->GetName().Equals("football_goal_C_3"))
+			{
+				goal2 = Cast<AActor>(*ActorItr);
+			}
+		}
+	}
+
+
 	if (goal1 != NULL)
 		return goal1->GetActorLocation();
 	else
@@ -326,6 +349,24 @@ FVector ARobot::getGoal1Position()
 }
 FVector ARobot::getGoal2Position()
 {
+
+	if (goal2 == NULL)
+	{
+		for (TActorIterator<AActor> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+		{
+
+			//TODO: Improve finding goals! These name change if the goal is modified!
+			if (ActorItr->GetName().Equals("football_goal_C_0") || ActorItr->GetName().Equals("football_goal_C_2"))
+			{
+				goal1 = Cast<AActor>(*ActorItr);
+			}
+			if (ActorItr->GetName().Equals("football_goal_C_1") || ActorItr->GetName().Equals("football_goal_C_3"))
+			{
+				goal2 = Cast<AActor>(*ActorItr);
+			}
+		}
+	}
+
 	if (goal2 != NULL)
 		return goal2->GetActorLocation();
 	else

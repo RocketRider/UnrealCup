@@ -113,7 +113,7 @@ int32 RobotWorker::getTimePlayed()
 		delete (RobotDataTypes::intStruct*)result;
 		return timePlayed;
 	}
-	return 0;
+	return -1;
 }
 
 
