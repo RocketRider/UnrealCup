@@ -1,10 +1,11 @@
+MAX_ABS = 50000 	-- Maximaler Abstand in dem der Spieler versucht ein Tor zu schießen
+MAX_RUN = 3			-- Wie viele Spieler sollen dem Ball hinterher rennen
+BALL_DIST = 1000	-- Abstand zum Ball beim Mitlaufen nach vorne/hinten
+
+
+
 runup = false
 rotation = 0
-
-MAX_ABS = 50000
-MAX_RUN = 3
-BALL_DIST = 1000
-
 function run()
 	-- Konstanten abrufen
 	goal1_x,goal1_y,goal1_z = GetGoal1Position()
@@ -97,6 +98,7 @@ function run()
 			gotBall = false
         end
         
+		-- Ist der Ball sichtbar?
 		if not (ballZ == 0 and ballY == 0 and ballX == 0) then
             
             -- Ist der Ball in Reichweite?
@@ -115,7 +117,7 @@ function run()
 		
 		    -- Ist der Spieler selbst unter den X Spielern die am nächsten am Ball sind: Laufe zum Ball
 			if (run < MAX_RUN) then
-				MoveTo(ballX, ballY, 100 - run*20)
+				MoveTo(ballX, ballY, 100)
                 
             -- Bereits genügend Spieler beim Ball: Bewege vor und zurück, abhängig von der Ballposition
 			else --Move with Ball X
