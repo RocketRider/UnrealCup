@@ -1,4 +1,4 @@
-StudentResearchProject
+UnrealCup
 ======================
 
 1) UnrealCup.uproject öffnen
